@@ -54,8 +54,6 @@
 - (void)dealloc {
     [_account release];
     [_password release];
-    [_pwdConfirm release];
-    [_identity release];
     [super dealloc];
 }
 - (IBAction)finishPressed:(UIBarButtonItem *)sender {

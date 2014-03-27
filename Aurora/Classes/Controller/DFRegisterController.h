@@ -12,8 +12,7 @@
 
 @property (retain, nonatomic) IBOutlet UITextField *account;
 @property (retain, nonatomic) IBOutlet UITextField *password;
-@property (retain, nonatomic) IBOutlet UITextField *pwdConfirm;
-@property (retain, nonatomic) IBOutlet UISegmentedControl *identity;
+@property (strong, nonatomic) IBOutlet UITextField *phone;
 - (IBAction)finishPressed:(UIBarButtonItem *)sender;
 
 @end
