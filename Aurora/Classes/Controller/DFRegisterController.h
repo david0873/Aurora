@@ -13,6 +13,7 @@
 @property (retain, nonatomic) IBOutlet UITextField *account;
 @property (retain, nonatomic) IBOutlet UITextField *password;
 @property (strong, nonatomic) IBOutlet UITextField *phone;
+
 - (IBAction)finishPressed:(UIBarButtonItem *)sender;
 
 @end

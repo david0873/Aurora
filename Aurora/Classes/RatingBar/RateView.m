@@ -70,7 +70,7 @@
     
     if (self.notSelectedImage == nil) return;
     
-    float desiredImageWidth = (self.frame.size.width - (self.leftMargin*2) - (self.midMargin*self.imageViews.count)) / self.imageViews.count;
+//    float desiredImageWidth = (self.frame.size.width - (self.leftMargin*2) - (self.midMargin*self.imageViews.count)) / self.imageViews.count;
     float imageWidth = self.fullSelectedImage.size.width;
     float imageHeight = self.fullSelectedImage.size.height;
 //    float imageWidth = MAX(self.minImageSize.width, desiredImageWidth);

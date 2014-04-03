@@ -7,6 +7,8 @@
 //
 
 #import "DFRegisterController.h"
+#import "DFGlobalVar.h"
+#import "DFAppDelegate.h"
 
 @interface DFRegisterController ()
 
@@ -56,6 +58,11 @@
     [_password release];
     [super dealloc];
 }
+
 - (IBAction)finishPressed:(UIBarButtonItem *)sender {
+    [DFGlobalVar sharedGlobalVar].userName=[_account text];
+    DFAppDelegate *thisAppDelegate = [[UIApplication sharedApplication] delegate];
+    [(UITabBarController *)thisAppDelegate.window.rootViewController setSelectedIndex:3];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9318EDA48700EDE552 /* DFGlobalVar.m */; };
+		4030EA9718EDA98B00EDE552 /* DFUserCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9618EDA98B00EDE552 /* DFUserCenterController.m */; };
+		4030EA9A18EDA9A500EDE552 /* DFPersonalCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9918EDA9A500EDE552 /* DFPersonalCenterController.m */; };
 		403433CB18E91BF700459FF5 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433CA18E91BF700459FF5 /* bar.png */; };
 		403433CE18E9309100459FF5 /* chamber.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433CC18E9309100459FF5 /* chamber.png */; };
 		403433CF18E9309100459FF5 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433CD18E9309100459FF5 /* person.png */; };
@@ -73,6 +75,10 @@
 /* Begin PBXFileReference section */
 		4030EA9218EDA48700EDE552 /* DFGlobalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFGlobalVar.h; sourceTree = "<group>"; };
 		4030EA9318EDA48700EDE552 /* DFGlobalVar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFGlobalVar.m; sourceTree = "<group>"; };
+		4030EA9518EDA98B00EDE552 /* DFUserCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUserCenterController.h; sourceTree = "<group>"; };
+		4030EA9618EDA98B00EDE552 /* DFUserCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUserCenterController.m; sourceTree = "<group>"; };
+		4030EA9818EDA9A500EDE552 /* DFPersonalCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPersonalCenterController.h; sourceTree = "<group>"; };
+		4030EA9918EDA9A500EDE552 /* DFPersonalCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPersonalCenterController.m; sourceTree = "<group>"; };
 		403433CA18E91BF700459FF5 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		403433CC18E9309100459FF5 /* chamber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chamber.png; sourceTree = "<group>"; };
 		403433CD18E9309100459FF5 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
@@ -277,6 +283,10 @@
 				4040C6C818E3078C00163066 /* ViewPager.m */,
 				40483D7118EC61BD0040116A /* DFRootTabBarController.h */,
 				40483D7218EC61BD0040116A /* DFRootTabBarController.m */,
+				4030EA9518EDA98B00EDE552 /* DFUserCenterController.h */,
+				4030EA9618EDA98B00EDE552 /* DFUserCenterController.m */,
+				4030EA9818EDA9A500EDE552 /* DFPersonalCenterController.h */,
+				4030EA9918EDA9A500EDE552 /* DFPersonalCenterController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -491,8 +501,10 @@
 				4040C6E718E3078C00163066 /* EGOImageView.m in Sources */,
 				4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */,
 				4040C69318E3050300163066 /* DFAppDelegate.m in Sources */,
+				4030EA9718EDA98B00EDE552 /* DFUserCenterController.m in Sources */,
 				4040C6E818E3078C00163066 /* RateView.m in Sources */,
 				4040C69918E3050300163066 /* DFViewController.m in Sources */,
+				4030EA9A18EDA9A500EDE552 /* DFPersonalCenterController.m in Sources */,
 				4040C6E118E3078C00163066 /* ViewController.m in Sources */,
 				4040C6E418E3078C00163066 /* EGOImageButton.m in Sources */,
 				4040C6DF18E3078C00163066 /* DFLoginController.m in Sources */,
