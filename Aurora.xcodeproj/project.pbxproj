@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9318EDA48700EDE552 /* DFGlobalVar.m */; };
+		403433CB18E91BF700459FF5 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433CA18E91BF700459FF5 /* bar.png */; };
+		403433CE18E9309100459FF5 /* chamber.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433CC18E9309100459FF5 /* chamber.png */; };
+		403433CF18E9309100459FF5 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433CD18E9309100459FF5 /* person.png */; };
+		403433D118E9318B00459FF5 /* ktv.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433D018E9318B00459FF5 /* ktv.png */; };
+		403433E118E93FB600459FF5 /* star_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433DE18E93FB500459FF5 /* star_empty.png */; };
+		403433E218E93FB600459FF5 /* star_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433DF18E93FB500459FF5 /* star_full.png */; };
+		403433E318E93FB600459FF5 /* star_half.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433E018E93FB500459FF5 /* star_half.png */; };
 		4040C68318E3050300163066 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4040C68218E3050300163066 /* Foundation.framework */; };
 		4040C68518E3050300163066 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4040C68418E3050300163066 /* CoreGraphics.framework */; };
 		4040C68718E3050300163066 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4040C68618E3050300163066 /* UIKit.framework */; };
@@ -24,7 +32,7 @@
 		4040C6DC18E3078C00163066 /* DFReserveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6BC18E3078C00163066 /* DFReserveController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4040C6DD18E3078C00163066 /* DFShopDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6BE18E3078C00163066 /* DFShopDetailController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4040C6DE18E3078C00163066 /* DFShopListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C018E3078C00163066 /* DFShopListController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4040C6DF18E3078C00163066 /* DFSignController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C218E3078C00163066 /* DFSignController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4040C6DF18E3078C00163066 /* DFLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C218E3078C00163066 /* DFLoginController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4040C6E018E3078C00163066 /* MyPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C418E3078C00163066 /* MyPageControl.m */; };
 		4040C6E118E3078C00163066 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C618E3078C00163066 /* ViewController.m */; };
 		4040C6E218E3078C00163066 /* ViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C818E3078C00163066 /* ViewPager.m */; };
@@ -44,14 +52,12 @@
 		4040C70318E3079800163066 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6F118E3079700163066 /* image2.jpg */; };
 		4040C70418E3079800163066 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6F218E3079700163066 /* image3.jpg */; };
 		4040C70518E3079800163066 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6F318E3079800163066 /* image4.jpg */; };
-		4040C70618E3079800163066 /* kermit_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6F418E3079800163066 /* kermit_empty.png */; };
-		4040C70718E3079800163066 /* kermit_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6F518E3079800163066 /* kermit_full.png */; };
-		4040C70818E3079800163066 /* kermit_half.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6F618E3079800163066 /* kermit_half.png */; };
 		4040C70A18E3079800163066 /* nav_trans_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6F818E3079800163066 /* nav_trans_bg.png */; };
 		4040C70B18E3079800163066 /* shopIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6F918E3079800163066 /* shopIcon.png */; };
 		4040C70C18E3079800163066 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6FA18E3079800163066 /* whiteArrow.png */; };
 		4040C70D18E3079800163066 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6FB18E3079800163066 /* whiteArrow@2x.png */; };
 		4040C71018E307D500163066 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4040C70E18E307D500163066 /* MainStoryboard_iPhone.storyboard */; };
+		40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40483D7218EC61BD0040116A /* DFRootTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4030EA9218EDA48700EDE552 /* DFGlobalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFGlobalVar.h; sourceTree = "<group>"; };
+		4030EA9318EDA48700EDE552 /* DFGlobalVar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFGlobalVar.m; sourceTree = "<group>"; };
+		403433CA18E91BF700459FF5 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
+		403433CC18E9309100459FF5 /* chamber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chamber.png; sourceTree = "<group>"; };
+		403433CD18E9309100459FF5 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
+		403433D018E9318B00459FF5 /* ktv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ktv.png; sourceTree = "<group>"; };
+		403433DE18E93FB500459FF5 /* star_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_empty.png; sourceTree = "<group>"; };
+		403433DF18E93FB500459FF5 /* star_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_full.png; sourceTree = "<group>"; };
+		403433E018E93FB500459FF5 /* star_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_half.png; sourceTree = "<group>"; };
 		4040C67F18E3050300163066 /* Aurora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aurora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4040C68218E3050300163066 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4040C68418E3050300163066 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,8 +106,8 @@
 		4040C6BE18E3078C00163066 /* DFShopDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFShopDetailController.m; sourceTree = "<group>"; };
 		4040C6BF18E3078C00163066 /* DFShopListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFShopListController.h; sourceTree = "<group>"; };
 		4040C6C018E3078C00163066 /* DFShopListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFShopListController.m; sourceTree = "<group>"; };
-		4040C6C118E3078C00163066 /* DFSignController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFSignController.h; sourceTree = "<group>"; };
-		4040C6C218E3078C00163066 /* DFSignController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFSignController.m; sourceTree = "<group>"; };
+		4040C6C118E3078C00163066 /* DFLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFLoginController.h; sourceTree = "<group>"; };
+		4040C6C218E3078C00163066 /* DFLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFLoginController.m; sourceTree = "<group>"; };
 		4040C6C318E3078C00163066 /* MyPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPageControl.h; sourceTree = "<group>"; };
 		4040C6C418E3078C00163066 /* MyPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageControl.m; sourceTree = "<group>"; };
 		4040C6C518E3078C00163066 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -121,14 +136,13 @@
 		4040C6F118E3079700163066 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
 		4040C6F218E3079700163066 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
 		4040C6F318E3079800163066 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
-		4040C6F418E3079800163066 /* kermit_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kermit_empty.png; sourceTree = "<group>"; };
-		4040C6F518E3079800163066 /* kermit_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kermit_full.png; sourceTree = "<group>"; };
-		4040C6F618E3079800163066 /* kermit_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kermit_half.png; sourceTree = "<group>"; };
 		4040C6F818E3079800163066 /* nav_trans_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_trans_bg.png; sourceTree = "<group>"; };
 		4040C6F918E3079800163066 /* shopIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopIcon.png; sourceTree = "<group>"; };
 		4040C6FA18E3079800163066 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		4040C6FB18E3079800163066 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 		4040C70F18E307D500163066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		40483D7118EC61BD0040116A /* DFRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRootTabBarController.h; sourceTree = "<group>"; };
+		40483D7218EC61BD0040116A /* DFRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRootTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +250,8 @@
 				4040C6B818E3078C00163066 /* Controller */,
 				4040C6C918E3078C00163066 /* ImageCache */,
 				4040C6D818E3078C00163066 /* RatingBar */,
+				4030EA9218EDA48700EDE552 /* DFGlobalVar.h */,
+				4030EA9318EDA48700EDE552 /* DFGlobalVar.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -251,14 +267,16 @@
 				4040C6BE18E3078C00163066 /* DFShopDetailController.m */,
 				4040C6BF18E3078C00163066 /* DFShopListController.h */,
 				4040C6C018E3078C00163066 /* DFShopListController.m */,
-				4040C6C118E3078C00163066 /* DFSignController.h */,
-				4040C6C218E3078C00163066 /* DFSignController.m */,
+				4040C6C118E3078C00163066 /* DFLoginController.h */,
+				4040C6C218E3078C00163066 /* DFLoginController.m */,
 				4040C6C318E3078C00163066 /* MyPageControl.h */,
 				4040C6C418E3078C00163066 /* MyPageControl.m */,
 				4040C6C518E3078C00163066 /* ViewController.h */,
 				4040C6C618E3078C00163066 /* ViewController.m */,
 				4040C6C718E3078C00163066 /* ViewPager.h */,
 				4040C6C818E3078C00163066 /* ViewPager.m */,
+				40483D7118EC61BD0040116A /* DFRootTabBarController.h */,
+				40483D7218EC61BD0040116A /* DFRootTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -324,6 +342,13 @@
 		4040C6E918E3079700163066 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				403433DE18E93FB500459FF5 /* star_empty.png */,
+				403433DF18E93FB500459FF5 /* star_full.png */,
+				403433E018E93FB500459FF5 /* star_half.png */,
+				403433D018E9318B00459FF5 /* ktv.png */,
+				403433CC18E9309100459FF5 /* chamber.png */,
+				403433CD18E9309100459FF5 /* person.png */,
+				403433CA18E91BF700459FF5 /* bar.png */,
 				4040C6EA18E3079700163066 /* blackArrow.png */,
 				4040C6EB18E3079700163066 /* blackArrow@2x.png */,
 				4040C6EC18E3079700163066 /* blueArrow.png */,
@@ -334,9 +359,6 @@
 				4040C6F118E3079700163066 /* image2.jpg */,
 				4040C6F218E3079700163066 /* image3.jpg */,
 				4040C6F318E3079800163066 /* image4.jpg */,
-				4040C6F418E3079800163066 /* kermit_empty.png */,
-				4040C6F518E3079800163066 /* kermit_full.png */,
-				4040C6F618E3079800163066 /* kermit_half.png */,
 				4040C6F818E3079800163066 /* nav_trans_bg.png */,
 				4040C6F918E3079800163066 /* shopIcon.png */,
 				4040C6FA18E3079800163066 /* whiteArrow.png */,
@@ -427,20 +449,24 @@
 				4040C70D18E3079800163066 /* whiteArrow@2x.png in Resources */,
 				4040C71018E307D500163066 /* MainStoryboard_iPhone.storyboard in Resources */,
 				4040C70C18E3079800163066 /* whiteArrow.png in Resources */,
-				4040C70718E3079800163066 /* kermit_full.png in Resources */,
+				403433CF18E9309100459FF5 /* person.png in Resources */,
 				4040C70218E3079800163066 /* image1.jpg in Resources */,
 				4040C70418E3079800163066 /* image3.jpg in Resources */,
 				4040C6FC18E3079800163066 /* blackArrow.png in Resources */,
 				4040C68D18E3050300163066 /* InfoPlist.strings in Resources */,
 				4040C70118E3079800163066 /* grayArrow@2x.png in Resources */,
-				4040C70818E3079800163066 /* kermit_half.png in Resources */,
+				403433E118E93FB600459FF5 /* star_empty.png in Resources */,
+				403433CE18E9309100459FF5 /* chamber.png in Resources */,
 				4040C70A18E3079800163066 /* nav_trans_bg.png in Resources */,
+				403433D118E9318B00459FF5 /* ktv.png in Resources */,
 				4040C70518E3079800163066 /* image4.jpg in Resources */,
 				4040C6FF18E3079800163066 /* blueArrow@2x.png in Resources */,
 				4040C70B18E3079800163066 /* shopIcon.png in Resources */,
+				403433E218E93FB600459FF5 /* star_full.png in Resources */,
 				4040C6FE18E3079800163066 /* blueArrow.png in Resources */,
+				403433E318E93FB600459FF5 /* star_half.png in Resources */,
 				4040C6FD18E3079800163066 /* blackArrow@2x.png in Resources */,
-				4040C70618E3079800163066 /* kermit_empty.png in Resources */,
+				403433CB18E91BF700459FF5 /* bar.png in Resources */,
 				4040C70018E3079800163066 /* grayArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,14 +489,16 @@
 				4040C6DC18E3078C00163066 /* DFReserveController.m in Sources */,
 				4040C6DB18E3078C00163066 /* DFRegisterController.m in Sources */,
 				4040C6E718E3078C00163066 /* EGOImageView.m in Sources */,
+				4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */,
 				4040C69318E3050300163066 /* DFAppDelegate.m in Sources */,
 				4040C6E818E3078C00163066 /* RateView.m in Sources */,
 				4040C69918E3050300163066 /* DFViewController.m in Sources */,
 				4040C6E118E3078C00163066 /* ViewController.m in Sources */,
 				4040C6E418E3078C00163066 /* EGOImageButton.m in Sources */,
-				4040C6DF18E3078C00163066 /* DFSignController.m in Sources */,
+				4040C6DF18E3078C00163066 /* DFLoginController.m in Sources */,
 				4040C6E218E3078C00163066 /* ViewPager.m in Sources */,
 				4040C6DE18E3078C00163066 /* DFShopListController.m in Sources */,
+				40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */,
 				4040C6E318E3078C00163066 /* EGOCache.m in Sources */,
 				4040C6DD18E3078C00163066 /* DFShopDetailController.m in Sources */,
 				4040C6E518E3078C00163066 /* EGOImageLoadConnection.m in Sources */,

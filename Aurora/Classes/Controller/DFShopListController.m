@@ -33,13 +33,13 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
         
-    self.shops = @[@[@"http://e.hiphotos.baidu.com/image/w%3D2048/sign=d3d8ef75af345982c58ae29238cc31ad/f2deb48f8c5494eeb41a74182ff5e0fe99257ef2.jpg",@"商户1",@"商户的简要描述信息",@"500m"],
-                   @[@"http://d.hiphotos.baidu.com/image/w%3D2048/sign=602bfe2d8501a18bf0eb154faa170608/42166d224f4a20a4addc44c692529822730ed0f5.jpg",@"商户2",@"商户的简要描述信息",@"500m"],
-                   @[@"http://e.hiphotos.baidu.com/image/w%3D2048/sign=03b1b4edd300baa1ba2c40bb7328b812/0e2442a7d933c8954dcfe17ad31373f082020079.jpg",@"商户3",@"商户的简要描述信息",@"500m"],
-                   @[@"http://h.hiphotos.baidu.com/image/w%3D2048/sign=b0deb35999504fc2a25fb705d1e5e611/d058ccbf6c81800a8628b65fb33533fa838b4795.jpg",@"商户4",@"商户的简要描述信息",@"500m"],
-                   @[@"http://e.hiphotos.baidu.com/image/w%3D2048/sign=49161ab24510b912bfc1f1fef7c5fc03/d043ad4bd11373f006053296a60f4bfbfbed0484.jpg",@"商户5",@"商户的简要描述信息",@"500m"],
-                   @[@"http://a.hiphotos.baidu.com/image/w%3D2048/sign=a27c0e276f224f4a579974133dcf9152/3bf33a87e950352ad6db5d095143fbf2b2118b7c.jpg",@"商户6",@"商户的简要描述信息",@"500m"],
-                   @[@"http://f.hiphotos.baidu.com/image/w%3D2048/sign=446decb7cb177f3e1034fb0d44f73ac7/aa18972bd40735fa736830b89c510fb30f240812.jpg",@"商户7",@"商户的简要描述信息",@"500m"]];
+    self.shops = @[@[@"http://e.hiphotos.baidu.com/image/w%3D2048/sign=d3d8ef75af345982c58ae29238cc31ad/f2deb48f8c5494eeb41a74182ff5e0fe99257ef2.jpg",@"商户1",@"商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息"],
+                   @[@"http://d.hiphotos.baidu.com/image/w%3D2048/sign=602bfe2d8501a18bf0eb154faa170608/42166d224f4a20a4addc44c692529822730ed0f5.jpg",@"商户2",@"商户的简要描述信息"],
+                   @[@"http://e.hiphotos.baidu.com/image/w%3D2048/sign=03b1b4edd300baa1ba2c40bb7328b812/0e2442a7d933c8954dcfe17ad31373f082020079.jpg",@"商户3",@"商户的简要描述信息"],
+                   @[@"http://h.hiphotos.baidu.com/image/w%3D2048/sign=b0deb35999504fc2a25fb705d1e5e611/d058ccbf6c81800a8628b65fb33533fa838b4795.jpg",@"商户4",@"商户的简要描述信息"],
+                   @[@"http://e.hiphotos.baidu.com/image/w%3D2048/sign=49161ab24510b912bfc1f1fef7c5fc03/d043ad4bd11373f006053296a60f4bfbfbed0484.jpg",@"商户5",@"商户的简要描述信息"],
+                   @[@"http://a.hiphotos.baidu.com/image/w%3D2048/sign=a27c0e276f224f4a579974133dcf9152/3bf33a87e950352ad6db5d095143fbf2b2118b7c.jpg",@"商户6",@"商户的简要描述信息"],
+                   @[@"http://f.hiphotos.baidu.com/image/w%3D2048/sign=446decb7cb177f3e1034fb0d44f73ac7/aa18972bd40735fa736830b89c510fb30f240812.jpg",@"商户7",@"商户的简要描述信息"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,18 +95,16 @@
     shopName.text = [shopItem objectAtIndex:1];
     
     RateView* rateView = (RateView *) [cell viewWithTag:3];
-    rateView.notSelectedImage = [UIImage imageNamed:@"kermit_empty.png"];
-    rateView.halfSelectedImage = [UIImage imageNamed:@"kermit_half.png"];
-    rateView.fullSelectedImage = [UIImage imageNamed:@"kermit_full.png"];
+    rateView.notSelectedImage = [UIImage imageNamed:@"star_empty"];
+    rateView.halfSelectedImage = [UIImage imageNamed:@"star_half"];
+    rateView.fullSelectedImage = [UIImage imageNamed:@"star_full"];
     rateView.rating = 3.5;
     rateView.editable = FALSE;
     rateView.maxRating = 5;
     
-    UILabel* shopDesc = (UILabel *) [cell viewWithTag:4];
+    UITextView* shopDesc = (UITextView *) [cell viewWithTag:4];
+    shopDesc.contentInset = UIEdgeInsetsMake(1.0f, 1.0f, 1.0f, 1.0f);
     shopDesc.text = [shopItem objectAtIndex:2];
-    
-    UILabel* dis = (UILabel *) [cell viewWithTag:5];
-    dis.text=[shopItem objectAtIndex:3];
     
     return cell;
 }

@@ -29,9 +29,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_trans_bg.png"] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
-    
     _numPicker = [[UIPickerView alloc] init];
     _numPicker.dataSource = self;
     _numPicker.delegate = self;
