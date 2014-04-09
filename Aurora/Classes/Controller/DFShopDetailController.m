@@ -8,6 +8,8 @@
 
 #import "DFShopDetailController.h"
 #import "EGOImageView.h"
+#import "DFReserveController.h"
+#import "DFGlobalVar.h"
 
 @interface DFShopDetailController ()
 
@@ -52,21 +54,16 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    DFUser * loginUser = [DFGlobalVar sharedGlobalVar].user;
+    if (loginUser != nil) {
+        UINavigationController * destination = [segue destinationViewController];
+        NSArray *viewControllers = destination.viewControllers;
+        DFReserveController *reserveController = [viewControllers objectAtIndex:0];
+        reserveController.shopName = _shopName;
+    }
     
 }
 
-- (IBAction)homePressed:(UIBarButtonItem *)sender {
-    NSLog(@"home pressed");
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (IBAction)reservePressed:(UIButton *)sender {
-    NSLog(@"resere pressed");
-}
-
-- (IBAction)commentPressed:(UIButton *)sender {
-    NSLog(@"comment pressed");
-}
 - (void)dealloc {
     [_shopImage release];
     [_labelWorkTime release];
@@ -74,5 +71,18 @@
     [_labelAvgConsume release];
     [_labelTEL release];
     [super dealloc];
+}
+- (IBAction)reservePressed:(UIButton *)sender {
+    DFUser * loginUser = [DFGlobalVar sharedGlobalVar].user;
+    if (loginUser == nil) {
+        NSString * segueIdentifier = @"segueLogin";
+        [self performSegueWithIdentifier:segueIdentifier sender:self];
+    }else{
+        NSString * segueIdentifier = @"segueReserve";
+        [self performSegueWithIdentifier:segueIdentifier sender:self];
+    }
+}
+
+- (IBAction)commentPressed:(UIButton *)sender {
 }
 @end

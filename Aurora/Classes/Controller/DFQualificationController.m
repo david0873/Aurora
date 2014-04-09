@@ -1,19 +1,18 @@
 //
-//  DFPersonalCenterController.m
+//  DFQualificationController.m
 //  Aurora
 //
-//  Created by David on 14-4-3.
+//  Created by David on 14-4-5.
 //  Copyright (c) 2014年 david. All rights reserved.
 //
 
-#import "DFPersonalCenterController.h"
-#import "DFGlobalVar.h"
+#import "DFQualificationController.h"
 
-@interface DFPersonalCenterController ()
+@interface DFQualificationController ()
 
 @end
 
-@implementation DFPersonalCenterController
+@implementation DFQualificationController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _userAccountLabel.text = [DFGlobalVar sharedGlobalVar].user.userName;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -40,6 +38,23 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
 }
 
 /*
@@ -102,4 +117,12 @@
 }
 */
 
+- (IBAction)cancelPressed:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+- (IBAction)okPressed:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

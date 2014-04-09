@@ -71,7 +71,11 @@
 }
 
 - (IBAction)loginPressed:(id)sender {
-    [DFGlobalVar sharedGlobalVar].userName=[_account text];
+    DFUser * user = [DFUser alloc];
+    user.userName = _account.text;
+    user.nibName = @"张三";
+    
+    [DFGlobalVar sharedGlobalVar].user = user;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

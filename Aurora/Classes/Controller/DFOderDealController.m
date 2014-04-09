@@ -1,19 +1,20 @@
 //
-//  DFPersonalCenterController.m
+//  DFOderDealController.m
 //  Aurora
 //
-//  Created by David on 14-4-3.
+//  Created by David on 14-4-8.
 //  Copyright (c) 2014年 david. All rights reserved.
 //
 
-#import "DFPersonalCenterController.h"
-#import "DFGlobalVar.h"
+#import "DFOderDealController.h"
 
-@interface DFPersonalCenterController ()
+@interface DFOderDealController ()
 
 @end
 
-@implementation DFPersonalCenterController
+@implementation DFOderDealController
+@synthesize selection;
+@synthesize delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,7 +28,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _userAccountLabel.text = [DFGlobalVar sharedGlobalVar].user.userName;
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    
+    _labelNumber.text = [NSString stringWithFormat:@"%d", selection.number];
+    
+    _lableSeatType.text = selection.seatType;
+    
+    _labelStartTime.text = [dateFormatter stringFromDate:selection.startTime];
+    
+    _labelEndTime.text = [dateFormatter stringFromDate:selection.endTime];
+    
+    _labelRemarks.text = selection.remarks;
+    
+    _labelComment.layer.borderColor = UIColor.grayColor.CGColor;
+    _labelComment.layer.borderWidth =1.0;
+    _labelComment.layer.cornerRadius =5.0;
+    _labelComment.delegate = self;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -41,6 +59,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"])
+    {
+        [textView resignFirstResponder];
+    }
+    return YES;
+}
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -91,7 +119,6 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -100,6 +127,18 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
+- (IBAction)okPressed:(id)sender {
+    self.selection.addition = _labelComment.text;
+    self.selection.orderStatus = OrderSuccess;
+    [self.delegate orderDealController:self didUpdatePresident:self.selection];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)rejectPressed:(UIButton *)sender {
+    self.selection.addition = _labelComment.text;
+    self.selection.orderStatus = OrderFail;
+    [self.delegate orderDealController:self didUpdatePresident:self.selection];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

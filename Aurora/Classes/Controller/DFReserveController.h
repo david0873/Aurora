@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DFReserveController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource, UIActionSheetDelegate, UITextViewDelegate>
+@interface DFReserveController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource, UIActionSheetDelegate, UITextViewDelegate, UIAlertViewDelegate>
+
+@property (copy, nonatomic) NSString * shopName;
 
 @property (retain, nonatomic) IBOutlet UITextField *numTextField;
 @property (retain, nonatomic) IBOutlet UITextField *timeBeginTextField;

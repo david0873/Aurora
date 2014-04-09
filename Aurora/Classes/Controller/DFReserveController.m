@@ -8,9 +8,10 @@
 
 #import "DFReserveController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "DFUserOrder.h"
+#import "DFGlobalVar.h"
 
 @interface DFReserveController ()
-
 @end
 
 @implementation DFReserveController
@@ -118,8 +119,45 @@
 }
 
 - (IBAction)reserveBtnPressed:(UIButton *)sender {
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"预定结果" message:@"预定成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    NSArray* myPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* myDocPath = [myPaths objectAtIndex:0];
+    NSString *path = [myDocPath stringByAppendingPathComponent:@"order.plist"];
+    
+    NSMutableArray * array = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
+    
+    if (array == nil) {
+        array = [[[NSMutableArray alloc] init] autorelease];
+    }
+    
+    DFUserOrder * order = [DFUserOrder alloc];
+    order.shopName = _shopName;
+    order.number = [_numTextField.text intValue];
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy-MM-dd HH:mm"];
+    order.startTime = [df dateFromString:_timeBeginTextField.text];
+    order.endTime = [df dateFromString:_timeEndTextField.text];
+    
+    order.remarks = _remarkText.text;
+    
+    order.orderId = @"242412424";
+    
+    int seatType = [_seatType selectedSegmentIndex];
+    order.seatType = seatType == 0 ? @"卡座" : @"散台";
+    
+    order.user = [DFGlobalVar sharedGlobalVar].user;
+    order.orderStatus = OrderInDeal;
+    
+    [array addObject:order];
+    
+    [NSKeyedArchiver archiveRootObject:array toFile:path];
+    
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"" message:@"预定已提交" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)numChanged {

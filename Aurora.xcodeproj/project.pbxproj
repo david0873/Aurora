@@ -60,6 +60,12 @@
 		4040C70D18E3079800163066 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6FB18E3079800163066 /* whiteArrow@2x.png */; };
 		4040C71018E307D500163066 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4040C70E18E307D500163066 /* MainStoryboard_iPhone.storyboard */; };
 		40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40483D7218EC61BD0040116A /* DFRootTabBarController.m */; };
+		40AC793E18F034B0004B63C3 /* DFQualificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AC793D18F034B0004B63C3 /* DFQualificationController.m */; };
+		40B3E27718F43CB300472C1F /* DFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3E27618F43CB300472C1F /* DFUser.m */; };
+		40B3E27A18F4471500472C1F /* DFOderDealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3E27918F4471500472C1F /* DFOderDealController.m */; };
+		40BFAE8918EEE3FC001C6767 /* DFPSOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE8818EEE3FC001C6767 /* DFPSOrderListController.m */; };
+		40BFAE8C18EEE419001C6767 /* DFMGOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE8B18EEE419001C6767 /* DFMGOrderListController.m */; };
+		40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE9318EF0062001C6767 /* DFUserOrder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +155,18 @@
 		4040C70F18E307D500163066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		40483D7118EC61BD0040116A /* DFRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRootTabBarController.h; sourceTree = "<group>"; };
 		40483D7218EC61BD0040116A /* DFRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRootTabBarController.m; sourceTree = "<group>"; };
+		40AC793C18F034B0004B63C3 /* DFQualificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFQualificationController.h; sourceTree = "<group>"; };
+		40AC793D18F034B0004B63C3 /* DFQualificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFQualificationController.m; sourceTree = "<group>"; };
+		40B3E27518F43CB300472C1F /* DFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUser.h; sourceTree = "<group>"; };
+		40B3E27618F43CB300472C1F /* DFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUser.m; sourceTree = "<group>"; };
+		40B3E27818F4471500472C1F /* DFOderDealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFOderDealController.h; sourceTree = "<group>"; };
+		40B3E27918F4471500472C1F /* DFOderDealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFOderDealController.m; sourceTree = "<group>"; };
+		40BFAE8718EEE3FC001C6767 /* DFPSOrderListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPSOrderListController.h; sourceTree = "<group>"; };
+		40BFAE8818EEE3FC001C6767 /* DFPSOrderListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPSOrderListController.m; sourceTree = "<group>"; };
+		40BFAE8A18EEE419001C6767 /* DFMGOrderListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFMGOrderListController.h; sourceTree = "<group>"; };
+		40BFAE8B18EEE419001C6767 /* DFMGOrderListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFMGOrderListController.m; sourceTree = "<group>"; };
+		40BFAE9218EF0062001C6767 /* DFUserOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUserOrder.h; sourceTree = "<group>"; };
+		40BFAE9318EF0062001C6767 /* DFUserOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUserOrder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +271,7 @@
 		4040C6B718E3078C00163066 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				40BFAE9118EF003E001C6767 /* Model */,
 				4040C6B818E3078C00163066 /* Controller */,
 				4040C6C918E3078C00163066 /* ImageCache */,
 				4040C6D818E3078C00163066 /* RatingBar */,
@@ -287,6 +306,14 @@
 				4030EA9618EDA98B00EDE552 /* DFUserCenterController.m */,
 				4030EA9818EDA9A500EDE552 /* DFPersonalCenterController.h */,
 				4030EA9918EDA9A500EDE552 /* DFPersonalCenterController.m */,
+				40BFAE8718EEE3FC001C6767 /* DFPSOrderListController.h */,
+				40BFAE8818EEE3FC001C6767 /* DFPSOrderListController.m */,
+				40BFAE8A18EEE419001C6767 /* DFMGOrderListController.h */,
+				40BFAE8B18EEE419001C6767 /* DFMGOrderListController.m */,
+				40AC793C18F034B0004B63C3 /* DFQualificationController.h */,
+				40AC793D18F034B0004B63C3 /* DFQualificationController.m */,
+				40B3E27818F4471500472C1F /* DFOderDealController.h */,
+				40B3E27918F4471500472C1F /* DFOderDealController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -375,6 +402,17 @@
 				4040C6FB18E3079800163066 /* whiteArrow@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		40BFAE9118EF003E001C6767 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40BFAE9218EF0062001C6767 /* DFUserOrder.h */,
+				40BFAE9318EF0062001C6767 /* DFUserOrder.m */,
+				40B3E27518F43CB300472C1F /* DFUser.h */,
+				40B3E27618F43CB300472C1F /* DFUser.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,14 +546,20 @@
 				4040C6E118E3078C00163066 /* ViewController.m in Sources */,
 				4040C6E418E3078C00163066 /* EGOImageButton.m in Sources */,
 				4040C6DF18E3078C00163066 /* DFLoginController.m in Sources */,
+				40BFAE8C18EEE419001C6767 /* DFMGOrderListController.m in Sources */,
+				40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */,
 				4040C6E218E3078C00163066 /* ViewPager.m in Sources */,
 				4040C6DE18E3078C00163066 /* DFShopListController.m in Sources */,
 				40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */,
+				40B3E27A18F4471500472C1F /* DFOderDealController.m in Sources */,
 				4040C6E318E3078C00163066 /* EGOCache.m in Sources */,
 				4040C6DD18E3078C00163066 /* DFShopDetailController.m in Sources */,
+				40AC793E18F034B0004B63C3 /* DFQualificationController.m in Sources */,
 				4040C6E518E3078C00163066 /* EGOImageLoadConnection.m in Sources */,
 				4040C68F18E3050300163066 /* main.m in Sources */,
+				40BFAE8918EEE3FC001C6767 /* DFPSOrderListController.m in Sources */,
 				4040C6E018E3078C00163066 /* MyPageControl.m in Sources */,
+				40B3E27718F43CB300472C1F /* DFUser.m in Sources */,
 				4040C6E618E3078C00163066 /* EGOImageLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

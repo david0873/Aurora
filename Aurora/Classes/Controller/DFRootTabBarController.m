@@ -44,8 +44,8 @@
     NSLog(@"selected viewcontroller %d", tabBarController.selectedIndex);
     
     //to do your business
-    NSString * userName = [DFGlobalVar sharedGlobalVar].userName;
-    if (tabBarController.selectedIndex==3 && [userName isEqualToString:@""]) {
+    DFUser * loginUser = [DFGlobalVar sharedGlobalVar].user;
+    if (tabBarController.selectedIndex == 3 && loginUser == nil) {
         NSString * segueIdentifier = @"segueLogin";
         [self performSegueWithIdentifier:segueIdentifier sender:self];
     }
@@ -76,14 +76,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

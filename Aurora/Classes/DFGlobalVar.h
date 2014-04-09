@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DFUser.h"
 
 @interface DFGlobalVar : NSObject{
-    NSString * userName;
+    DFUser * user;
 }
-@property(strong,nonatomic)NSString * userName;
+@property(strong,nonatomic)DFUser * user;
 +(DFGlobalVar *)sharedGlobalVar;
 
 @end

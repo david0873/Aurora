@@ -60,7 +60,9 @@
 }
 
 - (IBAction)finishPressed:(UIBarButtonItem *)sender {
-    [DFGlobalVar sharedGlobalVar].userName=[_account text];
+    DFUser * user = [DFUser alloc];
+    user.userName = _account.text;
+    [DFGlobalVar sharedGlobalVar].user = user;
     DFAppDelegate *thisAppDelegate = [[UIApplication sharedApplication] delegate];
     [(UITabBarController *)thisAppDelegate.window.rootViewController setSelectedIndex:3];
     [self dismissViewControllerAnimated:YES completion:nil];

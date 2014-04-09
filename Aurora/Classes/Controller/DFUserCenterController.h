@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DFUserCenterController : UITableViewController
+@interface DFUserCenterController : UITableViewController<UITableViewDelegate>
 
 @end

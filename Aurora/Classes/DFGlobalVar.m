@@ -10,7 +10,7 @@
 
 @implementation DFGlobalVar
 
-@synthesize userName;
+@synthesize user;
 
 +(DFGlobalVar *)sharedGlobalVar{
     static DFGlobalVar * globalVar;
@@ -24,7 +24,7 @@
 
 -(id)init{
     if (self=[super init]) {
-        userName=@"";
+        user=nil;
     }
     return self;
 }

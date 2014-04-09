@@ -59,6 +59,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     DFShopDetailController *destination = segue.destinationViewController;
+    destination.shopName = @"商户1";
     destination.imageUrl = @"http://www.show160.com/user/upphoto/20079/200791317125698501.jpg";
     destination.workTime = @"17:00-05:00";
     destination.avgConsume = @"500元";
