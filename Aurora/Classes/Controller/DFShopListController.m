@@ -10,9 +10,10 @@
 #import "DFShopDetailController.h"
 #import "EGOImageView.h"
 #import "RateView.h"
+#import "DFShop.h"
 
 @interface DFShopListController ()
-@property (strong, nonatomic) NSArray *shops;
+@property (strong, nonatomic) NSMutableArray *shops;
 @end
 
 @implementation DFShopListController
@@ -32,14 +33,34 @@
     // Do any additional setup after loading the view.
     _tableView.delegate = self;
     _tableView.dataSource = self;
-        
-    self.shops = @[@[@"http://e.hiphotos.baidu.com/image/w%3D2048/sign=d3d8ef75af345982c58ae29238cc31ad/f2deb48f8c5494eeb41a74182ff5e0fe99257ef2.jpg",@"商户1",@"商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息"],
-                   @[@"http://d.hiphotos.baidu.com/image/w%3D2048/sign=602bfe2d8501a18bf0eb154faa170608/42166d224f4a20a4addc44c692529822730ed0f5.jpg",@"商户2",@"商户的简要描述信息"],
-                   @[@"http://e.hiphotos.baidu.com/image/w%3D2048/sign=03b1b4edd300baa1ba2c40bb7328b812/0e2442a7d933c8954dcfe17ad31373f082020079.jpg",@"商户3",@"商户的简要描述信息"],
-                   @[@"http://h.hiphotos.baidu.com/image/w%3D2048/sign=b0deb35999504fc2a25fb705d1e5e611/d058ccbf6c81800a8628b65fb33533fa838b4795.jpg",@"商户4",@"商户的简要描述信息"],
-                   @[@"http://e.hiphotos.baidu.com/image/w%3D2048/sign=49161ab24510b912bfc1f1fef7c5fc03/d043ad4bd11373f006053296a60f4bfbfbed0484.jpg",@"商户5",@"商户的简要描述信息"],
-                   @[@"http://a.hiphotos.baidu.com/image/w%3D2048/sign=a27c0e276f224f4a579974133dcf9152/3bf33a87e950352ad6db5d095143fbf2b2118b7c.jpg",@"商户6",@"商户的简要描述信息"],
-                   @[@"http://f.hiphotos.baidu.com/image/w%3D2048/sign=446decb7cb177f3e1034fb0d44f73ac7/aa18972bd40735fa736830b89c510fb30f240812.jpg",@"商户7",@"商户的简要描述信息"]];
+    
+    _shops = [[NSMutableArray alloc]initWithCapacity:5];
+    
+    NSString * sampleKTVImage = @"http://pic24.nipic.com/20120921/6647776_183526363113_2.jpg";
+    NSString * sampleChamberImage = @"http://www.show160.com/user/upphoto/20079/200791317125698501.jpg";
+    NSString * sampleBarImage = @"http://pic15.nipic.com/20110717/5713677_093454493000_2.jpg";
+    
+    NSString * sampleShopImage;
+    
+    if (_tabIndex == 0) {
+        sampleShopImage = sampleBarImage;
+    }else if (_tabIndex == 1){
+        sampleShopImage = sampleChamberImage;
+    }else{
+        sampleShopImage = sampleKTVImage;
+    }
+    for (int i=0 ; i<5; i++) {
+        DFShop * shop = [DFShop alloc];
+        shop.shopImage = sampleShopImage;
+        shop.shopName = [NSString stringWithFormat:@"商户%d",i+1];
+        shop.desc = @"商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息";
+        shop.avgConsume = @"500";
+        shop.address = @"上海市**区**路**号";
+        shop.avgConsume = @"500元";
+        shop.workTime = @"17:00-05:00";
+        shop.tel = @"021-88888888";
+        [_shops addObject:shop];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,12 +80,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     DFShopDetailController *destination = segue.destinationViewController;
-    destination.shopName = @"商户1";
-    destination.imageUrl = @"http://www.show160.com/user/upphoto/20079/200791317125698501.jpg";
-    destination.workTime = @"17:00-05:00";
-    destination.avgConsume = @"500元";
-    destination.address = @"上海市**区**路**号";
-    destination.tel = @"021-88888888";
+
+    if ([destination respondsToSelector:@selector(setShop:)]) {
+        NSIndexPath *indexPath = [_tableView indexPathForCell:sender];
+        DFShop* shop = [self.shops objectAtIndex:indexPath.row];
+        [destination setValue:shop forKey:@"shop"];
+    }
+
 }
 
 #pragma mark - Table view data source
@@ -83,17 +105,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *shopItem = [self.shops objectAtIndex:indexPath.row];
+    DFShop *shop = [self.shops objectAtIndex:indexPath.row];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"shopItem"];
     
     // Configure the cell...
     
     EGOImageView* shopImage = (EGOImageView*) [cell viewWithTag:1];
-    shopImage.imageURL = [NSURL URLWithString:[shopItem objectAtIndex:0]];
+    shopImage.imageURL = [NSURL URLWithString:shop.shopImage];
     
     UILabel* shopName = (UILabel *) [cell viewWithTag:2];
-    shopName.text = [shopItem objectAtIndex:1];
+    shopName.text = shop.shopName;
     
     RateView* rateView = (RateView *) [cell viewWithTag:3];
     rateView.notSelectedImage = [UIImage imageNamed:@"star_empty"];
@@ -105,7 +127,7 @@
     
     UITextView* shopDesc = (UITextView *) [cell viewWithTag:4];
     shopDesc.contentInset = UIEdgeInsetsMake(1.0f, 1.0f, 1.0f, 1.0f);
-    shopDesc.text = [shopItem objectAtIndex:2];
+    shopDesc.text = shop.desc;
     
     return cell;
 }
@@ -126,7 +148,5 @@
     [_tableView release];
     [super dealloc];
 }
-- (IBAction)homePressed:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 @end

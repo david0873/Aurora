@@ -59,6 +59,7 @@
 		4040C70C18E3079800163066 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6FA18E3079800163066 /* whiteArrow.png */; };
 		4040C70D18E3079800163066 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6FB18E3079800163066 /* whiteArrow@2x.png */; };
 		4040C71018E307D500163066 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4040C70E18E307D500163066 /* MainStoryboard_iPhone.storyboard */; };
+		4043548A18F82F7B003F6542 /* DFShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4043548918F82F7B003F6542 /* DFShop.m */; };
 		40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40483D7218EC61BD0040116A /* DFRootTabBarController.m */; };
 		40AC793E18F034B0004B63C3 /* DFQualificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AC793D18F034B0004B63C3 /* DFQualificationController.m */; };
 		40B3E27718F43CB300472C1F /* DFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3E27618F43CB300472C1F /* DFUser.m */; };
@@ -153,6 +154,8 @@
 		4040C6FA18E3079800163066 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		4040C6FB18E3079800163066 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 		4040C70F18E307D500163066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		4043548818F82F7B003F6542 /* DFShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFShop.h; sourceTree = "<group>"; };
+		4043548918F82F7B003F6542 /* DFShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFShop.m; sourceTree = "<group>"; };
 		40483D7118EC61BD0040116A /* DFRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRootTabBarController.h; sourceTree = "<group>"; };
 		40483D7218EC61BD0040116A /* DFRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRootTabBarController.m; sourceTree = "<group>"; };
 		40AC793C18F034B0004B63C3 /* DFQualificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFQualificationController.h; sourceTree = "<group>"; };
@@ -411,6 +414,8 @@
 				40BFAE9318EF0062001C6767 /* DFUserOrder.m */,
 				40B3E27518F43CB300472C1F /* DFUser.h */,
 				40B3E27618F43CB300472C1F /* DFUser.m */,
+				4043548818F82F7B003F6542 /* DFShop.h */,
+				4043548918F82F7B003F6542 /* DFShop.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -549,6 +554,7 @@
 				40BFAE8C18EEE419001C6767 /* DFMGOrderListController.m in Sources */,
 				40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */,
 				4040C6E218E3078C00163066 /* ViewPager.m in Sources */,
+				4043548A18F82F7B003F6542 /* DFShop.m in Sources */,
 				4040C6DE18E3078C00163066 /* DFShopListController.m in Sources */,
 				40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */,
 				40B3E27A18F4471500472C1F /* DFOderDealController.m in Sources */,

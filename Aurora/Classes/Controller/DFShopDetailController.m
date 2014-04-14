@@ -33,12 +33,12 @@
     // Do any additional setup after loading the view.
     
     EGOImageView* imageView = (EGOImageView *)_shopImage;
-    imageView.imageURL = [NSURL URLWithString:_imageUrl];
+    imageView.imageURL = [NSURL URLWithString:_shop.shopImage];
     
-    _labelWorkTime.text = _workTime;
-    _labelAvgConsume.text = _avgConsume;
-    _labelTEL.text = _tel;
-    _labelAddress.text = _address;
+    _labelWorkTime.text = _shop.workTime;
+    _labelAvgConsume.text = _shop.avgConsume;
+    _labelTEL.text = _shop.tel;
+    _labelAddress.text = _shop.address;
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,7 +59,7 @@
         UINavigationController * destination = [segue destinationViewController];
         NSArray *viewControllers = destination.viewControllers;
         DFReserveController *reserveController = [viewControllers objectAtIndex:0];
-        reserveController.shopName = _shopName;
+        reserveController.shopName = _shop.shopName;
     }
     
 }

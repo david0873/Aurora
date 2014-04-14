@@ -12,6 +12,7 @@
 @interface DFShopListController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     IBOutlet UITableView *_tableView;
 }
-- (IBAction)homePressed:(UIBarButtonItem *)sender;
+
+@property int tabIndex;
 
 @end

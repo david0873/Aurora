@@ -7,16 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DFShop.h"
 
 @interface DFShopDetailController : UIViewController
 
-@property (copy, nonatomic) NSString *imageUrl;
-@property (copy, nonatomic) NSString *workTime;
-@property (copy, nonatomic) NSString *avgConsume;
-@property (copy, nonatomic) NSString *address;
-@property (copy, nonatomic) NSString *tel;
-
-@property (copy, nonatomic) NSString *shopName;
+@property (copy, nonatomic) DFShop * shop;
 
 @property (retain, nonatomic) IBOutlet UIImageView *shopImage;
 @property (retain, nonatomic) IBOutlet UILabel *labelWorkTime;
