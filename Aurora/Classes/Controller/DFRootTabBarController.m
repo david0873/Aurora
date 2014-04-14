@@ -8,7 +8,7 @@
 
 #import "DFRootTabBarController.h"
 #import "DFGlobalVar.h"
-#import "DFShopListController.h"
+#import "DFBarListController.h"
 
 @interface DFRootTabBarController ()
 
@@ -84,8 +84,6 @@
  {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
-     DFShopListController * shopListController = [segue destinationViewController];
-     shopListController.tabIndex = self.selectedIndex;
  }
  
 

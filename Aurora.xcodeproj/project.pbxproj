@@ -33,7 +33,7 @@
 		4040C6DB18E3078C00163066 /* DFRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6BA18E3078C00163066 /* DFRegisterController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4040C6DC18E3078C00163066 /* DFReserveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6BC18E3078C00163066 /* DFReserveController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4040C6DD18E3078C00163066 /* DFShopDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6BE18E3078C00163066 /* DFShopDetailController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4040C6DE18E3078C00163066 /* DFShopListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C018E3078C00163066 /* DFShopListController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4040C6DE18E3078C00163066 /* DFBarListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C018E3078C00163066 /* DFBarListController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4040C6DF18E3078C00163066 /* DFLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C218E3078C00163066 /* DFLoginController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4040C6E018E3078C00163066 /* MyPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C418E3078C00163066 /* MyPageControl.m */; };
 		4040C6E118E3078C00163066 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C618E3078C00163066 /* ViewController.m */; };
@@ -67,6 +67,8 @@
 		40BFAE8918EEE3FC001C6767 /* DFPSOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE8818EEE3FC001C6767 /* DFPSOrderListController.m */; };
 		40BFAE8C18EEE419001C6767 /* DFMGOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE8B18EEE419001C6767 /* DFMGOrderListController.m */; };
 		40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE9318EF0062001C6767 /* DFUserOrder.m */; };
+		40D2DB6518FBAFEC000DA952 /* DFKTVListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2DB6418FBAFEC000DA952 /* DFKTVListController.m */; };
+		40D2DB6818FBB024000DA952 /* DFChamberListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2DB6718FBB024000DA952 /* DFChamberListController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,8 +119,8 @@
 		4040C6BC18E3078C00163066 /* DFReserveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFReserveController.m; sourceTree = "<group>"; };
 		4040C6BD18E3078C00163066 /* DFShopDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFShopDetailController.h; sourceTree = "<group>"; };
 		4040C6BE18E3078C00163066 /* DFShopDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFShopDetailController.m; sourceTree = "<group>"; };
-		4040C6BF18E3078C00163066 /* DFShopListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFShopListController.h; sourceTree = "<group>"; };
-		4040C6C018E3078C00163066 /* DFShopListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFShopListController.m; sourceTree = "<group>"; };
+		4040C6BF18E3078C00163066 /* DFBarListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFBarListController.h; sourceTree = "<group>"; };
+		4040C6C018E3078C00163066 /* DFBarListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBarListController.m; sourceTree = "<group>"; };
 		4040C6C118E3078C00163066 /* DFLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFLoginController.h; sourceTree = "<group>"; };
 		4040C6C218E3078C00163066 /* DFLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFLoginController.m; sourceTree = "<group>"; };
 		4040C6C318E3078C00163066 /* MyPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPageControl.h; sourceTree = "<group>"; };
@@ -170,6 +172,10 @@
 		40BFAE8B18EEE419001C6767 /* DFMGOrderListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFMGOrderListController.m; sourceTree = "<group>"; };
 		40BFAE9218EF0062001C6767 /* DFUserOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUserOrder.h; sourceTree = "<group>"; };
 		40BFAE9318EF0062001C6767 /* DFUserOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUserOrder.m; sourceTree = "<group>"; };
+		40D2DB6318FBAFEC000DA952 /* DFKTVListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFKTVListController.h; sourceTree = "<group>"; };
+		40D2DB6418FBAFEC000DA952 /* DFKTVListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFKTVListController.m; sourceTree = "<group>"; };
+		40D2DB6618FBB024000DA952 /* DFChamberListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFChamberListController.h; sourceTree = "<group>"; };
+		40D2DB6718FBB024000DA952 /* DFChamberListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFChamberListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,8 +299,8 @@
 				4040C6BC18E3078C00163066 /* DFReserveController.m */,
 				4040C6BD18E3078C00163066 /* DFShopDetailController.h */,
 				4040C6BE18E3078C00163066 /* DFShopDetailController.m */,
-				4040C6BF18E3078C00163066 /* DFShopListController.h */,
-				4040C6C018E3078C00163066 /* DFShopListController.m */,
+				4040C6BF18E3078C00163066 /* DFBarListController.h */,
+				4040C6C018E3078C00163066 /* DFBarListController.m */,
 				4040C6C118E3078C00163066 /* DFLoginController.h */,
 				4040C6C218E3078C00163066 /* DFLoginController.m */,
 				4040C6C318E3078C00163066 /* MyPageControl.h */,
@@ -317,6 +323,10 @@
 				40AC793D18F034B0004B63C3 /* DFQualificationController.m */,
 				40B3E27818F4471500472C1F /* DFOderDealController.h */,
 				40B3E27918F4471500472C1F /* DFOderDealController.m */,
+				40D2DB6318FBAFEC000DA952 /* DFKTVListController.h */,
+				40D2DB6418FBAFEC000DA952 /* DFKTVListController.m */,
+				40D2DB6618FBB024000DA952 /* DFChamberListController.h */,
+				40D2DB6718FBB024000DA952 /* DFChamberListController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -548,6 +558,7 @@
 				4040C6E818E3078C00163066 /* RateView.m in Sources */,
 				4040C69918E3050300163066 /* DFViewController.m in Sources */,
 				4030EA9A18EDA9A500EDE552 /* DFPersonalCenterController.m in Sources */,
+				40D2DB6518FBAFEC000DA952 /* DFKTVListController.m in Sources */,
 				4040C6E118E3078C00163066 /* ViewController.m in Sources */,
 				4040C6E418E3078C00163066 /* EGOImageButton.m in Sources */,
 				4040C6DF18E3078C00163066 /* DFLoginController.m in Sources */,
@@ -555,7 +566,7 @@
 				40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */,
 				4040C6E218E3078C00163066 /* ViewPager.m in Sources */,
 				4043548A18F82F7B003F6542 /* DFShop.m in Sources */,
-				4040C6DE18E3078C00163066 /* DFShopListController.m in Sources */,
+				4040C6DE18E3078C00163066 /* DFBarListController.m in Sources */,
 				40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */,
 				40B3E27A18F4471500472C1F /* DFOderDealController.m in Sources */,
 				4040C6E318E3078C00163066 /* EGOCache.m in Sources */,
@@ -564,6 +575,7 @@
 				4040C6E518E3078C00163066 /* EGOImageLoadConnection.m in Sources */,
 				4040C68F18E3050300163066 /* main.m in Sources */,
 				40BFAE8918EEE3FC001C6767 /* DFPSOrderListController.m in Sources */,
+				40D2DB6818FBB024000DA952 /* DFChamberListController.m in Sources */,
 				4040C6E018E3078C00163066 /* MyPageControl.m in Sources */,
 				40B3E27718F43CB300472C1F /* DFUser.m in Sources */,
 				4040C6E618E3078C00163066 /* EGOImageLoader.m in Sources */,

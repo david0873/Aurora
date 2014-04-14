@@ -1,22 +1,22 @@
 //
-//  DfShopListController.m
-//  ViewPagerTest
+//  DFChamberListController.m
+//  Aurora
 //
-//  Created by David on 14-3-15.
-//  Copyright (c) 2014年 flame_thupdi. All rights reserved.
+//  Created by David on 14-4-14.
+//  Copyright (c) 2014年 david. All rights reserved.
 //
 
-#import "DFShopListController.h"
+#import "DFChamberListController.h"
 #import "DFShopDetailController.h"
 #import "EGOImageView.h"
 #import "RateView.h"
 #import "DFShop.h"
 
-@interface DFShopListController ()
+@interface DFChamberListController ()
 @property (strong, nonatomic) NSMutableArray *shops;
 @end
 
-@implementation DFShopListController
+@implementation DFChamberListController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,7 +28,7 @@
 }
 
 - (void)viewDidLoad
-{    
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _tableView.delegate = self;
@@ -36,23 +36,12 @@
     
     _shops = [[NSMutableArray alloc]initWithCapacity:5];
     
-    NSString * sampleKTVImage = @"http://pic24.nipic.com/20120921/6647776_183526363113_2.jpg";
     NSString * sampleChamberImage = @"http://www.show160.com/user/upphoto/20079/200791317125698501.jpg";
-    NSString * sampleBarImage = @"http://pic15.nipic.com/20110717/5713677_093454493000_2.jpg";
     
-    NSString * sampleShopImage;
-    
-    if (_tabIndex == 0) {
-        sampleShopImage = sampleBarImage;
-    }else if (_tabIndex == 1){
-        sampleShopImage = sampleChamberImage;
-    }else{
-        sampleShopImage = sampleKTVImage;
-    }
     for (int i=0 ; i<5; i++) {
         DFShop * shop = [DFShop alloc];
-        shop.shopImage = sampleShopImage;
-        shop.shopName = [NSString stringWithFormat:@"商户%d",i+1];
+        shop.shopImage = sampleChamberImage;
+        shop.shopName = [NSString stringWithFormat:@"会所%d",i+1];
         shop.desc = @"商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息";
         shop.avgConsume = @"500";
         shop.address = @"上海市**区**路**号";
@@ -69,10 +58,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) viewDidAppear:(BOOL)animated{
-   
-}
+/*
+#pragma mark - Navigation
 
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 #pragma mark - Navigation
 
@@ -80,13 +75,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     DFShopDetailController *destination = segue.destinationViewController;
-
+    
     if ([destination respondsToSelector:@selector(setShop:)]) {
         NSIndexPath *indexPath = [_tableView indexPathForCell:sender];
         DFShop* shop = [self.shops objectAtIndex:indexPath.row];
         [destination setValue:shop forKey:@"shop"];
     }
-
+    
 }
 
 #pragma mark - Table view data source
@@ -142,11 +137,6 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-}
-
-- (void)dealloc {
-    [_tableView release];
-    [super dealloc];
 }
 
 @end

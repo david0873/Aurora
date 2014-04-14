@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "RateView.h"
 
-@interface DFShopListController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
+@interface DFBarListController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     IBOutlet UITableView *_tableView;
 }
-
-@property int tabIndex;
 
 @end
