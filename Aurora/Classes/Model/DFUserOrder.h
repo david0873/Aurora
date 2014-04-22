@@ -39,4 +39,8 @@
 @property (nonatomic, copy) NSString * remarks;
 @property (nonatomic, copy) NSString * addition;
 
+//出价，选择非手动输入
+@property (nonatomic, copy) NSString * price;
+
+
 @end

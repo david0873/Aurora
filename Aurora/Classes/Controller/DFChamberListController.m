@@ -11,6 +11,7 @@
 #import "EGOImageView.h"
 #import "RateView.h"
 #import "DFShop.h"
+#import "SQRiskCursor.h"
 
 @interface DFChamberListController ()
 @property (strong, nonatomic) NSMutableArray *shops;
@@ -47,7 +48,7 @@
         shop.address = @"上海市**区**路**号";
         shop.avgConsume = @"500元";
         shop.workTime = @"17:00-05:00";
-        shop.tel = @"021-88888888";
+        shop.hiDegree = 9;
         [_shops addObject:shop];
     }
 }
@@ -111,14 +112,10 @@
     
     UILabel* shopName = (UILabel *) [cell viewWithTag:2];
     shopName.text = shop.shopName;
-    
-    RateView* rateView = (RateView *) [cell viewWithTag:3];
-    rateView.notSelectedImage = [UIImage imageNamed:@"star_empty"];
-    rateView.halfSelectedImage = [UIImage imageNamed:@"star_half"];
-    rateView.fullSelectedImage = [UIImage imageNamed:@"star_full"];
-    rateView.rating = 3.5;
-    rateView.editable = FALSE;
-    rateView.maxRating = 5;
+
+    SQRiskCursor* hiDegree = (SQRiskCursor *) [cell viewWithTag:3];
+    [hiDegree setValue:shop.hiDegree];
+    hiDegree.enabled = false;
     
     UITextView* shopDesc = (UITextView *) [cell viewWithTag:4];
     shopDesc.contentInset = UIEdgeInsetsMake(1.0f, 1.0f, 1.0f, 1.0f);

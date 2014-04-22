@@ -118,4 +118,8 @@
  }
  */
 
+- (IBAction)logoutPressed:(UIBarButtonItem *)sender {
+    
+    [DFGlobalVar sharedGlobalVar].user = nil;
+}
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40214E7219011AFA000BB4D2 /* DFCommentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40214E7119011AFA000BB4D2 /* DFCommentListController.m */; };
 		4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9318EDA48700EDE552 /* DFGlobalVar.m */; };
 		4030EA9718EDA98B00EDE552 /* DFUserCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9618EDA98B00EDE552 /* DFUserCenterController.m */; };
 		4030EA9A18EDA9A500EDE552 /* DFPersonalCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9918EDA9A500EDE552 /* DFPersonalCenterController.m */; };
@@ -62,6 +63,9 @@
 		4043548A18F82F7B003F6542 /* DFShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4043548918F82F7B003F6542 /* DFShop.m */; };
 		40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40483D7218EC61BD0040116A /* DFRootTabBarController.m */; };
 		40AC793E18F034B0004B63C3 /* DFQualificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AC793D18F034B0004B63C3 /* DFQualificationController.m */; };
+		40B0A09318FCFC1F009D5A0D /* NSString+SQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0A09018FCFC1F009D5A0D /* NSString+SQ.m */; };
+		40B0A09418FCFC1F009D5A0D /* UIColor+SQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0A09218FCFC1F009D5A0D /* UIColor+SQ.m */; };
+		40B0A09818FCFC32009D5A0D /* SQRiskCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0A09718FCFC32009D5A0D /* SQRiskCursor.m */; };
 		40B3E27718F43CB300472C1F /* DFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3E27618F43CB300472C1F /* DFUser.m */; };
 		40B3E27A18F4471500472C1F /* DFOderDealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3E27918F4471500472C1F /* DFOderDealController.m */; };
 		40BFAE8918EEE3FC001C6767 /* DFPSOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE8818EEE3FC001C6767 /* DFPSOrderListController.m */; };
@@ -82,6 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40214E7019011AFA000BB4D2 /* DFCommentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFCommentListController.h; sourceTree = "<group>"; };
+		40214E7119011AFA000BB4D2 /* DFCommentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFCommentListController.m; sourceTree = "<group>"; };
 		4030EA9218EDA48700EDE552 /* DFGlobalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFGlobalVar.h; sourceTree = "<group>"; };
 		4030EA9318EDA48700EDE552 /* DFGlobalVar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFGlobalVar.m; sourceTree = "<group>"; };
 		4030EA9518EDA98B00EDE552 /* DFUserCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUserCenterController.h; sourceTree = "<group>"; };
@@ -123,12 +129,12 @@
 		4040C6C018E3078C00163066 /* DFBarListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBarListController.m; sourceTree = "<group>"; };
 		4040C6C118E3078C00163066 /* DFLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFLoginController.h; sourceTree = "<group>"; };
 		4040C6C218E3078C00163066 /* DFLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFLoginController.m; sourceTree = "<group>"; };
-		4040C6C318E3078C00163066 /* MyPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPageControl.h; sourceTree = "<group>"; };
-		4040C6C418E3078C00163066 /* MyPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageControl.m; sourceTree = "<group>"; };
+		4040C6C318E3078C00163066 /* MyPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPageControl.h; path = Controller/MyPageControl.h; sourceTree = "<group>"; };
+		4040C6C418E3078C00163066 /* MyPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPageControl.m; path = Controller/MyPageControl.m; sourceTree = "<group>"; };
 		4040C6C518E3078C00163066 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4040C6C618E3078C00163066 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4040C6C718E3078C00163066 /* ViewPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPager.h; sourceTree = "<group>"; };
-		4040C6C818E3078C00163066 /* ViewPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPager.m; sourceTree = "<group>"; };
+		4040C6C718E3078C00163066 /* ViewPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewPager.h; path = Controller/ViewPager.h; sourceTree = "<group>"; };
+		4040C6C818E3078C00163066 /* ViewPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewPager.m; path = Controller/ViewPager.m; sourceTree = "<group>"; };
 		4040C6CB18E3078C00163066 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
 		4040C6CC18E3078C00163066 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
 		4040C6CE18E3078C00163066 /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
@@ -162,6 +168,12 @@
 		40483D7218EC61BD0040116A /* DFRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRootTabBarController.m; sourceTree = "<group>"; };
 		40AC793C18F034B0004B63C3 /* DFQualificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFQualificationController.h; sourceTree = "<group>"; };
 		40AC793D18F034B0004B63C3 /* DFQualificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFQualificationController.m; sourceTree = "<group>"; };
+		40B0A08F18FCFC1F009D5A0D /* NSString+SQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SQ.h"; sourceTree = "<group>"; };
+		40B0A09018FCFC1F009D5A0D /* NSString+SQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SQ.m"; sourceTree = "<group>"; };
+		40B0A09118FCFC1F009D5A0D /* UIColor+SQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SQ.h"; sourceTree = "<group>"; };
+		40B0A09218FCFC1F009D5A0D /* UIColor+SQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SQ.m"; sourceTree = "<group>"; };
+		40B0A09618FCFC32009D5A0D /* SQRiskCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQRiskCursor.h; sourceTree = "<group>"; };
+		40B0A09718FCFC32009D5A0D /* SQRiskCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRiskCursor.m; sourceTree = "<group>"; };
 		40B3E27518F43CB300472C1F /* DFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUser.h; sourceTree = "<group>"; };
 		40B3E27618F43CB300472C1F /* DFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUser.m; sourceTree = "<group>"; };
 		40B3E27818F4471500472C1F /* DFOderDealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFOderDealController.h; sourceTree = "<group>"; };
@@ -202,6 +214,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40214E6F1900F32E000BB4D2 /* ViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				4040C6C318E3078C00163066 /* MyPageControl.h */,
+				4040C6C418E3078C00163066 /* MyPageControl.m */,
+				4040C6C718E3078C00163066 /* ViewPager.h */,
+				4040C6C818E3078C00163066 /* ViewPager.m */,
+			);
+			name = ViewPager;
+			sourceTree = "<group>";
+		};
 		4040C67618E3050300163066 = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +303,12 @@
 		4040C6B718E3078C00163066 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				40214E6F1900F32E000BB4D2 /* ViewPager */,
+				40B0A09518FCFC32009D5A0D /* slider */,
+				40B0A08F18FCFC1F009D5A0D /* NSString+SQ.h */,
+				40B0A09018FCFC1F009D5A0D /* NSString+SQ.m */,
+				40B0A09118FCFC1F009D5A0D /* UIColor+SQ.h */,
+				40B0A09218FCFC1F009D5A0D /* UIColor+SQ.m */,
 				40BFAE9118EF003E001C6767 /* Model */,
 				4040C6B818E3078C00163066 /* Controller */,
 				4040C6C918E3078C00163066 /* ImageCache */,
@@ -303,12 +332,8 @@
 				4040C6C018E3078C00163066 /* DFBarListController.m */,
 				4040C6C118E3078C00163066 /* DFLoginController.h */,
 				4040C6C218E3078C00163066 /* DFLoginController.m */,
-				4040C6C318E3078C00163066 /* MyPageControl.h */,
-				4040C6C418E3078C00163066 /* MyPageControl.m */,
 				4040C6C518E3078C00163066 /* ViewController.h */,
 				4040C6C618E3078C00163066 /* ViewController.m */,
-				4040C6C718E3078C00163066 /* ViewPager.h */,
-				4040C6C818E3078C00163066 /* ViewPager.m */,
 				40483D7118EC61BD0040116A /* DFRootTabBarController.h */,
 				40483D7218EC61BD0040116A /* DFRootTabBarController.m */,
 				4030EA9518EDA98B00EDE552 /* DFUserCenterController.h */,
@@ -327,6 +352,8 @@
 				40D2DB6418FBAFEC000DA952 /* DFKTVListController.m */,
 				40D2DB6618FBB024000DA952 /* DFChamberListController.h */,
 				40D2DB6718FBB024000DA952 /* DFChamberListController.m */,
+				40214E7019011AFA000BB4D2 /* DFCommentListController.h */,
+				40214E7119011AFA000BB4D2 /* DFCommentListController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -415,6 +442,15 @@
 				4040C6FB18E3079800163066 /* whiteArrow@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		40B0A09518FCFC32009D5A0D /* slider */ = {
+			isa = PBXGroup;
+			children = (
+				40B0A09618FCFC32009D5A0D /* SQRiskCursor.h */,
+				40B0A09718FCFC32009D5A0D /* SQRiskCursor.m */,
+			);
+			path = slider;
 			sourceTree = "<group>";
 		};
 		40BFAE9118EF003E001C6767 /* Model */ = {
@@ -553,6 +589,7 @@
 				4040C6DB18E3078C00163066 /* DFRegisterController.m in Sources */,
 				4040C6E718E3078C00163066 /* EGOImageView.m in Sources */,
 				4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */,
+				40B0A09318FCFC1F009D5A0D /* NSString+SQ.m in Sources */,
 				4040C69318E3050300163066 /* DFAppDelegate.m in Sources */,
 				4030EA9718EDA98B00EDE552 /* DFUserCenterController.m in Sources */,
 				4040C6E818E3078C00163066 /* RateView.m in Sources */,
@@ -567,11 +604,14 @@
 				4040C6E218E3078C00163066 /* ViewPager.m in Sources */,
 				4043548A18F82F7B003F6542 /* DFShop.m in Sources */,
 				4040C6DE18E3078C00163066 /* DFBarListController.m in Sources */,
+				40B0A09418FCFC1F009D5A0D /* UIColor+SQ.m in Sources */,
 				40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */,
 				40B3E27A18F4471500472C1F /* DFOderDealController.m in Sources */,
 				4040C6E318E3078C00163066 /* EGOCache.m in Sources */,
+				40214E7219011AFA000BB4D2 /* DFCommentListController.m in Sources */,
 				4040C6DD18E3078C00163066 /* DFShopDetailController.m in Sources */,
 				40AC793E18F034B0004B63C3 /* DFQualificationController.m in Sources */,
+				40B0A09818FCFC32009D5A0D /* SQRiskCursor.m in Sources */,
 				4040C6E518E3078C00163066 /* EGOImageLoadConnection.m in Sources */,
 				4040C68F18E3050300163066 /* main.m in Sources */,
 				40BFAE8918EEE3FC001C6767 /* DFPSOrderListController.m in Sources */,

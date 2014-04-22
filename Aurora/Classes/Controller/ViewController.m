@@ -22,16 +22,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_trans_bg.png"] forBarMetrics:UIBarMetricsDefault];
-    
     NSArray* images = [NSArray arrayWithObjects:[UIImage imageNamed:@"image1.jpg"], [UIImage imageNamed:@"image2.jpg"], [UIImage imageNamed:@"image3.jpg"], nil];
     
     NSMutableArray* views = [NSMutableArray arrayWithCapacity:3];
-
-    EGOImageView* imageView = [[EGOImageView alloc] initWithPlaceholderImage:[UIImage imageNamed:@"image1.jpg"]];
-    imageView.imageURL = [NSURL URLWithString:@"http://s1.it.itc.cn/a/data/attachment/forum/201307/07/164242l780ypt0h3l83w0w.png"];
-    
-    [views addObject:imageView];
     
     for (int i=0; i<images.count; i++) {
         [views addObject:[[UIImageView alloc] initWithImage:images[i]]];

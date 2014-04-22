@@ -1,18 +1,18 @@
 //
-//  DFQualificationController.m
+//  DFCommentListController.m
 //  Aurora
 //
-//  Created by David on 14-4-5.
+//  Created by David on 14-4-18.
 //  Copyright (c) 2014年 david. All rights reserved.
 //
 
-#import "DFQualificationController.h"
+#import "DFCommentListController.h"
 
-@interface DFQualificationController ()
+@interface DFCommentListController ()
 
 @end
 
-@implementation DFQualificationController
+@implementation DFCommentListController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -40,7 +40,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -56,7 +55,6 @@
     // Return the number of rows in the section.
     return 0;
 }
-*/
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -118,12 +116,7 @@
 }
 */
 
-- (IBAction)cancelPressed:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
-- (IBAction)okPressed:(UIBarButtonItem *)sender {
+- (IBAction)backPressed:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

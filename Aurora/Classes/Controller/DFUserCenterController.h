@@ -10,4 +10,5 @@
 
 @interface DFUserCenterController : UITableViewController<UITableViewDelegate>
 
+- (IBAction)logoutPressed:(UIBarButtonItem *)sender;
 @end

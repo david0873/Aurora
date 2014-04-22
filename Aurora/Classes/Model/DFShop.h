@@ -13,7 +13,7 @@
 #define kShopWorkTimeKey            @"workTime"
 #define kShopAddressKey             @"address"
 #define kShopAvgConsumeKey          @"avgConsume"
-#define kShopTelkey                 @"tel"
+#define kShopHiDegreekey            @"hiDegree"
 #define kShopDescKey                @"desc"
 
 @interface DFShop : NSObject<NSCoding, NSCopying>
@@ -23,7 +23,8 @@
 @property (nonatomic, copy) NSString * workTime;
 @property (nonatomic, copy) NSString * address;
 @property (nonatomic, copy) NSString * avgConsume;
-@property (nonatomic, copy) NSString * tel;
 @property (nonatomic, copy) NSString * desc;
+@property int hiDegree;
+
 
 @end

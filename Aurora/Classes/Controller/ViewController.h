@@ -13,4 +13,5 @@
 {
     ViewPager* _vp;
 }
+//@property (strong, nonatomic) IBOutlet ViewPager *viewPager;
 @end

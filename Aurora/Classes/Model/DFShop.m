@@ -16,8 +16,8 @@
     [copy setShopName:[self.shopName copyWithZone:zone]];
     [copy setWorkTime:[self.workTime copyWithZone:zone]];
     [copy setAddress:[self.address copyWithZone:zone]];
-    [copy setTel:[self.tel copyWithZone:zone]];
     [copy setDesc:[self.desc copyWithZone:zone]];
+    copy.hiDegree = self.hiDegree;
     return copy;
 }
 
@@ -26,8 +26,8 @@
     [aCoder encodeObject:self.shopName forKey:kShopShopNameKey];
     [aCoder encodeObject:self.workTime forKey:kShopWorkTimeKey];
     [aCoder encodeObject:self.address forKey:kShopAddressKey];
-    [aCoder encodeObject:self.tel forKey:kShopTelkey];
     [aCoder encodeObject:self.desc forKey:kShopDescKey];
+    [aCoder encodeInt:self.hiDegree forKey:kShopHiDegreekey];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
@@ -36,8 +36,8 @@
         _shopImage = [aDecoder decodeObjectForKey:kShopShopImageKey];
         _workTime = [aDecoder decodeObjectForKey:kShopWorkTimeKey];
         _address = [aDecoder decodeObjectForKey:kShopAddressKey];
-        _tel = [aDecoder decodeObjectForKey:kShopTelkey];
         _desc = [aDecoder decodeObjectForKey:kShopDescKey];
+        _hiDegree = [aDecoder decodeIntForKey:kShopHiDegreekey];
     }
     return self;
 }
