@@ -29,7 +29,7 @@
 {
     // Drawing code
     _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, 320, 230)];
-    _scrollView.backgroundColor = UIColor.whiteColor;
+    _scrollView.backgroundColor = [UIColor whiteColor];
     _scrollView.userInteractionEnabled = YES;
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.showsVerticalScrollIndicator = NO;

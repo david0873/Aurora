@@ -353,11 +353,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5d-xi-P2F" customClass="ViewPager">
-                                <rect key="frame" x="0.0" y="65" width="320" height="230"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="营业时间：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCm-yK-Zcv">
                                 <rect key="frame" x="20" y="304" width="85" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -423,7 +418,6 @@
                         <outlet property="labelAddress" destination="KIf-fA-GQs" id="44u-Yd-jSm"/>
                         <outlet property="labelAvgConsume" destination="vhL-t6-qFS" id="7Cr-Ki-CSE"/>
                         <outlet property="labelWorkTime" destination="lFS-qU-bea" id="Q73-wO-ZAV"/>
-                        <outlet property="viewPager" destination="e5d-xi-P2F" id="WBd-16-f9p"/>
                         <segue destination="evV-IE-Two" kind="modal" identifier="segueReserve" id="1e2-iA-kLB"/>
                         <segue destination="kzx-3d-d6g" kind="modal" identifier="segueComment" id="Cuo-Gk-IMx"/>
                         <segue destination="HY7-CH-uxQ" kind="modal" identifier="segueLogin" id="FI0-V8-Ll8"/>
