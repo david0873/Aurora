@@ -12,8 +12,10 @@
 
 - (id)copyWithZone:(NSZone *)zone{
     DFShop * copy = [[DFShop allocWithZone:zone]init];
-    [copy setShopImage:[self.shopImage copyWithZone:zone]];
+//    [copy setShopImage:[self.shopImage copyWithZone:zone]];
+    [copy setShopId:[self.shopId copyWithZone:zone]];
     [copy setShopName:[self.shopName copyWithZone:zone]];
+    [copy setShopType:[self.shopType copyWithZone:zone]];
     [copy setWorkTime:[self.workTime copyWithZone:zone]];
     [copy setAddress:[self.address copyWithZone:zone]];
     [copy setDesc:[self.desc copyWithZone:zone]];
@@ -22,8 +24,10 @@
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder{
-    [aCoder encodeObject:self.shopImage forKey:kShopShopImageKey];
+ //   [aCoder encodeObject:self.shopImage forKey:kShopShopImageKey];
+    [aCoder encodeObject:self.shopId forKey:kShopShopIdKey];
     [aCoder encodeObject:self.shopName forKey:kShopShopNameKey];
+    [aCoder encodeObject:self.shopType forKey:kShopTypeKey];
     [aCoder encodeObject:self.workTime forKey:kShopWorkTimeKey];
     [aCoder encodeObject:self.address forKey:kShopAddressKey];
     [aCoder encodeObject:self.desc forKey:kShopDescKey];
@@ -32,8 +36,10 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super init]) {
+        _shopId = [aDecoder decodeObjectForKey:kShopShopIdKey];
         _shopName = [aDecoder decodeObjectForKey:kShopShopNameKey];
-        _shopImage = [aDecoder decodeObjectForKey:kShopShopImageKey];
+        _shopType = [aDecoder decodeObjectForKey:kShopTypeKey];
+ //       _shopImage = [aDecoder decodeObjectForKey:kShopShopImageKey];
         _workTime = [aDecoder decodeObjectForKey:kShopWorkTimeKey];
         _address = [aDecoder decodeObjectForKey:kShopAddressKey];
         _desc = [aDecoder decodeObjectForKey:kShopDescKey];

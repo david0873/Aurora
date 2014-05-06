@@ -21,6 +21,11 @@
 #define kUserOrderRemarksKey            @"Remarks"
 #define kUserOrderAdditonKey            @"Addition"
 
+#define kUserOrderShopIdKey             @"ShopId"
+#define kUserOrderDepositKey            @"Deposit"
+#define kUserOrderMiniChargeKey         @"MiniCharge"
+#define kUserOrderPayedKey              @"Payed"
+
 #define OrderSuccess    1;
 #define OrderFail       -1;
 #define OrderInDeal     0;
