@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-#define kShopShopIdKey                  @"shopId"
-#define kShopShopNameKey            @"shopName"
-#define kShopTypeKey                @"shopType"
-//#define kShopShopImageKey           @"shopImage"
-#define kShopWorkTimeKey            @"workTime"
-#define kShopAddressKey             @"address"
-#define kShopAvgConsumeKey          @"avgConsume"
-#define kShopHiDegreekey            @"hiDegree"
-#define kShopDescKey                @"desc"
+#define kShopShopIdKey                  @"ShopId"
+#define kShopShopNameKey            @"ShopName"
+#define kShopTypeKey                @"ShopType"
+//#define kShopShopImageKey           @"ShopImage"
+#define kShopWorkTimeKey            @"WorkTime"
+#define kShopAddressKey             @"Address"
+#define kShopAvgConsumeKey          @"AvgConsume"
+#define kShopHiDegreekey            @"HiDegree"
+#define kShopDescKey                @"Desc"
 
 @interface DFShop : NSObject<NSCoding, NSCopying>
 
