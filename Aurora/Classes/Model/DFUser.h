@@ -12,10 +12,16 @@
 #define kUserNibNameKey         @"NibName"
 #define kUserPasswordKey        @"Password"
 
+#define kUserUserIdKey              @"UserId"
+#define kUserShopIdsKey             @"ShopIds"
+
 @interface DFUser : NSObject<NSCopying, NSCoding>
 
 @property (nonatomic, copy) NSString * userName;
 @property (nonatomic, copy) NSString * nibName;
 @property (nonatomic, copy) NSString * password;
+
+@property (nonatomic, copy) NSString * userId;
+@property (nonatomic, copy) NSString * shopIds;
 
 @end

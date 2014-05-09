@@ -15,6 +15,8 @@
     [copy setUserName:[self.userName copyWithZone:zone]];
     [copy setNibName:[self.nibName copyWithZone:zone]];
     [copy setPassword:[self.password copyWithZone:zone]];
+    [copy setUserId:[self.userId copyWithZone:zone]];
+    [copy setShopIds:[self.shopIds copyWithZone:zone]];
     return copy;
 }
 
@@ -22,6 +24,8 @@
     [aCoder encodeObject:self.userName forKey:kUserUserNameKey];
     [aCoder encodeObject:self.nibName forKey:kUserNibNameKey];
     [aCoder encodeObject:self.password forKey:kUserPasswordKey];
+    [aCoder encodeObject:self.userId forKey:kUserUserIdKey];
+    [aCoder encodeObject:self.shopIds forKey:kUserShopIdsKey];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
@@ -29,6 +33,8 @@
         _userName = [aDecoder decodeObjectForKey:kUserUserNameKey];
         _nibName = [aDecoder decodeObjectForKey:kUserNibNameKey];
         _password = [aDecoder decodeObjectForKey:kUserPasswordKey];
+        _userId = [aDecoder decodeObjectForKey:kUserUserIdKey];
+        _shopIds = [aDecoder decodeObjectForKey:kUserShopIdsKey];
     }
     return self;
 }

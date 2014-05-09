@@ -21,9 +21,17 @@
 #define kUserOrderRemarksKey            @"Remarks"
 #define kUserOrderAdditonKey            @"Addition"
 
+#define kUserOrderShopIdKey             @"ShopId"
+#define kUserOrderDepositKey            @"Deposit"
+#define kUserOrderMiniChargeKey         @"MiniCharge"
+#define kUserOrderPayedKey              @"Payed"
+
 #define OrderSuccess    1;
 #define OrderFail       -1;
 #define OrderInDeal     0;
+
+#define OrderPayed      1;
+#define OrderNotPayed   0;
 
 @interface DFUserOrder : NSObject<NSCopying, NSCoding>
 
@@ -38,6 +46,10 @@
 @property (nonatomic, copy) NSDate * endTime;
 @property (nonatomic, copy) NSString * remarks;
 @property (nonatomic, copy) NSString * addition;
+@property (nonatomic, copy) NSString * shopId;
+@property int deposit;
+@property int miniCharge;
+@property int payed;
 
 //出价，选择非手动输入
 @property (nonatomic, copy) NSString * price;
