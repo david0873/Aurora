@@ -32,5 +32,7 @@
 //@property (nonatomic, copy) NSString * desc;
 @property int hiDegree;
 
+- (instancetype)initWithAttributes:(NSDictionary *)attributes;
+
 
 @end

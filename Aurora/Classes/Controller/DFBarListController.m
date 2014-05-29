@@ -44,12 +44,13 @@
         NSLog(@"JSON: %@", responseObject);
         NSLog(@"JSON: %@", [responseObject objectAtIndex:0]);
         
-        _shops = [NSMutableArray arrayWithCapacity:[responseObject count]];
+        self.shops = [NSMutableArray arrayWithCapacity:[responseObject count]];
         for (NSDictionary *attributes in responseObject) {
             DFShop *shop = [[DFShop alloc] initWithAttributes:attributes];
             shop.shopImage = sampleBarImage;
-            [_shops addObject:shop];
+            [self.shops addObject:shop];
         }
+        
         [_tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);

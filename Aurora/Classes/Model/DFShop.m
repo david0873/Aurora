@@ -10,7 +10,7 @@
 
 @implementation DFShop
 
-- (instancetype)initWithAttributes:(NSDictionary *)attributes {
+- (id)initWithAttributes:(NSDictionary *)attributes {
     self = [super init];
     if (!self) {
         return nil;
