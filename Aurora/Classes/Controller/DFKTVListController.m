@@ -39,18 +39,18 @@
     
     NSString * sampleKTVImage = @"http://pic24.nipic.com/20120921/6647776_183526363113_2.jpg";
     
-    for (int i=0 ; i<5; i++) {
-        DFShop * shop = [DFShop alloc];
-        shop.shopImage = sampleKTVImage;
-        shop.shopName = [NSString stringWithFormat:@"KTV%d",i+1];
-        shop.desc = @"商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息";
-        shop.avgConsume = @"500";
-        shop.address = @"上海市**区**路**号";
-        shop.avgConsume = @"500元";
-        shop.workTime = @"17:00-05:00";
-        shop.hiDegree = 9;
-        [_shops addObject:shop];
-    }
+//    for (int i=0 ; i<5; i++) {
+//        DFShop * shop = [DFShop alloc];
+//        shop.shopImage = sampleKTVImage;
+//        shop.shopName = [NSString stringWithFormat:@"KTV%d",i+1];
+//        shop.desc = @"商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息";
+//        shop.avgConsume = @"500";
+//        shop.address = @"上海市**区**路**号";
+//        shop.avgConsume = @"500元";
+//        shop.workTime = @"17:00-05:00";
+//        shop.hiDegree = 9;
+//        [_shops addObject:shop];
+//    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -117,9 +117,9 @@
     [hiDegree setValue:shop.hiDegree];
     hiDegree.enabled = false;
     
-    UITextView* shopDesc = (UITextView *) [cell viewWithTag:4];
-    shopDesc.contentInset = UIEdgeInsetsMake(1.0f, 1.0f, 1.0f, 1.0f);
-    shopDesc.text = shop.desc;
+//    UITextView* shopDesc = (UITextView *) [cell viewWithTag:4];
+//    shopDesc.contentInset = UIEdgeInsetsMake(1.0f, 1.0f, 1.0f, 1.0f);
+//    shopDesc.text = shop.desc;
     
     return cell;
 }

@@ -12,6 +12,8 @@
 #import "RateView.h"
 #import "DFShop.h"
 #import "SQRiskCursor.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "JSONKit.h"
 
 @interface DFBarListController ()
 @property (strong, nonatomic) NSMutableArray *shops;
@@ -35,22 +37,36 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
-    _shops = [[NSMutableArray alloc]initWithCapacity:5];
-    
     NSString * sampleBarImage = @"http://pic15.nipic.com/20110717/5713677_093454493000_2.jpg";
     
-    for (int i=0 ; i<5; i++) {
-        DFShop * shop = [DFShop alloc];
-        shop.shopImage = sampleBarImage;
-        shop.shopName = [NSString stringWithFormat:@"酒吧%d",i+1];
-        shop.desc = @"商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息";
-        shop.avgConsume = @"500";
-        shop.address = @"上海市**区**路**号";
-        shop.avgConsume = @"500元";
-        shop.workTime = @"17:00-05:00";
-        shop.hiDegree = 9;
-        [_shops addObject:shop];
-    }
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://54.186.41.213:9000/shop/list" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        NSLog(@"JSON: %@", [responseObject objectAtIndex:0]);
+        
+        _shops = [NSMutableArray arrayWithCapacity:[responseObject count]];
+        for (NSDictionary *attributes in responseObject) {
+            DFShop *shop = [[DFShop alloc] initWithAttributes:attributes];
+            shop.shopImage = sampleBarImage;
+            [_shops addObject:shop];
+        }
+        [_tableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+//    for (int i=0 ; i<5; i++) {
+//        DFShop * shop = [DFShop alloc];
+//        shop.shopImage = sampleBarImage;
+//        shop.shopName = [NSString stringWithFormat:@"酒吧%d",i+1];
+//        shop.desc = @"商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息商户的简要描述信息";
+//        shop.avgConsume = @"500";
+//        shop.address = @"上海市**区**路**号";
+//        shop.avgConsume = @"500元";
+//        shop.workTime = @"17:00-05:00";
+//        shop.hiDegree = 9;
+//        [_shops addObject:shop];
+//    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -111,9 +127,9 @@
     [hiDegree setValue:shop.hiDegree];
     hiDegree.enabled = false;
     
-    UITextView* shopDesc = (UITextView *) [cell viewWithTag:4];
-    shopDesc.contentInset = UIEdgeInsetsMake(1.0f, 1.0f, 1.0f, 1.0f);
-    shopDesc.text = shop.desc;
+//    UITextView* shopDesc = (UITextView *) [cell viewWithTag:4];
+//    shopDesc.contentInset = UIEdgeInsetsMake(1.0f, 1.0f, 1.0f, 1.0f);
+//    shopDesc.text = shop.desc;
     
     return cell;
 }

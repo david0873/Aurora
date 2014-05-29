@@ -62,13 +62,16 @@
 		4040C71018E307D500163066 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4040C70E18E307D500163066 /* MainStoryboard_iPhone.storyboard */; };
 		4043548A18F82F7B003F6542 /* DFShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4043548918F82F7B003F6542 /* DFShop.m */; };
 		40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40483D7218EC61BD0040116A /* DFRootTabBarController.m */; };
-		40A02ADB1925081E002D62BE /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A02ADA1925081E002D62BE /* JSONKit.m */; };
 		40AC793E18F034B0004B63C3 /* DFQualificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AC793D18F034B0004B63C3 /* DFQualificationController.m */; };
 		40B0A09318FCFC1F009D5A0D /* NSString+SQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0A09018FCFC1F009D5A0D /* NSString+SQ.m */; };
 		40B0A09418FCFC1F009D5A0D /* UIColor+SQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0A09218FCFC1F009D5A0D /* UIColor+SQ.m */; };
 		40B0A09818FCFC32009D5A0D /* SQRiskCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0A09718FCFC32009D5A0D /* SQRiskCursor.m */; };
 		40B3E27718F43CB300472C1F /* DFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3E27618F43CB300472C1F /* DFUser.m */; };
 		40B3E27A18F4471500472C1F /* DFOderDealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3E27918F4471500472C1F /* DFOderDealController.m */; };
+		40B44EAC19339B7C00F04533 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B44EAB19339B7C00F04533 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		40B44EAE19339C7A00F04533 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44EAD19339C7A00F04533 /* CFNetwork.framework */; };
+		40B44EB019339C8700F04533 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44EAF19339C8700F04533 /* libz.dylib */; };
+		40B44EB219339C9400F04533 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44EB119339C9400F04533 /* libxml2.2.dylib */; };
 		40BFAE8918EEE3FC001C6767 /* DFPSOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE8818EEE3FC001C6767 /* DFPSOrderListController.m */; };
 		40BFAE8C18EEE419001C6767 /* DFMGOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE8B18EEE419001C6767 /* DFMGOrderListController.m */; };
 		40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE9318EF0062001C6767 /* DFUserOrder.m */; };
@@ -169,8 +172,6 @@
 		4043548918F82F7B003F6542 /* DFShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFShop.m; sourceTree = "<group>"; };
 		40483D7118EC61BD0040116A /* DFRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRootTabBarController.h; sourceTree = "<group>"; };
 		40483D7218EC61BD0040116A /* DFRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRootTabBarController.m; sourceTree = "<group>"; };
-		40A02AD91925081E002D62BE /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		40A02ADA1925081E002D62BE /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		40AC793C18F034B0004B63C3 /* DFQualificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFQualificationController.h; sourceTree = "<group>"; };
 		40AC793D18F034B0004B63C3 /* DFQualificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFQualificationController.m; sourceTree = "<group>"; };
 		40B0A08F18FCFC1F009D5A0D /* NSString+SQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SQ.h"; sourceTree = "<group>"; };
@@ -183,6 +184,11 @@
 		40B3E27618F43CB300472C1F /* DFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUser.m; sourceTree = "<group>"; };
 		40B3E27818F4471500472C1F /* DFOderDealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFOderDealController.h; sourceTree = "<group>"; };
 		40B3E27918F4471500472C1F /* DFOderDealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFOderDealController.m; sourceTree = "<group>"; };
+		40B44EAA19339B7C00F04533 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		40B44EAB19339B7C00F04533 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		40B44EAD19339C7A00F04533 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		40B44EAF19339C8700F04533 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		40B44EB119339C9400F04533 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		40BFAE8718EEE3FC001C6767 /* DFPSOrderListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPSOrderListController.h; sourceTree = "<group>"; };
 		40BFAE8818EEE3FC001C6767 /* DFPSOrderListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPSOrderListController.m; sourceTree = "<group>"; };
 		40BFAE8A18EEE419001C6767 /* DFMGOrderListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFMGOrderListController.h; sourceTree = "<group>"; };
@@ -201,6 +207,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B44EB219339C9400F04533 /* libxml2.2.dylib in Frameworks */,
+				40B44EB019339C8700F04533 /* libz.dylib in Frameworks */,
+				40B44EAE19339C7A00F04533 /* CFNetwork.framework in Frameworks */,
 				4040C68518E3050300163066 /* CoreGraphics.framework in Frameworks */,
 				4040C68718E3050300163066 /* UIKit.framework in Frameworks */,
 				4040C68318E3050300163066 /* Foundation.framework in Frameworks */,
@@ -255,6 +264,9 @@
 		4040C68118E3050300163066 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40B44EB119339C9400F04533 /* libxml2.2.dylib */,
+				40B44EAF19339C8700F04533 /* libz.dylib */,
+				40B44EAD19339C7A00F04533 /* CFNetwork.framework */,
 				4040C68218E3050300163066 /* Foundation.framework */,
 				4040C68418E3050300163066 /* CoreGraphics.framework */,
 				4040C68618E3050300163066 /* UIKit.framework */,
@@ -312,7 +324,7 @@
 		4040C6B718E3078C00163066 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				40A02AD81925081E002D62BE /* JSONKit */,
+				40B44EA919339B7C00F04533 /* JSONKit */,
 				40214E6F1900F32E000BB4D2 /* ViewPager */,
 				40B0A09518FCFC32009D5A0D /* slider */,
 				40B0A08F18FCFC1F009D5A0D /* NSString+SQ.h */,
@@ -454,15 +466,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		40A02AD81925081E002D62BE /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				40A02AD91925081E002D62BE /* JSONKit.h */,
-				40A02ADA1925081E002D62BE /* JSONKit.m */,
-			);
-			path = JSONKit;
-			sourceTree = "<group>";
-		};
 		40B0A09518FCFC32009D5A0D /* slider */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +473,15 @@
 				40B0A09718FCFC32009D5A0D /* SQRiskCursor.m */,
 			);
 			path = slider;
+			sourceTree = "<group>";
+		};
+		40B44EA919339B7C00F04533 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				40B44EAA19339B7C00F04533 /* JSONKit.h */,
+				40B44EAB19339B7C00F04533 /* JSONKit.m */,
+			);
+			path = JSONKit;
 			sourceTree = "<group>";
 		};
 		40BFAE9118EF003E001C6767 /* Model */ = {
@@ -658,7 +670,7 @@
 				4040C6E218E3078C00163066 /* ViewPager.m in Sources */,
 				4043548A18F82F7B003F6542 /* DFShop.m in Sources */,
 				4040C6DE18E3078C00163066 /* DFBarListController.m in Sources */,
-				40A02ADB1925081E002D62BE /* JSONKit.m in Sources */,
+				40B44EAC19339B7C00F04533 /* JSONKit.m in Sources */,
 				40B0A09418FCFC1F009D5A0D /* UIColor+SQ.m in Sources */,
 				40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */,
 				40B3E27A18F4471500472C1F /* DFOderDealController.m in Sources */,
