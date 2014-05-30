@@ -31,24 +31,30 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    EGOImageView *imagview = [[[EGOImageView alloc]initWithFrame:CGRectMake(0, 65, 320, 230)] autorelease];
+    imagview.imageURL = [NSURL URLWithString: _shop.shopImage];
+    [self.view addSubview:imagview];
+    
     UITextView *textView1 = [[[UITextView alloc] init] autorelease];
+    textView1.font = [UIFont systemFontOfSize:16];
     textView1.editable = false;
-    textView1.text = @"促销活动";
+    textView1.text = @"购买早午餐菜单中任意两份特色早午餐, 汉堡或意面, 即可获赠小蓝蛙菜单中主菜及软饮一份. \n蓝蛙正大广场店开业慈善派对\n2014年4月18日\n下午6点半至闭店\n";
     
     UITextView *textView2 = [[[UITextView alloc] init] autorelease];
     textView2.font = [UIFont systemFontOfSize:16];
     textView2.editable = false;
-    textView2.text = @"购买早午餐菜单中任意两份特色早午餐, 汉堡或意面, 即可获赠小蓝蛙菜单中主菜及软饮一份. \n蓝蛙正大广场店开业慈善派对\n2014年4月18日\n下午6点半至闭店\n购买早午餐菜单中任意两份特色早午餐, 汉堡或意面, 即可获赠小蓝蛙菜单中主菜及软饮一份. \n蓝蛙正大广场店开业慈善派对\n2014年4月18日\n下午6点半至闭店";
+    textView2.text = @"购买早午餐菜单中任意两份特色早午餐, 汉堡或意面, 即可获赠小蓝蛙菜单中主菜及软饮一份. \n蓝蛙正大广场店开业慈善派对\n2014年4月18日\n下午6点半至闭店";
 
     NSArray * views = [NSArray arrayWithObjects:textView1, textView2, nil];
     
     viewPager = [[ViewPager alloc]initWithFrame:CGRectMake(0, 65, 320, 230) andViews:views];
     viewPager.delegate = self;
+    viewPager.alpha = 0.5;
     [self.view addSubview:viewPager];
    
     
     _labelWorkTime.text = [NSString stringWithFormat:@"%@-%@",_shop.workStartTime, _shop.workEndTime];
-    _labelAvgConsume.text = _shop.avgConsume;
+    _labelAvgConsume.text = [NSString stringWithFormat:@"%@ 元",_shop.avgConsume];
     _labelAddress.text = _shop.address;
 }
 
