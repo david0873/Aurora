@@ -1,5 +1,3 @@
-//
-//  DFUserOrder.m
 //  Aurora
 //
 //  Created by David on 14-4-4.
@@ -33,12 +31,12 @@
 - (void)encodeWithCoder:(NSCoder *)aCoder{
     [aCoder encodeInt:self.number forKey:kUserOrderNumberKey];
     [aCoder encodeInt:self.identification forKey:kUserOrderIdentificationKey];
+    
     [aCoder encodeInt:self.orderStatus forKey:kUserOrderOrderStatusKey];
     [aCoder encodeObject:self.seatType forKey:kUserOrderSeatTypeKey];
     [aCoder encodeObject:self.user forKey:KUserOrderUserKey];
     [aCoder encodeObject:self.orderId forKey:kUserOrderOrderIdKey];
-    [aCoder encodeObject:self.shopName forKey:kUserOrderShopNameKey];
-    [aCoder encodeObject:self.startTime forKey:kUserOrderStartTimeKey];
+    
     [aCoder encodeObject:self.endTime forKey:kUserOrderEndTimeKey];
     [aCoder encodeObject:self.remarks forKey:kUserOrderRemarksKey];
     [aCoder encodeObject:self.addition forKey:kUserOrderAdditonKey];
@@ -53,12 +51,12 @@
     if (self = [super init]) {
         _number = [aDecoder decodeIntForKey:kUserOrderNumberKey];
         _identification = [aDecoder decodeIntForKey:kUserOrderIdentificationKey];
+        
         _orderStatus = [aDecoder decodeIntForKey:kUserOrderOrderStatusKey];
         _seatType = [aDecoder decodeObjectForKey:kUserOrderSeatTypeKey];
         _user = [aDecoder decodeObjectForKey:KUserOrderUserKey];
         _orderId = [aDecoder decodeObjectForKey:kUserOrderOrderIdKey];
-        _shopName = [aDecoder decodeObjectForKey:kUserOrderShopNameKey];
-        _startTime = [aDecoder decodeObjectForKey:kUserOrderStartTimeKey];
+        
         _endTime = [aDecoder decodeObjectForKey:kUserOrderEndTimeKey];
         _remarks = [aDecoder decodeObjectForKey:kUserOrderRemarksKey];
         _addition = [aDecoder decodeObjectForKey:kUserOrderAdditonKey];
@@ -71,5 +69,3 @@
 }
 
 @end
-
-

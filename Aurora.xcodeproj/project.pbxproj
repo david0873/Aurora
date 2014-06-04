@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		40214E7219011AFA000BB4D2 /* DFCommentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40214E7119011AFA000BB4D2 /* DFCommentListController.m */; };
+		4027E31A193F542B00FDF898 /* DFComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E317193F542B00FDF898 /* DFComment.m */; };
+		4027E31B193F542B00FDF898 /* DFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E319193F542B00FDF898 /* DFMessage.m */; };
 		4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9318EDA48700EDE552 /* DFGlobalVar.m */; };
 		4030EA9718EDA98B00EDE552 /* DFUserCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9618EDA98B00EDE552 /* DFUserCenterController.m */; };
 		4030EA9A18EDA9A500EDE552 /* DFPersonalCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9918EDA9A500EDE552 /* DFPersonalCenterController.m */; };
@@ -94,6 +96,10 @@
 		3ED3508BBB614205A634CF2E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		40214E7019011AFA000BB4D2 /* DFCommentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFCommentListController.h; sourceTree = "<group>"; };
 		40214E7119011AFA000BB4D2 /* DFCommentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFCommentListController.m; sourceTree = "<group>"; };
+		4027E316193F542B00FDF898 /* DFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFComment.h; sourceTree = "<group>"; };
+		4027E317193F542B00FDF898 /* DFComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFComment.m; sourceTree = "<group>"; };
+		4027E318193F542B00FDF898 /* DFMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFMessage.h; sourceTree = "<group>"; };
+		4027E319193F542B00FDF898 /* DFMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFMessage.m; sourceTree = "<group>"; };
 		4030EA9218EDA48700EDE552 /* DFGlobalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFGlobalVar.h; sourceTree = "<group>"; };
 		4030EA9318EDA48700EDE552 /* DFGlobalVar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFGlobalVar.m; sourceTree = "<group>"; };
 		4030EA9518EDA98B00EDE552 /* DFUserCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUserCenterController.h; sourceTree = "<group>"; };
@@ -487,6 +493,10 @@
 		40BFAE9118EF003E001C6767 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4027E316193F542B00FDF898 /* DFComment.h */,
+				4027E317193F542B00FDF898 /* DFComment.m */,
+				4027E318193F542B00FDF898 /* DFMessage.h */,
+				4027E319193F542B00FDF898 /* DFMessage.m */,
 				40BFAE9218EF0062001C6767 /* DFUserOrder.h */,
 				40BFAE9318EF0062001C6767 /* DFUserOrder.m */,
 				40B3E27518F43CB300472C1F /* DFUser.h */,
@@ -663,9 +673,11 @@
 				4030EA9A18EDA9A500EDE552 /* DFPersonalCenterController.m in Sources */,
 				40D2DB6518FBAFEC000DA952 /* DFKTVListController.m in Sources */,
 				4040C6E118E3078C00163066 /* ViewController.m in Sources */,
+				4027E31B193F542B00FDF898 /* DFMessage.m in Sources */,
 				4040C6E418E3078C00163066 /* EGOImageButton.m in Sources */,
 				4040C6DF18E3078C00163066 /* DFLoginController.m in Sources */,
 				40BFAE8C18EEE419001C6767 /* DFMGOrderListController.m in Sources */,
+				4027E31A193F542B00FDF898 /* DFComment.m in Sources */,
 				40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */,
 				4040C6E218E3078C00163066 /* ViewPager.m in Sources */,
 				4043548A18F82F7B003F6542 /* DFShop.m in Sources */,
