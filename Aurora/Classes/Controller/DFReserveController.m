@@ -10,6 +10,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "DFUserOrder.h"
 #import "DFGlobalVar.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "JSONKit.h"
 
 @interface DFReserveController ()
 @end
@@ -119,18 +121,18 @@
 }
 
 - (IBAction)reserveBtnPressed:(UIButton *)sender {
-    NSArray* myPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString* myDocPath = [myPaths objectAtIndex:0];
-    NSString *path = [myDocPath stringByAppendingPathComponent:@"order.plist"];
+//    NSArray* myPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString* myDocPath = [myPaths objectAtIndex:0];
+//    NSString *path = [myDocPath stringByAppendingPathComponent:@"order.plist"];
     
-    NSMutableArray * array = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
-    
-    if (array == nil) {
-        array = [[[NSMutableArray alloc] init] autorelease];
-    }
+//    NSMutableArray * array = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
+//    
+//    if (array == nil) {
+//        array = [[[NSMutableArray alloc] init] autorelease];
+//    }
     
     DFUserOrder * order = [DFUserOrder alloc];
-    order.shopName = _shopName;
+    order.shopId= _shop.shopId;
     order.number = [_numTextField.text intValue];
     
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
@@ -148,12 +150,41 @@
     order.user = [DFGlobalVar sharedGlobalVar].user;
     order.orderStatus = OrderInDeal;
     
-    [array addObject:order];
+//    [array addObject:order];
     
-    [NSKeyedArchiver archiveRootObject:array toFile:path];
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"" message:@"预定已提交" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alert show];
+//    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+//    [parameters setObject:@"3" forKey:@"shop"];
+//    [parameters setObject:[NSString stringWithFormat:@"%d", order.number] forKey:@"person_number"];
+//    [parameters setObject:order.startTime forKey:@"start_time"];
+//    [parameters setObject:order.endTime forKey:@"end_time"];
+//    [parameters setObject:order.seatType forKey:@"seat_type"];
+    
+//    NSDictionary* params = @{@"shop":@"3", @"person_number":[NSString stringWithFormat:@"%d", order.number], @"start_time":order.startTime, @"end_time":order.endTime, @"seat_type":order.seatType};
+    
+    NSString * params = [order toJson];
+    
+    NSURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:@"http://54.186.41.213:9000/order/add" parameters:params error:nil];
+    
+    AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    op.responseSerializer = [AFJSONResponseSerializer serializer];
+    [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    [[NSOperationQueue mainQueue] addOperation:op];
+//    
+//    [manager POST:@"http://54.186.41.213:9000/order/add" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"JSON: %@", responseObject);
+//        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"" message:@"预定已提交" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+//        [alert show];
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"Error: %@", error);
+//    }];
+    
+//    [NSKeyedArchiver archiveRootObject:array toFile:path];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{

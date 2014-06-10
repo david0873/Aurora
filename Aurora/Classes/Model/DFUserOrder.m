@@ -5,6 +5,7 @@
 //
 
 #import "DFUserOrder.h"
+#import "JSONKit.h"
 
 @implementation DFUserOrder
 
@@ -16,7 +17,6 @@
     [copy setSeatType:[self.seatType copyWithZone:zone]];
     [copy setUser:[self.user copyWithZone:zone]];
     [copy setOrderId:[self.orderId copyWithZone:zone]];
-    [copy setShopName:[self.shopName copyWithZone:zone]];
     [copy setStartTime:[self.startTime copyWithZone:zone]];
     [copy setEndTime:[self.endTime copyWithZone:zone]];
     [copy setRemarks:[self.remarks copyWithZone:zone]];
@@ -51,12 +51,10 @@
     if (self = [super init]) {
         _number = [aDecoder decodeIntForKey:kUserOrderNumberKey];
         _identification = [aDecoder decodeIntForKey:kUserOrderIdentificationKey];
-        
         _orderStatus = [aDecoder decodeIntForKey:kUserOrderOrderStatusKey];
         _seatType = [aDecoder decodeObjectForKey:kUserOrderSeatTypeKey];
         _user = [aDecoder decodeObjectForKey:KUserOrderUserKey];
         _orderId = [aDecoder decodeObjectForKey:kUserOrderOrderIdKey];
-        
         _endTime = [aDecoder decodeObjectForKey:kUserOrderEndTimeKey];
         _remarks = [aDecoder decodeObjectForKey:kUserOrderRemarksKey];
         _addition = [aDecoder decodeObjectForKey:kUserOrderAdditonKey];
@@ -66,6 +64,24 @@
         _payed = [aDecoder decodeIntForKey:kUserOrderPayedKey];
     }
     return self;
+}
+
+- (NSString *)toJson{
+    NSDictionary* params = @{@"shop":_shopId, @"person_number":[NSString stringWithFormat:@"%d", _number], @"start_time":[self stringFromDate:_startTime], @"end_time":[self stringFromDate:_endTime], @"seat_type":_seatType};
+    NSString *string = [params JSONString];
+    return string;
+}
+
+- (NSString *)stringFromDate:(NSDate *)date{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    NSString *destDateString = [dateFormatter stringFromDate:date];
+    
+    return destDateString;
+    
 }
 
 @end

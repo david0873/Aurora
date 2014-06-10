@@ -77,7 +77,7 @@
             UINavigationController * destination = [segue destinationViewController];
             NSArray *viewControllers = destination.viewControllers;
             DFReserveController *reserveController = [viewControllers objectAtIndex:0];
-            reserveController.shopName = _shop.shopName;
+            reserveController.shop = _shop;
         }
     }
     

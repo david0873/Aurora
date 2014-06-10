@@ -41,7 +41,6 @@
 @property (nonatomic, copy) NSString * seatType;
 @property (nonatomic, retain) DFUser * user;
 @property (nonatomic, copy) NSString * orderId;
-@property (nonatomic, copy) NSString * shopName;
 @property (nonatomic, copy) NSDate * startTime;
 @property (nonatomic, copy) NSDate * endTime;
 @property (nonatomic, copy) NSString * remarks;
@@ -53,6 +52,8 @@
 
 //出价，选择非手动输入
 @property (nonatomic, copy) NSString * price;
+
+- (NSString *)toJson;
 
 
 @end

@@ -106,8 +106,8 @@ NSString *path;
     // Configure the cell...
     DFUserOrder * order = [self.psOders objectAtIndex:indexPath.row];
     
-    UILabel * shopName = (UILabel *)[cell viewWithTag:1];
-    shopName.text = order.shopName;
+//    UILabel * shopName = (UILabel *)[cell viewWithTag:1];
+//    shopName.text = order.shopName;
     
     UILabel * orderId = (UILabel *)[cell viewWithTag:2];
     orderId.text = order.orderId;

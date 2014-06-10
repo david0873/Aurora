@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DFShop.h"
 
 @interface DFReserveController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource, UIActionSheetDelegate, UITextViewDelegate, UIAlertViewDelegate>
 
-@property (copy, nonatomic) NSString * shopName;
+@property (copy, nonatomic) DFShop * shop;
 
 @property (retain, nonatomic) IBOutlet UITextField *numTextField;
 @property (retain, nonatomic) IBOutlet UITextField *timeBeginTextField;
