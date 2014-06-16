@@ -46,6 +46,7 @@
 @property (nonatomic, copy) NSString * remarks;
 @property (nonatomic, copy) NSString * addition;
 @property (nonatomic, copy) NSString * shopId;
+@property (nonatomic, copy) NSString * shopName;
 @property int deposit;
 @property int miniCharge;
 @property int payed;

@@ -108,7 +108,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="订座" id="6gf-Ly-sd1"/>
+                    <navigationItem key="navigationItem" title="订座" id="6gf-Ly-sd1">
+                        <barButtonItem key="rightBarButtonItem" title="取消" id="60V-Gu-z2h">
+                            <connections>
+                                <action selector="cancelPressed:" destination="xP1-cD-cXq" id="iiw-SL-uhZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="numTextField" destination="BqM-de-Kbg" id="FcA-pZ-4CF"/>
                         <outlet property="remarkText" destination="smz-rk-Ld4" id="Yad-7C-AdI"/>
@@ -187,6 +193,9 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="cTX-If-1XH" kind="push" id="aFt-aT-VGL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -203,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vak-nw-Dsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="195"/>
+            <point key="canvasLocation" x="591" y="195"/>
         </scene>
         <!--Chamber List Controller - 会所-->
         <scene sceneID="TYd-ot-Jgn">
@@ -253,6 +262,9 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="cTX-If-1XH" kind="push" id="lWU-oq-23v"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1975,6 +1987,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="PVa-u9-azj"/>
         <segue reference="FI0-V8-Ll8"/>
     </inferredMetricsTieBreakers>
 </document>

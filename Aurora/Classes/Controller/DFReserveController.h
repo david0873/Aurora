@@ -23,6 +23,7 @@
 @property (nonatomic,retain) UIPickerView *numPicker;
 
 - (IBAction)reserveBtnPressed:(UIButton *)sender;
+- (IBAction)cancelPressed:(UIBarButtonItem *)sender;
 - (void) numChanged;
 - (void) dateChanged:(id)sender;
 - (void) dateOKPressed;

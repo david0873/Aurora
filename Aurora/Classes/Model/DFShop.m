@@ -20,11 +20,10 @@
     self.shopName = [attributes valueForKeyPath:kShopShopNameKey];
     self.shopType = [attributes valueForKeyPath:kShopTypeKey];
 //    self.shopImage = [attributes valueForKeyPath:kShopShopImageKey];
-    self.workStartTime = [attributes valueForKeyPath:kShopWorkStartTimeKey];
-    self.workEndTime = [attributes valueForKeyPath:kShopWorkEndTimeKey];
+    self.workTime = [attributes valueForKeyPath:kShopWorkTimeKey];
     self.address = [attributes valueForKeyPath:kShopAddressKey];
     self.avgConsume = [attributes valueForKeyPath:kShopAvgConsumeKey];
-//    self.desc = [attributes valueForKeyPath:kShopDescKey];
+    self.desc = [attributes valueForKeyPath:kShopDescKey];
     self.hiDegree = (NSInteger)[[attributes valueForKeyPath:kShopHiDegreekey]integerValue];
     
     return self;
@@ -36,11 +35,10 @@
     [copy setShopId:[self.shopId copyWithZone:zone]];
     [copy setShopName:[self.shopName copyWithZone:zone]];
     [copy setShopType:[self.shopType copyWithZone:zone]];
-    [copy setWorkStartTime:[self.workStartTime copyWithZone:zone]];
-    [copy setWorkEndTime:[self.workEndTime copyWithZone:zone]];
+    [copy setWorkTime:[self.workTime copyWithZone:zone]];
     [copy setAddress:[self.address copyWithZone:zone]];
     [copy setAvgConsume:[self.avgConsume copyWithZone:zone]];
-//    [copy setDesc:[self.desc copyWithZone:zone]];
+    [copy setDesc:[self.desc copyWithZone:zone]];
     copy.hiDegree = self.hiDegree;
     return copy;
 }
@@ -50,11 +48,10 @@
     [aCoder encodeObject:self.shopId forKey:kShopShopIdKey];
     [aCoder encodeObject:self.shopName forKey:kShopShopNameKey];
     [aCoder encodeObject:self.shopType forKey:kShopTypeKey];
-    [aCoder encodeObject:self.workStartTime forKey:kShopWorkStartTimeKey];
-    [aCoder encodeObject:self.workEndTime forKey:kShopWorkEndTimeKey];
+    [aCoder encodeObject:self.workTime forKey:kShopWorkTimeKey];
     [aCoder encodeObject:self.address forKey:kShopAddressKey];
     [aCoder encodeObject:self.avgConsume forKey:kShopAvgConsumeKey];
-//    [aCoder encodeObject:self.desc forKey:kShopDescKey];
+    [aCoder encodeObject:self.desc forKey:kShopDescKey];
     [aCoder encodeInt:self.hiDegree forKey:kShopHiDegreekey];
 }
 
@@ -64,11 +61,10 @@
         self.shopName = [aDecoder decodeObjectForKey:kShopShopNameKey];
         self.shopType = [aDecoder decodeObjectForKey:kShopTypeKey];
         self.shopImage = [aDecoder decodeObjectForKey:kShopShopImageKey];
-        self.workStartTime = [aDecoder decodeObjectForKey:kShopWorkStartTimeKey];
-        self.workStartTime = [aDecoder decodeObjectForKey:kShopWorkEndTimeKey];
+        self.workTime = [aDecoder decodeObjectForKey:kShopWorkTimeKey];
         self.address = [aDecoder decodeObjectForKey:kShopAddressKey];
         self.avgConsume = [aDecoder decodeObjectForKey:kShopAvgConsumeKey];
-//        self.desc = [aDecoder decodeObjectForKey:kShopDescKey];
+        self.desc = [aDecoder decodeObjectForKey:kShopDescKey];
         self.hiDegree = [aDecoder decodeIntForKey:kShopHiDegreekey];
     }
     return self;

@@ -46,7 +46,6 @@
 		4040C6E518E3078C00163066 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6D218E3078C00163066 /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4040C6E618E3078C00163066 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6D418E3078C00163066 /* EGOImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4040C6E718E3078C00163066 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6D718E3078C00163066 /* EGOImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4040C6E818E3078C00163066 /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6DA18E3078C00163066 /* RateView.m */; };
 		4040C6FC18E3079800163066 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6EA18E3079700163066 /* blackArrow.png */; };
 		4040C6FD18E3079800163066 /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6EB18E3079700163066 /* blackArrow@2x.png */; };
 		4040C6FE18E3079800163066 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6EC18E3079700163066 /* blueArrow.png */; };
@@ -79,7 +78,6 @@
 		40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE9318EF0062001C6767 /* DFUserOrder.m */; };
 		40D2DB6518FBAFEC000DA952 /* DFKTVListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2DB6418FBAFEC000DA952 /* DFKTVListController.m */; };
 		40D2DB6818FBB024000DA952 /* DFChamberListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2DB6718FBB024000DA952 /* DFChamberListController.m */; };
-		BD161B7AE8ED4556B0A712CF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F9EEE0BB7A43A5930EA4D5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +91,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3ED3508BBB614205A634CF2E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		40214E7019011AFA000BB4D2 /* DFCommentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFCommentListController.h; sourceTree = "<group>"; };
 		40214E7119011AFA000BB4D2 /* DFCommentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFCommentListController.m; sourceTree = "<group>"; };
 		4027E316193F542B00FDF898 /* DFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFComment.h; sourceTree = "<group>"; };
@@ -157,8 +154,6 @@
 		4040C6D418E3078C00163066 /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoader.m; sourceTree = "<group>"; };
 		4040C6D618E3078C00163066 /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
 		4040C6D718E3078C00163066 /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
-		4040C6D918E3078C00163066 /* RateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateView.h; sourceTree = "<group>"; };
-		4040C6DA18E3078C00163066 /* RateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateView.m; sourceTree = "<group>"; };
 		4040C6EA18E3079700163066 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
 		4040C6EB18E3079700163066 /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
 		4040C6EC18E3079700163066 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
@@ -205,7 +200,6 @@
 		40D2DB6418FBAFEC000DA952 /* DFKTVListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFKTVListController.m; sourceTree = "<group>"; };
 		40D2DB6618FBB024000DA952 /* DFChamberListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFChamberListController.h; sourceTree = "<group>"; };
 		40D2DB6718FBB024000DA952 /* DFChamberListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFChamberListController.m; sourceTree = "<group>"; };
-		80F9EEE0BB7A43A5930EA4D5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,7 +213,6 @@
 				4040C68518E3050300163066 /* CoreGraphics.framework in Frameworks */,
 				4040C68718E3050300163066 /* UIKit.framework in Frameworks */,
 				4040C68318E3050300163066 /* Foundation.framework in Frameworks */,
-				BD161B7AE8ED4556B0A712CF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +247,6 @@
 				4040C6A718E3050300163066 /* AuroraTests */,
 				4040C68118E3050300163066 /* Frameworks */,
 				4040C68018E3050300163066 /* Products */,
-				3ED3508BBB614205A634CF2E /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,7 +269,6 @@
 				4040C68418E3050300163066 /* CoreGraphics.framework */,
 				4040C68618E3050300163066 /* UIKit.framework */,
 				4040C6A118E3050300163066 /* XCTest.framework */,
-				80F9EEE0BB7A43A5930EA4D5 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -340,7 +331,6 @@
 				40BFAE9118EF003E001C6767 /* Model */,
 				4040C6B818E3078C00163066 /* Controller */,
 				4040C6C918E3078C00163066 /* ImageCache */,
-				4040C6D818E3078C00163066 /* RatingBar */,
 				4030EA9218EDA48700EDE552 /* DFGlobalVar.h */,
 				4030EA9318EDA48700EDE552 /* DFGlobalVar.m */,
 			);
@@ -435,15 +425,6 @@
 			path = EGOImageView;
 			sourceTree = "<group>";
 		};
-		4040C6D818E3078C00163066 /* RatingBar */ = {
-			isa = PBXGroup;
-			children = (
-				4040C6D918E3078C00163066 /* RateView.h */,
-				4040C6DA18E3078C00163066 /* RateView.m */,
-			);
-			path = RatingBar;
-			sourceTree = "<group>";
-		};
 		4040C6E918E3079700163066 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,11 +495,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4040C6B118E3050300163066 /* Build configuration list for PBXNativeTarget "Aurora" */;
 			buildPhases = (
-				B174333B2F0A484E8186BF88 /* Check Pods Manifest.lock */,
 				4040C67B18E3050300163066 /* Sources */,
 				4040C67C18E3050300163066 /* Frameworks */,
 				4040C67D18E3050300163066 /* Resources */,
-				7E8FFB7ECF914C02B7FEC184 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -623,39 +602,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		7E8FFB7ECF914C02B7FEC184 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B174333B2F0A484E8186BF88 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		4040C67B18E3050300163066 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -668,7 +614,6 @@
 				40B0A09318FCFC1F009D5A0D /* NSString+SQ.m in Sources */,
 				4040C69318E3050300163066 /* DFAppDelegate.m in Sources */,
 				4030EA9718EDA98B00EDE552 /* DFUserCenterController.m in Sources */,
-				4040C6E818E3078C00163066 /* RateView.m in Sources */,
 				4040C69918E3050300163066 /* DFViewController.m in Sources */,
 				4030EA9A18EDA9A500EDE552 /* DFPersonalCenterController.m in Sources */,
 				40D2DB6518FBAFEC000DA952 /* DFKTVListController.m in Sources */,
@@ -819,7 +764,6 @@
 		};
 		4040C6B218E3050300163066 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ED3508BBB614205A634CF2E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -834,7 +778,6 @@
 		};
 		4040C6B318E3050300163066 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ED3508BBB614205A634CF2E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

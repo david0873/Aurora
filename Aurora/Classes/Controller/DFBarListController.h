@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RateView.h"
 
 @interface DFBarListController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     IBOutlet UITableView *_tableView;

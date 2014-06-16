@@ -22,6 +22,7 @@
     [copy setRemarks:[self.remarks copyWithZone:zone]];
     [copy setAddition:[self.addition copyWithZone:zone]];
     [copy setShopId:[self.shopId copyWithZone:zone]];
+    [copy setShopName:[self.shopName copyWithZone:zone]];
     copy.deposit = self.deposit;
     copy.miniCharge = self.miniCharge;
     copy.payed = self.payed;
@@ -41,6 +42,7 @@
     [aCoder encodeObject:self.remarks forKey:kUserOrderRemarksKey];
     [aCoder encodeObject:self.addition forKey:kUserOrderAdditonKey];
     [aCoder encodeObject:self.shopId forKey:kUserOrderShopIdKey];
+    [aCoder encodeObject:self.shopName forKey:kUserOrderShopNameKey];
     [aCoder encodeInt:self.deposit forKey:kUserOrderDepositKey];
     [aCoder encodeInt:self.miniCharge forKey:kUserOrderMiniChargeKey];
     [aCoder encodeInt:self.payed forKey:kUserOrderPayedKey];
@@ -59,6 +61,7 @@
         _remarks = [aDecoder decodeObjectForKey:kUserOrderRemarksKey];
         _addition = [aDecoder decodeObjectForKey:kUserOrderAdditonKey];
         _shopId = [aDecoder decodeObjectForKey:kUserOrderShopIdKey];
+        _shopName = [aDecoder decodeObjectForKey:kUserOrderShopNameKey];
         _deposit = [aDecoder decodeIntForKey:kUserOrderDepositKey];
         _miniCharge = [aDecoder decodeIntForKey:kUserOrderMiniChargeKey];
         _payed = [aDecoder decodeIntForKey:kUserOrderPayedKey];

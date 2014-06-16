@@ -53,7 +53,7 @@
     [self.view addSubview:viewPager];
    
     
-    _labelWorkTime.text = [NSString stringWithFormat:@"%@-%@",_shop.workStartTime, _shop.workEndTime];
+    _labelWorkTime.text = _shop.workTime;
     _labelAvgConsume.text = [NSString stringWithFormat:@"%@ 元",_shop.avgConsume];
     _labelAddress.text = _shop.address;
 }

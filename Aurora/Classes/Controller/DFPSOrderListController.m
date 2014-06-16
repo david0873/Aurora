@@ -39,35 +39,35 @@ NSString *path;
     
     self.psOders = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
     
-//    _psOders = [NSMutableArray arrayWithCapacity:8];
-//    
-//    DFUserOrder * order1 = [DFUserOrder alloc];
-//    order1.shopName = @"商户1";
-//    order1.orderId = @"2423424242";
-//    order1.agree = YES;
-//
-//    [_psOders addObject:order1];
-//    
-//    DFUserOrder * order2 = [DFUserOrder alloc];
-//    order2.shopName = @"商户2";
-//    order2.orderId = @"2423424242";
-//    order2.agree = NO;
-//    
-//    [_psOders addObject:order2];
-//    
-//    DFUserOrder * order3 = [DFUserOrder alloc];
-//    order3.shopName = @"商户3";
-//    order3.orderId = @"2423424242";
-//    order3.agree = YES;
-//    
-//    [_psOders addObject:order3];
-//    
-//    DFUserOrder * order4 = [DFUserOrder alloc];
-//    order4.shopName = @"商户4";
-//    order4.orderId = @"2423424242";
-//    order4.agree = YES;
-//    
-//    [_psOders addObject:order4];
+    _psOders = [NSMutableArray arrayWithCapacity:8];
+    
+    DFUserOrder * order1 = [DFUserOrder alloc];
+    order1.shopName = @"商户1";
+    order1.orderId = @"2423424242";
+    order1.orderStatus = OrderSuccess;
+
+    [_psOders addObject:order1];
+    
+    DFUserOrder * order2 = [DFUserOrder alloc];
+    order2.shopName = @"商户2";
+    order2.orderId = @"2423424242";
+    order1.orderStatus = OrderSuccess;
+    
+    [_psOders addObject:order2];
+    
+    DFUserOrder * order3 = [DFUserOrder alloc];
+    order3.shopName = @"商户3";
+    order3.orderId = @"2423424242";
+    order1.orderStatus = OrderInDeal;
+    
+    [_psOders addObject:order3];
+    
+    DFUserOrder * order4 = [DFUserOrder alloc];
+    order4.shopName = @"商户4";
+    order4.orderId = @"2423424242";
+    order1.orderStatus = OrderFail;
+    
+    [_psOders addObject:order4];
     
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = NO;
