@@ -8,9 +8,10 @@
 
 #import "DFPSOrderListController.h"
 #import "DFuserOrder.h"
+#import "DFOrderDetailController.h"
 
 @interface DFPSOrderListController ()
-@property (nonatomic, strong) NSMutableArray *psOders;
+@property (nonatomic, strong) NSMutableArray *psOrders;
 @end
 
 @implementation DFPSOrderListController
@@ -37,37 +38,38 @@ NSString *path;
     NSString* myDocPath = [myPaths objectAtIndex:0];
     path = [myDocPath stringByAppendingPathComponent:@"order.plist"];
     
-    self.psOders = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
+    self.psOrders = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
     
-    _psOders = [NSMutableArray arrayWithCapacity:8];
+//    _psOders = [NSMutableArray arrayWithCapacity:8];
+//    
+//    DFUserOrder * order1 = [DFUserOrder alloc];
+//    order1.shopName = @"商户1";
+//    order1.orderId = @"2423424242";
+//    order1.orderStatus = OrderSuccess;
+//
+//    [_psOders addObject:order1];
+//    
+//    DFUserOrder * order2 = [DFUserOrder alloc];
+//    order2.shopName = @"商户2";
+//    order2.orderId = @"2423424242";
+//    order1.orderStatus = OrderSuccess;
+//    
+//    [_psOders addObject:order2];
+//    
+//    DFUserOrder * order3 = [DFUserOrder alloc];
+//    order3.shopName = @"商户3";
+//    order3.orderId = @"2423424242";
+//    order1.orderStatus = OrderInDeal;
+//    
+//    [_psOders addObject:order3];
+//    
+//    DFUserOrder * order4 = [DFUserOrder alloc];
+//    order4.shopName = @"商户4";
+//    order4.orderId = @"2423424242";
+//    order1.orderStatus = OrderFail;
+//    
+//    [_psOders addObject:order4];
     
-    DFUserOrder * order1 = [DFUserOrder alloc];
-    order1.shopName = @"商户1";
-    order1.orderId = @"2423424242";
-    order1.orderStatus = OrderSuccess;
-
-    [_psOders addObject:order1];
-    
-    DFUserOrder * order2 = [DFUserOrder alloc];
-    order2.shopName = @"商户2";
-    order2.orderId = @"2423424242";
-    order1.orderStatus = OrderSuccess;
-    
-    [_psOders addObject:order2];
-    
-    DFUserOrder * order3 = [DFUserOrder alloc];
-    order3.shopName = @"商户3";
-    order3.orderId = @"2423424242";
-    order1.orderStatus = OrderInDeal;
-    
-    [_psOders addObject:order3];
-    
-    DFUserOrder * order4 = [DFUserOrder alloc];
-    order4.shopName = @"商户4";
-    order4.orderId = @"2423424242";
-    order1.orderStatus = OrderFail;
-    
-    [_psOders addObject:order4];
     
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = NO;
@@ -95,7 +97,7 @@ NSString *path;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.psOders.count;
+    return self.psOrders.count;
 }
 
 
@@ -104,7 +106,7 @@ NSString *path;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identifier_PersonalOrder" forIndexPath:indexPath];
     
     // Configure the cell...
-    DFUserOrder * order = [self.psOders objectAtIndex:indexPath.row];
+    DFUserOrder * order = [self.psOrders objectAtIndex:indexPath.row];
     
 //    UILabel * shopName = (UILabel *)[cell viewWithTag:1];
 //    shopName.text = order.shopName;
@@ -144,8 +146,8 @@ NSString *path;
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         
-        [self.psOders removeObjectAtIndex:indexPath.row];
-        [NSKeyedArchiver archiveRootObject:self.psOders toFile:path];
+        [self.psOrders removeObjectAtIndex:indexPath.row];
+        [NSKeyedArchiver archiveRootObject:self.psOrders toFile:path];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                          withRowAnimation:UITableViewRowAnimationAutomatic];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -158,10 +160,10 @@ NSString *path;
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
-    id object = [self.psOders objectAtIndex:fromIndexPath.row];
-    [self.psOders removeObjectAtIndex:fromIndexPath.row];
-    [self.psOders insertObject:object atIndex:toIndexPath.row];
-    [NSKeyedArchiver archiveRootObject:self.psOders toFile:path];
+    id object = [self.psOrders objectAtIndex:fromIndexPath.row];
+    [self.psOrders removeObjectAtIndex:fromIndexPath.row];
+    [self.psOrders insertObject:object atIndex:toIndexPath.row];
+    [NSKeyedArchiver archiveRootObject:self.psOrders toFile:path];
 }
 
 
@@ -172,15 +174,20 @@ NSString *path;
     return YES;
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    DFOrderDetailController *destination = segue.destinationViewController;
+    
+    if ([destination respondsToSelector:@selector(setSelection:)]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        DFUserOrder* userOrder = [self.psOrders objectAtIndex:indexPath.row];
+        [destination setValue:userOrder forKey:@"selection"];
+    }
 }
-*/
+
 
 @end

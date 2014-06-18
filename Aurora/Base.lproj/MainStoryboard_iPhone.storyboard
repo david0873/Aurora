@@ -1322,8 +1322,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="选择" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9s-ww-51P">
-                                                    <rect key="frame" x="117" y="5" width="190" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aj-Dj-Msn">
+                                                    <rect key="frame" x="117" y="5" width="183" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1344,8 +1344,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="选择" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-kc-TkB">
-                                                    <rect key="frame" x="117" y="4" width="189" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mT9-WJ-MMC">
+                                                    <rect key="frame" x="117" y="5" width="183" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1391,7 +1391,13 @@
                             <outlet property="delegate" destination="3vW-ji-MG7" id="HoX-es-VMT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="订单处理" id="FB0-YK-W6i"/>
+                    <navigationItem key="navigationItem" title="订单处理" id="FB0-YK-W6i">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="HdO-pf-kKc">
+                            <connections>
+                                <action selector="backPressed:" destination="3vW-ji-MG7" id="jpm-Do-SOW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="labelComment" destination="WCR-tt-NI3" id="xDV-D1-L5U"/>
                         <outlet property="labelEndTime" destination="p5u-SA-Fnr" id="f90-p0-qeN"/>
@@ -1399,6 +1405,8 @@
                         <outlet property="labelRemarks" destination="QCp-nj-WVt" id="dfP-e1-nnl"/>
                         <outlet property="labelStartTime" destination="t3j-1R-0Sv" id="z1n-nG-MFF"/>
                         <outlet property="lableSeatType" destination="jzV-5I-h7W" id="kO3-N9-IdE"/>
+                        <outlet property="textDeposit" destination="mT9-WJ-MMC" id="BS2-de-GHZ"/>
+                        <outlet property="textMinConsume" destination="5aj-Dj-Msn" id="drI-G0-1m6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pc3-OW-2i7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1688,10 +1696,10 @@
             </objects>
             <point key="canvasLocation" x="1656" y="-146"/>
         </scene>
-        <!--Oder Deal Controller - 订单详情-->
+        <!--Order Detail Controller - 订单详情-->
         <scene sceneID="4ha-L6-Q4p">
             <objects>
-                <tableViewController id="v2Q-V0-9yy" customClass="DFOderDealController" sceneMemberID="viewController">
+                <tableViewController id="v2Q-V0-9yy" customClass="DFOrderDetailController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8xJ-aP-sSv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1819,7 +1827,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" text="回复" translatesAutoresizingMaskIntoConstraints="NO" id="flI-kw-1hV">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" text="回复" translatesAutoresizingMaskIntoConstraints="NO" id="flI-kw-1hV">
                                                     <rect key="frame" x="15" y="7" width="291" height="116"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1842,7 +1850,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFh-51-zQM">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFh-51-zQM">
                                                     <rect key="frame" x="112" y="9" width="195" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1864,7 +1872,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ps-Cd-Iq8">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="120" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ps-Cd-Iq8">
                                                     <rect key="frame" x="114" y="9" width="192" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1901,10 +1909,18 @@
                             <outlet property="delegate" destination="v2Q-V0-9yy" id="zHG-US-ar4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="订单详情" id="C19-6w-YYt"/>
+                    <navigationItem key="navigationItem" title="订单详情" id="C19-6w-YYt">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="4M5-fz-EkG">
+                            <connections>
+                                <action selector="backPressed:" destination="v2Q-V0-9yy" id="uoZ-fI-YmQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="labelComment" destination="flI-kw-1hV" id="ftg-rD-cSd"/>
+                        <outlet property="labelDeposit" destination="XFh-51-zQM" id="0tN-77-Qkc"/>
                         <outlet property="labelEndTime" destination="Sr3-R3-56b" id="LBP-Uz-cC9"/>
+                        <outlet property="labelMinConsume" destination="5Ps-Cd-Iq8" id="1d8-Ma-51s"/>
                         <outlet property="labelNumber" destination="PrV-vI-JOs" id="9D7-nU-e32"/>
                         <outlet property="labelRemarks" destination="SvW-tp-fJf" id="f6c-6q-geX"/>
                         <outlet property="labelStartTime" destination="F31-wG-woH" id="TYg-5z-uyG"/>
@@ -1926,7 +1942,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="v2Q-V0-9yy" kind="relationship" relationship="rootViewController" id="4ck-fc-ho4"/>
+                        <segue destination="v2Q-V0-9yy" kind="relationship" relationship="rootViewController" id="dpa-bK-wzV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRs-PM-kdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1987,7 +2003,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="PVa-u9-azj"/>
+        <segue reference="lWU-oq-23v"/>
         <segue reference="FI0-V8-Ll8"/>
     </inferredMetricsTieBreakers>
 </document>

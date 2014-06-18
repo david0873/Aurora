@@ -20,11 +20,13 @@
 #define kUserOrderEndTimeKey            @"EndTime"
 #define kUserOrderRemarksKey            @"Remarks"
 #define kUserOrderAdditonKey            @"Addition"
+#define kUserOrderReplyKey              @"Reply"
 
 #define kUserOrderShopIdKey             @"ShopId"
 #define kUserOrderDepositKey            @"Deposit"
 #define kUserOrderMiniChargeKey         @"MiniCharge"
 #define kUserOrderPayedKey              @"Payed"
+
 
 #define OrderSuccess    1;
 #define OrderFail       -1;
@@ -47,6 +49,7 @@
 @property (nonatomic, copy) NSString * addition;
 @property (nonatomic, copy) NSString * shopId;
 @property (nonatomic, copy) NSString * shopName;
+@property (nonatomic, copy) NSString * reply;
 @property int deposit;
 @property int miniCharge;
 @property int payed;

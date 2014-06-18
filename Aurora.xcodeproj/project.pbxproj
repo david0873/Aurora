@@ -78,6 +78,7 @@
 		40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE9318EF0062001C6767 /* DFUserOrder.m */; };
 		40D2DB6518FBAFEC000DA952 /* DFKTVListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2DB6418FBAFEC000DA952 /* DFKTVListController.m */; };
 		40D2DB6818FBB024000DA952 /* DFChamberListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2DB6718FBB024000DA952 /* DFChamberListController.m */; };
+		869A1B961951B115004F125A /* DFOrderDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869A1B951951B115004F125A /* DFOrderDetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +201,8 @@
 		40D2DB6418FBAFEC000DA952 /* DFKTVListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFKTVListController.m; sourceTree = "<group>"; };
 		40D2DB6618FBB024000DA952 /* DFChamberListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFChamberListController.h; sourceTree = "<group>"; };
 		40D2DB6718FBB024000DA952 /* DFChamberListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFChamberListController.m; sourceTree = "<group>"; };
+		869A1B941951B115004F125A /* DFOrderDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFOrderDetailController.h; sourceTree = "<group>"; };
+		869A1B951951B115004F125A /* DFOrderDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFOrderDetailController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +375,8 @@
 				40D2DB6718FBB024000DA952 /* DFChamberListController.m */,
 				40214E7019011AFA000BB4D2 /* DFCommentListController.h */,
 				40214E7119011AFA000BB4D2 /* DFCommentListController.m */,
+				869A1B941951B115004F125A /* DFOrderDetailController.h */,
+				869A1B951951B115004F125A /* DFOrderDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -609,6 +614,7 @@
 			files = (
 				4040C6DC18E3078C00163066 /* DFReserveController.m in Sources */,
 				4040C6DB18E3078C00163066 /* DFRegisterController.m in Sources */,
+				869A1B961951B115004F125A /* DFOrderDetailController.m in Sources */,
 				4040C6E718E3078C00163066 /* EGOImageView.m in Sources */,
 				4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */,
 				40B0A09318FCFC1F009D5A0D /* NSString+SQ.m in Sources */,

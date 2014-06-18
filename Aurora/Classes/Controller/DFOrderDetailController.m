@@ -1,20 +1,18 @@
 //
-//  DFOderDealController.m
+//  DFOrderDetailController.m
 //  Aurora
 //
-//  Created by David on 14-4-8.
+//  Created by yubiao on 14-6-18.
 //  Copyright (c) 2014年 david. All rights reserved.
 //
 
-#import "DFOderDealController.h"
+#import "DFOrderDetailController.h"
 
-@interface DFOderDealController ()
+@interface DFOrderDetailController ()
 
 @end
 
-@implementation DFOderDealController
-@synthesize selection;
-@synthesize delegate;
+@implementation DFOrderDetailController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,26 +30,25 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     
-    _labelNumber.text = [NSString stringWithFormat:@"%d", selection.number];
+    _labelNumber.text = [NSString stringWithFormat:@"%d", _selection.number];
     
-    _lableSeatType.text = selection.seatType;
+    _lableSeatType.text = _selection.seatType;
     
-    _labelStartTime.text = [dateFormatter stringFromDate:selection.startTime];
+    _labelStartTime.text = [dateFormatter stringFromDate:_selection.startTime];
     
-    _labelEndTime.text = [dateFormatter stringFromDate:selection.endTime];
+    _labelEndTime.text = [dateFormatter stringFromDate:_selection.endTime];
     
-    _labelRemarks.text = selection.remarks;
+    _labelRemarks.text = _selection.remarks;
     
     _labelComment.layer.borderColor = UIColor.grayColor.CGColor;
     _labelComment.layer.borderWidth =1.0;
     _labelComment.layer.cornerRadius =5.0;
-    _labelComment.delegate = self;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    _labelComment.text = _selection.reply;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _labelDeposit.text = [NSString stringWithFormat:@"%d", _selection.deposit];
+    _labelMinConsume.text = [NSString stringWithFormat:@"%d", _selection.miniCharge];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,6 +66,21 @@
     return YES;
 }
 
+//#pragma mark - Table view data source
+//
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//#warning Potentially incomplete method implementation.
+//    // Return the number of sections.
+//    return 0;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//#warning Incomplete method implementation.
+//    // Return the number of rows in the section.
+//    return 0;
+//}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -119,6 +131,7 @@
 }
 */
 
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -127,22 +140,10 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-
-- (IBAction)okPressed:(id)sender {
-    self.selection.addition = _labelComment.text;
-    self.selection.orderStatus = OrderSuccess;
-    [self.delegate orderDealController:self didUpdatePresident:self.selection];
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (IBAction)rejectPressed:(UIButton *)sender {
-    self.selection.addition = _labelComment.text;
-    self.selection.orderStatus = OrderFail;
-    [self.delegate orderDealController:self didUpdatePresident:self.selection];
-    [self.navigationController popViewControllerAnimated:YES];
-}
+*/
 
 - (IBAction)backPressed:(UIBarButtonItem *)sender {
-     [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end
