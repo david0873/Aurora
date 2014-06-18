@@ -151,7 +151,19 @@
     
     [array addObject:order];
     
+    NSString * message = @"订单已提交";
+    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:nil
+                          message:message
+                          delegate:self
+                          cancelButtonTitle:@"确定"
+                          otherButtonTitles:nil];
+    [alert show];
+    [alert release];
+    
 }
+
 
 - (IBAction)cancelPressed:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

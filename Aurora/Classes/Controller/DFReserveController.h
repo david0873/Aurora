@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DFShop.h"
 
-@interface DFReserveController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource, UIActionSheetDelegate, UITextViewDelegate, UIAlertViewDelegate>
+@interface DFReserveController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource, UIActionSheetDelegate, UITextViewDelegate, UIAlertViewDelegate, UIAlertViewDelegate>
 
 @property (copy, nonatomic) DFShop * shop;
 
