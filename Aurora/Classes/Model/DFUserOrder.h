@@ -26,15 +26,11 @@
 #define kUserOrderShopIdKey             @"ShopId"
 #define kUserOrderDepositKey            @"Deposit"
 #define kUserOrderMiniChargeKey         @"MiniCharge"
-#define kUserOrderPayedKey              @"Payed"
 
-
-#define OrderSuccess    1;
-#define OrderFail       -1;
-#define OrderInDeal     0;
-
-#define OrderPayed      1;
-#define OrderNotPayed   0;
+#define OrderInDeal     0
+#define OrderNotPayed   1
+#define OrderSuccess    2
+#define OrderFail       -1
 
 @interface DFUserOrder : NSObject<NSCopying, NSCoding>
 
@@ -54,12 +50,11 @@
 @property (nonatomic, copy) NSString * reply;
 @property int deposit;
 @property int miniCharge;
-@property int payed;
 
 //出价，选择非手动输入
 @property (nonatomic, copy) NSString * price;
 
-- (NSString *)toJson;
+//- (NSString *)toJson;
 
 
 @end

@@ -22,8 +22,9 @@
 @property (strong, nonatomic) IBOutlet UITextView *labelRemarks;
 @property (weak, nonatomic) IBOutlet UILabel *labelDeposit;
 @property (weak, nonatomic) IBOutlet UILabel *labelMinConsume;
+@property (strong, nonatomic) IBOutlet UIButton *btnPay;
 
 
-- (IBAction)backPressed:(UIBarButtonItem *)sender;
+//- (IBAction)backPressed:(UIBarButtonItem *)sender;
 
 @end

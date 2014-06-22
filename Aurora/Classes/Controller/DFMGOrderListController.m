@@ -42,32 +42,6 @@ NSString *path;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     
-//    _psOders = [NSMutableArray arrayWithCapacity:8];
-//    
-//    DFUserOrder * order1 = [DFUserOrder alloc];
-//    DFUser * user1 = [DFUser alloc];
-//    user1.nibName = @"david";
-//    order1.user = user1;
-//    order1.number = 3;
-//    order1.seatType = @"卡座";
-//    order1.shopName = @"商户1";
-//    order1.orderId = @"2423424242";
-//    order1.startTime = [dateFormatter dateFromString:@"2014-04-05 13:00"];
-//    order1.endTime = [dateFormatter dateFromString:@"2014-04-05 16:00"];
-//    [_psOders addObject:order1];
-//    
-//    DFUserOrder * order2 = [DFUserOrder alloc];
-//    DFUser * user2 = [DFUser alloc];
-//    user2.nibName = @"Jessy";
-//    order2.user = user2;
-//    order2.number = 4;
-//    order2.seatType = @"散台";
-//    order2.shopName = @"商户2";
-//    order2.orderId = @"242344242";
-//    order2.startTime = [dateFormatter dateFromString:@"2014-04-06 15:00"];
-//    order2.endTime = [dateFormatter dateFromString:@"2014-04-06 17:00"];
-//    [_psOders addObject:order2];
-    
 }
 
 - (void)didReceiveMemoryWarning

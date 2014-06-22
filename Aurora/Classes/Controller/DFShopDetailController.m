@@ -52,6 +52,7 @@
     viewPager.alpha = 0.5;
     [self.view addSubview:viewPager];
    
+    self.title = _shop.shopName;
     
     _labelWorkTime.text = _shop.workTime;
     _labelAvgConsume.text = [NSString stringWithFormat:@"%@ 元",_shop.avgConsume];
