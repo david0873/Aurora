@@ -89,6 +89,7 @@
 		40D2DB6518FBAFEC000DA952 /* DFKTVListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2DB6418FBAFEC000DA952 /* DFKTVListController.m */; };
 		40D2DB6818FBB024000DA952 /* DFChamberListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2DB6718FBB024000DA952 /* DFChamberListController.m */; };
 		869A1B961951B115004F125A /* DFOrderDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869A1B951951B115004F125A /* DFOrderDetailController.m */; };
+		86FB27961956BC9900949AE9 /* YBAddCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FB27951956BC9900949AE9 /* YBAddCommentController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,6 +234,8 @@
 		40D2DB6718FBB024000DA952 /* DFChamberListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFChamberListController.m; sourceTree = "<group>"; };
 		869A1B941951B115004F125A /* DFOrderDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFOrderDetailController.h; sourceTree = "<group>"; };
 		869A1B951951B115004F125A /* DFOrderDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFOrderDetailController.m; sourceTree = "<group>"; };
+		86FB27941956BC9900949AE9 /* YBAddCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBAddCommentController.h; sourceTree = "<group>"; };
+		86FB27951956BC9900949AE9 /* YBAddCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBAddCommentController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -459,6 +462,8 @@
 				869A1B951951B115004F125A /* DFOrderDetailController.m */,
 				0F9EE14A19567FB600428AE7 /* WLRootViewController.h */,
 				0F9EE14B19567FB600428AE7 /* WLRootViewController.m */,
+				86FB27941956BC9900949AE9 /* YBAddCommentController.h */,
+				86FB27951956BC9900949AE9 /* YBAddCommentController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -708,6 +713,7 @@
 				0F9EE1611956A15E00428AE7 /* WLNavigationControlller.m in Sources */,
 				40D2DB6518FBAFEC000DA952 /* DFKTVListController.m in Sources */,
 				0F9EE15419568B4400428AE7 /* WLTabBar.m in Sources */,
+				86FB27961956BC9900949AE9 /* YBAddCommentController.m in Sources */,
 				4040C6E118E3078C00163066 /* ViewController.m in Sources */,
 				0F9EE16D1956A24F00428AE7 /* WLFourthPage.m in Sources */,
 				4027E31B193F542B00FDF898 /* DFMessage.m in Sources */,

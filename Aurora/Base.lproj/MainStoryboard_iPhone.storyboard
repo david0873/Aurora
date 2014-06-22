@@ -500,10 +500,10 @@
             </objects>
             <point key="canvasLocation" x="2104" y="-146"/>
         </scene>
-        <!--View Controller - 说两句-->
+        <!--Add Comment Controller - 说两句-->
         <scene sceneID="GJX-LG-chb">
             <objects>
-                <viewController id="XLa-hL-EY3" sceneMemberID="viewController">
+                <viewController id="XLa-hL-EY3" customClass="YBAddCommentController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K54-Uc-n8F"/>
                         <viewControllerLayoutGuide type="bottom" id="pqe-S3-STa"/>
@@ -536,11 +536,18 @@
                                 <state key="normal" title="提交">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="okPressed:" destination="XLa-hL-EY3" eventType="touchUpInside" id="zam-oL-pZp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="说两句" id="kzL-oW-0G4"/>
+                    <connections>
+                        <outlet property="comment" destination="Koq-dR-uYx" id="NNT-2i-AsG"/>
+                        <outlet property="hidegree" destination="I7y-TW-vNg" id="aY5-uI-Ie1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9b-1M-FFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
