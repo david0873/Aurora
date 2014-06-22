@@ -14,6 +14,7 @@
 #import "WLSecondPage.h"
 #import "WLThirdPage.h"
 #import "WLFourthPage.h"
+#import "WLDataManager.h"
 
 @implementation DFAppDelegate
 @synthesize PagesArray;
@@ -21,33 +22,30 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-//    self.window = [[UIWindow alloc] init];
-//    [self createPages];
-//    
-//    self.window.rootViewController = [self.PagesArray objectAtIndex:0];
-//    [self.window makeKeyAndVisible];
-//    
-//    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self createPages];
+    
+    self.window.rootViewController = [[WLDataManager instance].mainPagesArray objectAtIndex:0];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
 
 - (void)createPages
 {
-    self.PagesArray = [NSMutableArray array];
+    [WLDataManager instance].mainPagesArray = [NSMutableArray array];
     
     WLNavigationControlller *page1 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLFirstPage alloc] init]];
-    [self.PagesArray addObject:page1];
+    [[WLDataManager instance].mainPagesArray addObject:page1];
     
     WLNavigationControlller *page2 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLSecondPage alloc] init]];
-    
-    [self.PagesArray addObject:page2];
+    [[WLDataManager instance].mainPagesArray addObject:page2];
     
     WLNavigationControlller *page3 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLThirdPage alloc] init]];
-    [self.PagesArray addObject:page3];
+    [[WLDataManager instance].mainPagesArray addObject:page3];
     
     WLNavigationControlller *page4 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLFourthPage alloc] init]];
-    [self.PagesArray addObject:page4];
+    [[WLDataManager instance].mainPagesArray addObject:page4];
     
     
 }
