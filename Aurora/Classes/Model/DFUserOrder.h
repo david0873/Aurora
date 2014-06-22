@@ -18,6 +18,7 @@
 #define kUserOrderShopNameKey           @"ShopName"
 #define kUserOrderStartTimeKey          @"StartTime"
 #define kUserOrderEndTimeKey            @"EndTime"
+#define kUserOrderOrderTimeKey          @"OrderTime"
 #define kUserOrderRemarksKey            @"Remarks"
 #define kUserOrderAdditonKey            @"Addition"
 #define kUserOrderReplyKey              @"Reply"
@@ -45,6 +46,7 @@
 @property (nonatomic, copy) NSString * orderId;
 @property (nonatomic, copy) NSDate * startTime;
 @property (nonatomic, copy) NSDate * endTime;
+@property (nonatomic, copy) NSDate * orderTime;
 @property (nonatomic, copy) NSString * remarks;
 @property (nonatomic, copy) NSString * addition;
 @property (nonatomic, copy) NSString * shopId;

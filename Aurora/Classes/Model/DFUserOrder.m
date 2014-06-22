@@ -19,6 +19,7 @@
     [copy setOrderId:[self.orderId copyWithZone:zone]];
     [copy setStartTime:[self.startTime copyWithZone:zone]];
     [copy setEndTime:[self.endTime copyWithZone:zone]];
+    [copy setOrderTime:[self.orderTime copyWithZone:zone]];
     [copy setRemarks:[self.remarks copyWithZone:zone]];
     [copy setReply:[self.reply copyWithZone:zone]];
     [copy setAddition:[self.addition copyWithZone:zone]];
@@ -39,7 +40,9 @@
     [aCoder encodeObject:self.user forKey:KUserOrderUserKey];
     [aCoder encodeObject:self.orderId forKey:kUserOrderOrderIdKey];
     
+    [aCoder encodeObject:self.startTime forKey:kUserOrderStartTimeKey];
     [aCoder encodeObject:self.endTime forKey:kUserOrderEndTimeKey];
+    [aCoder encodeObject:self.orderTime forKey:kUserOrderOrderTimeKey];
     [aCoder encodeObject:self.remarks forKey:kUserOrderRemarksKey];
     [aCoder encodeObject:self.reply forKey:kUserOrderReplyKey];
     [aCoder encodeObject:self.addition forKey:kUserOrderAdditonKey];
@@ -59,7 +62,9 @@
         _seatType = [aDecoder decodeObjectForKey:kUserOrderSeatTypeKey];
         _user = [aDecoder decodeObjectForKey:KUserOrderUserKey];
         _orderId = [aDecoder decodeObjectForKey:kUserOrderOrderIdKey];
+        _startTime = [aDecoder decodeObjectForKey:kUserOrderStartTimeKey];
         _endTime = [aDecoder decodeObjectForKey:kUserOrderEndTimeKey];
+        _orderTime = [aDecoder decodeObjectForKey:kUserOrderOrderTimeKey];
         _remarks = [aDecoder decodeObjectForKey:kUserOrderRemarksKey];
         _reply = [aDecoder decodeObjectForKey:kUserOrderReplyKey];
         _addition = [aDecoder decodeObjectForKey:kUserOrderAdditonKey];
