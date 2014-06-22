@@ -7,8 +7,11 @@
 //
 
 #import "WLFirstPage.h"
+#import "WLRootViewController.h"
 
 @interface WLFirstPage ()
+
+- (void)action;
 
 @end
 
@@ -23,13 +26,32 @@
     return self;
 }
 
+- (void)action
+{
+    WLRootViewController *w = [[WLRootViewController alloc] init];
+    [self.navigationController pushViewController:w animated:YES];
+}
+
+- (void)action2
+{
+    WLNavigationControlller *w = [[WLDataManager instance].mainPagesArray objectAtIndex:0];
+    [UIApplication sharedApplication].keyWindow.rootViewController = w;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"首页";
     self.view.backgroundColor = [UIColor redColor];
+    [self.tabBar selectItem:0];
     
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(100, 100, 120, 50);
+    [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"开始" forState:UIControlStateNormal];
+    [self.view addSubview:button];
 }
 
 - (void)didReceiveMemoryWarning

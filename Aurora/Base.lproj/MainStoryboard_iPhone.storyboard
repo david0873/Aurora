@@ -1930,7 +1930,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="aFt-aT-VGL"/>
         <segue reference="2BD-CD-ihF"/>
+        <segue reference="PVa-u9-azj"/>
     </inferredMetricsTieBreakers>
 </document>
