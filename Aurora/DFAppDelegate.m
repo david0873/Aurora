@@ -7,13 +7,49 @@
 //
 
 #import "DFAppDelegate.h"
+#import "WLRootViewController.h"
+//
+#import "WLNavigationControlller.h"
+#import "WLFirstPage.h"
+#import "WLSecondPage.h"
+#import "WLThirdPage.h"
+#import "WLFourthPage.h"
 
 @implementation DFAppDelegate
+@synthesize PagesArray;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] init];
+    [self createPages];
+    
+    self.window.rootViewController = [self.PagesArray objectAtIndex:0];
+    [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
+}
+
+- (void)createPages
+{
+    self.PagesArray = [NSMutableArray array];
+    
+    WLNavigationControlller *page1 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLFirstPage alloc] init]];
+    [self.PagesArray addObject:page1];
+    
+    WLNavigationControlller *page2 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLSecondPage alloc] init]];
+    
+    [self.PagesArray addObject:page2];
+    
+    WLNavigationControlller *page3 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLThirdPage alloc] init]];
+    [self.PagesArray addObject:page3];
+    
+    WLNavigationControlller *page4 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLFourthPage alloc] init]];
+    [self.PagesArray addObject:page4];
+    
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

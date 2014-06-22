@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F9EE14C19567FB600428AE7 /* WLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE14B19567FB600428AE7 /* WLRootViewController.m */; };
+		0F9EE1501956852A00428AE7 /* WLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE14F1956852A00428AE7 /* WLUtils.m */; };
+		0F9EE15419568B4400428AE7 /* WLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE15319568B4400428AE7 /* WLTabBar.m */; };
+		0F9EE15719569F8200428AE7 /* WLTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE15619569F8200428AE7 /* WLTabBarItem.m */; };
+		0F9EE15E1956A10000428AE7 /* WLBasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE15D1956A10000428AE7 /* WLBasePage.m */; };
+		0F9EE1611956A15E00428AE7 /* WLNavigationControlller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1601956A15E00428AE7 /* WLNavigationControlller.m */; };
+		0F9EE1641956A1D700428AE7 /* WLSecondPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1631956A1D700428AE7 /* WLSecondPage.m */; };
+		0F9EE1671956A20000428AE7 /* WLFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1661956A20000428AE7 /* WLFirstPage.m */; };
+		0F9EE16A1956A21F00428AE7 /* WLThirdPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1691956A21F00428AE7 /* WLThirdPage.m */; };
+		0F9EE16D1956A24F00428AE7 /* WLFourthPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE16C1956A24F00428AE7 /* WLFourthPage.m */; };
 		40214E7219011AFA000BB4D2 /* DFCommentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40214E7119011AFA000BB4D2 /* DFCommentListController.m */; };
 		4027E31A193F542B00FDF898 /* DFComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E317193F542B00FDF898 /* DFComment.m */; };
 		4027E31B193F542B00FDF898 /* DFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E319193F542B00FDF898 /* DFMessage.m */; };
@@ -92,6 +102,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F9EE14A19567FB600428AE7 /* WLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLRootViewController.h; sourceTree = "<group>"; };
+		0F9EE14B19567FB600428AE7 /* WLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLRootViewController.m; sourceTree = "<group>"; };
+		0F9EE14E1956852A00428AE7 /* WLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLUtils.h; path = Utils/WLUtils.h; sourceTree = "<group>"; };
+		0F9EE14F1956852A00428AE7 /* WLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLUtils.m; path = Utils/WLUtils.m; sourceTree = "<group>"; };
+		0F9EE15219568B4400428AE7 /* WLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBar.h; path = Views/WLTabBar.h; sourceTree = "<group>"; };
+		0F9EE15319568B4400428AE7 /* WLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLTabBar.m; path = Views/WLTabBar.m; sourceTree = "<group>"; };
+		0F9EE15519569F8200428AE7 /* WLTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarItem.h; path = Views/WLTabBarItem.h; sourceTree = "<group>"; };
+		0F9EE15619569F8200428AE7 /* WLTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLTabBarItem.m; path = Views/WLTabBarItem.m; sourceTree = "<group>"; };
+		0F9EE15C1956A10000428AE7 /* WLBasePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLBasePage.h; path = RootPages/WLBasePage.h; sourceTree = "<group>"; };
+		0F9EE15D1956A10000428AE7 /* WLBasePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLBasePage.m; path = RootPages/WLBasePage.m; sourceTree = "<group>"; };
+		0F9EE15F1956A15E00428AE7 /* WLNavigationControlller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLNavigationControlller.h; path = RootPages/WLNavigationControlller.h; sourceTree = "<group>"; };
+		0F9EE1601956A15E00428AE7 /* WLNavigationControlller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLNavigationControlller.m; path = RootPages/WLNavigationControlller.m; sourceTree = "<group>"; };
+		0F9EE1621956A1D700428AE7 /* WLSecondPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLSecondPage.h; path = RootPages/WLSecondPage.h; sourceTree = "<group>"; };
+		0F9EE1631956A1D700428AE7 /* WLSecondPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLSecondPage.m; path = RootPages/WLSecondPage.m; sourceTree = "<group>"; };
+		0F9EE1651956A20000428AE7 /* WLFirstPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLFirstPage.h; path = RootPages/WLFirstPage.h; sourceTree = "<group>"; };
+		0F9EE1661956A20000428AE7 /* WLFirstPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLFirstPage.m; path = RootPages/WLFirstPage.m; sourceTree = "<group>"; };
+		0F9EE1681956A21F00428AE7 /* WLThirdPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLThirdPage.h; path = RootPages/WLThirdPage.h; sourceTree = "<group>"; };
+		0F9EE1691956A21F00428AE7 /* WLThirdPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLThirdPage.m; path = RootPages/WLThirdPage.m; sourceTree = "<group>"; };
+		0F9EE16B1956A24F00428AE7 /* WLFourthPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLFourthPage.h; path = RootPages/WLFourthPage.h; sourceTree = "<group>"; };
+		0F9EE16C1956A24F00428AE7 /* WLFourthPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLFourthPage.m; path = RootPages/WLFourthPage.m; sourceTree = "<group>"; };
 		40214E7019011AFA000BB4D2 /* DFCommentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFCommentListController.h; sourceTree = "<group>"; };
 		40214E7119011AFA000BB4D2 /* DFCommentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFCommentListController.m; sourceTree = "<group>"; };
 		4027E316193F542B00FDF898 /* DFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFComment.h; sourceTree = "<group>"; };
@@ -232,6 +262,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F9EE14D195684C000428AE7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0F9EE14E1956852A00428AE7 /* WLUtils.h */,
+				0F9EE14F1956852A00428AE7 /* WLUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		0F9EE15119568B1100428AE7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0F9EE15219568B4400428AE7 /* WLTabBar.h */,
+				0F9EE15319568B4400428AE7 /* WLTabBar.m */,
+				0F9EE15519569F8200428AE7 /* WLTabBarItem.h */,
+				0F9EE15619569F8200428AE7 /* WLTabBarItem.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0F9EE1581956A00700428AE7 /* RootPages */ = {
+			isa = PBXGroup;
+			children = (
+				0F9EE15C1956A10000428AE7 /* WLBasePage.h */,
+				0F9EE15D1956A10000428AE7 /* WLBasePage.m */,
+				0F9EE15F1956A15E00428AE7 /* WLNavigationControlller.h */,
+				0F9EE1601956A15E00428AE7 /* WLNavigationControlller.m */,
+				0F9EE1651956A20000428AE7 /* WLFirstPage.h */,
+				0F9EE1661956A20000428AE7 /* WLFirstPage.m */,
+				0F9EE1621956A1D700428AE7 /* WLSecondPage.h */,
+				0F9EE1631956A1D700428AE7 /* WLSecondPage.m */,
+				0F9EE1681956A21F00428AE7 /* WLThirdPage.h */,
+				0F9EE1691956A21F00428AE7 /* WLThirdPage.m */,
+				0F9EE16B1956A24F00428AE7 /* WLFourthPage.h */,
+				0F9EE16C1956A24F00428AE7 /* WLFourthPage.m */,
+			);
+			name = RootPages;
+			sourceTree = "<group>";
+		};
 		40214E6F1900F32E000BB4D2 /* ViewPager */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +393,8 @@
 		4040C6B718E3078C00163066 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0F9EE15119568B1100428AE7 /* Views */,
+				0F9EE14D195684C000428AE7 /* Utils */,
 				40B44EA919339B7C00F04533 /* JSONKit */,
 				40214E6F1900F32E000BB4D2 /* ViewPager */,
 				40B0A09518FCFC32009D5A0D /* slider */,
@@ -343,6 +414,7 @@
 		4040C6B818E3078C00163066 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0F9EE1581956A00700428AE7 /* RootPages */,
 				4040C6B918E3078C00163066 /* DFRegisterController.h */,
 				4040C6BA18E3078C00163066 /* DFRegisterController.m */,
 				4040C6BB18E3078C00163066 /* DFReserveController.h */,
@@ -377,6 +449,8 @@
 				40214E7119011AFA000BB4D2 /* DFCommentListController.m */,
 				869A1B941951B115004F125A /* DFOrderDetailController.h */,
 				869A1B951951B115004F125A /* DFOrderDetailController.m */,
+				0F9EE14A19567FB600428AE7 /* WLRootViewController.h */,
+				0F9EE14B19567FB600428AE7 /* WLRootViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -615,6 +689,7 @@
 				4040C6DC18E3078C00163066 /* DFReserveController.m in Sources */,
 				4040C6DB18E3078C00163066 /* DFRegisterController.m in Sources */,
 				869A1B961951B115004F125A /* DFOrderDetailController.m in Sources */,
+				0F9EE14C19567FB600428AE7 /* WLRootViewController.m in Sources */,
 				4040C6E718E3078C00163066 /* EGOImageView.m in Sources */,
 				4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */,
 				40B0A09318FCFC1F009D5A0D /* NSString+SQ.m in Sources */,
@@ -622,19 +697,26 @@
 				4030EA9718EDA98B00EDE552 /* DFUserCenterController.m in Sources */,
 				4040C69918E3050300163066 /* DFViewController.m in Sources */,
 				4030EA9A18EDA9A500EDE552 /* DFPersonalCenterController.m in Sources */,
+				0F9EE1611956A15E00428AE7 /* WLNavigationControlller.m in Sources */,
 				40D2DB6518FBAFEC000DA952 /* DFKTVListController.m in Sources */,
+				0F9EE15419568B4400428AE7 /* WLTabBar.m in Sources */,
 				4040C6E118E3078C00163066 /* ViewController.m in Sources */,
+				0F9EE16D1956A24F00428AE7 /* WLFourthPage.m in Sources */,
 				4027E31B193F542B00FDF898 /* DFMessage.m in Sources */,
+				0F9EE15719569F8200428AE7 /* WLTabBarItem.m in Sources */,
 				4040C6E418E3078C00163066 /* EGOImageButton.m in Sources */,
 				4040C6DF18E3078C00163066 /* DFLoginController.m in Sources */,
 				40BFAE8C18EEE419001C6767 /* DFMGOrderListController.m in Sources */,
 				4027E31A193F542B00FDF898 /* DFComment.m in Sources */,
 				40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */,
+				0F9EE1641956A1D700428AE7 /* WLSecondPage.m in Sources */,
 				4040C6E218E3078C00163066 /* ViewPager.m in Sources */,
 				4043548A18F82F7B003F6542 /* DFShop.m in Sources */,
 				4040C6DE18E3078C00163066 /* DFBarListController.m in Sources */,
+				0F9EE15E1956A10000428AE7 /* WLBasePage.m in Sources */,
 				40B44EAC19339B7C00F04533 /* JSONKit.m in Sources */,
 				40B0A09418FCFC1F009D5A0D /* UIColor+SQ.m in Sources */,
+				0F9EE16A1956A21F00428AE7 /* WLThirdPage.m in Sources */,
 				40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */,
 				40B3E27A18F4471500472C1F /* DFOderDealController.m in Sources */,
 				4040C6E318E3078C00163066 /* EGOCache.m in Sources */,
@@ -644,8 +726,10 @@
 				40B0A09818FCFC32009D5A0D /* SQRiskCursor.m in Sources */,
 				4040C6E518E3078C00163066 /* EGOImageLoadConnection.m in Sources */,
 				4040C68F18E3050300163066 /* main.m in Sources */,
+				0F9EE1501956852A00428AE7 /* WLUtils.m in Sources */,
 				40BFAE8918EEE3FC001C6767 /* DFPSOrderListController.m in Sources */,
 				40D2DB6818FBB024000DA952 /* DFChamberListController.m in Sources */,
+				0F9EE1671956A20000428AE7 /* WLFirstPage.m in Sources */,
 				4040C6E018E3078C00163066 /* MyPageControl.m in Sources */,
 				40B3E27718F43CB300472C1F /* DFUser.m in Sources */,
 				4040C6E618E3078C00163066 /* EGOImageLoader.m in Sources */,

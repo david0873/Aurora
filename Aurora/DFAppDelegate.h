@@ -12,4 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic, strong) NSMutableArray *PagesArray;
+
+- (void)createPages;
+
 @end
