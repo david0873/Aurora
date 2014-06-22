@@ -147,9 +147,11 @@
     order.seatType = seatType == 0 ? @"卡座" : @"散台";
     
     order.user = [DFGlobalVar sharedGlobalVar].user;
-    order.orderStatus = OrderInDeal;
+    order.orderStatus = 0;
     
     [array addObject:order];
+    
+    [array writeToFile:path atomically:YES];
     
     NSString * message = @"订单已提交";
     
