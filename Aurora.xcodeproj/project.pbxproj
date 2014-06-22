@@ -281,6 +281,8 @@
 				0F9EE15319568B4400428AE7 /* WLTabBar.m */,
 				0F9EE15519569F8200428AE7 /* WLTabBarItem.h */,
 				0F9EE15619569F8200428AE7 /* WLTabBarItem.m */,
+				0F9EE1721956C86B00428AE7 /* WLTabBarDelegate.h */,
+				0F9EE1731956C9AD00428AE7 /* WLTabBarItemDelegate.h */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -288,6 +290,8 @@
 		0F9EE16E1956AC7D00428AE7 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
+				0F9EE16F1956AE0100428AE7 /* WLDataManager.h */,
+				0F9EE1701956AE0100428AE7 /* WLDataManager.m */,
 			);
 			name = Datas;
 			sourceTree = "<group>";

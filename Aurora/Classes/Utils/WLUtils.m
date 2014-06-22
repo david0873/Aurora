@@ -19,9 +19,6 @@
         width = [UIScreen mainScreen].bounds.size.width;
     }
     
-    CGFloat scale = [UIScreen mainScreen].scale;
-    width *= scale;
-    
     return width;
 }
 
@@ -34,9 +31,7 @@
         orientation == UIInterfaceOrientationPortraitUpsideDown) {
         height = [UIScreen mainScreen].bounds.size.height;
     }
-    
-    CGFloat scale = [UIScreen mainScreen].scale;
-    height *= scale;
+
     
     return height;
 }
@@ -46,9 +41,8 @@
 {
     CGSize statusBarSize = [[UIApplication sharedApplication] statusBarFrame].size;
     CGFloat height = (statusBarSize.height > statusBarSize.width) ? statusBarSize.width : statusBarSize.height;
-    CGFloat scale = [UIScreen mainScreen].scale;
     
-    return height*scale;
+    return height;
 }
 
 

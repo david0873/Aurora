@@ -7,6 +7,8 @@
 //
 
 #import "WLSecondPage.h"
+#import "WLNavigationControlller.h"
+#import "WLDataManager.h"
 
 @interface WLSecondPage ()
 
@@ -23,12 +25,26 @@
     return self;
 }
 
+- (void)action2
+{
+    WLNavigationControlller *w = [[WLDataManager instance].mainPagesArray objectAtIndex:0];
+    [UIApplication sharedApplication].keyWindow.rootViewController = w;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"凤飞飞";
     self.view.backgroundColor = [UIColor yellowColor];
+    [self.tabBar selectItem:1];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(100, 200, 120, 50);
+    [button addTarget:self action:@selector(action2) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"返回" forState:UIControlStateNormal];
+    [self.view addSubview:button];
+    
 }
 
 - (void)didReceiveMemoryWarning
