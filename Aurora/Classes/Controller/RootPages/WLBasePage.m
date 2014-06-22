@@ -40,7 +40,6 @@
     [self createContentScrollView];
     [self createTabBar];
     
-    
 }
 
 - (void)didReceiveMemoryWarning
