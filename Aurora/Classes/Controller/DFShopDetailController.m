@@ -31,16 +31,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    EGOImageView *imagview = [[[EGOImageView alloc]initWithFrame:CGRectMake(0, 65, 320, 230)] autorelease];
+    EGOImageView *imagview = [[EGOImageView alloc]initWithFrame:CGRectMake(0, 65, 320, 230)];
     imagview.imageURL = [NSURL URLWithString: _shop.shopImage];
     [self.view addSubview:imagview];
     
-    UITextView *textView1 = [[[UITextView alloc] init] autorelease];
+    UITextView *textView1 = [[UITextView alloc] init];
     textView1.font = [UIFont systemFontOfSize:16];
     textView1.editable = false;
     textView1.text = @"购买早午餐菜单中任意两份特色早午餐, 汉堡或意面, 即可获赠小蓝蛙菜单中主菜及软饮一份. \n蓝蛙正大广场店开业慈善派对\n2014年4月18日\n下午6点半至闭店\n";
     
-    UITextView *textView2 = [[[UITextView alloc] init] autorelease];
+    UITextView *textView2 = [[UITextView alloc] init];
     textView2.font = [UIFont systemFontOfSize:16];
     textView2.editable = false;
     textView2.text = @"购买早午餐菜单中任意两份特色早午餐, 汉堡或意面, 即可获赠小蓝蛙菜单中主菜及软饮一份. \n蓝蛙正大广场店开业慈善派对\n2014年4月18日\n下午6点半至闭店";
@@ -82,13 +82,6 @@
         }
     }
     
-}
-
-- (void)dealloc {
-    [_labelWorkTime release];
-    [_labelAddress release];
-    [_labelAvgConsume release];
-    [super dealloc];
 }
 
 - (void)ViewPager:(ViewPager *)viewPager clickContent:(NSInteger)index{

@@ -7,22 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F9EE14C19567FB600428AE7 /* WLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE14B19567FB600428AE7 /* WLRootViewController.m */; };
 		0F9EE1501956852A00428AE7 /* WLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE14F1956852A00428AE7 /* WLUtils.m */; };
 		0F9EE15419568B4400428AE7 /* WLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE15319568B4400428AE7 /* WLTabBar.m */; };
 		0F9EE15719569F8200428AE7 /* WLTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE15619569F8200428AE7 /* WLTabBarItem.m */; };
-		0F9EE15E1956A10000428AE7 /* WLBasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE15D1956A10000428AE7 /* WLBasePage.m */; };
-		0F9EE1611956A15E00428AE7 /* WLNavigationControlller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1601956A15E00428AE7 /* WLNavigationControlller.m */; };
-		0F9EE1641956A1D700428AE7 /* WLSecondPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1631956A1D700428AE7 /* WLSecondPage.m */; };
-		0F9EE1671956A20000428AE7 /* WLFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1661956A20000428AE7 /* WLFirstPage.m */; };
-		0F9EE16A1956A21F00428AE7 /* WLThirdPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1691956A21F00428AE7 /* WLThirdPage.m */; };
-		0F9EE16D1956A24F00428AE7 /* WLFourthPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE16C1956A24F00428AE7 /* WLFourthPage.m */; };
-		40214E7219011AFA000BB4D2 /* DFCommentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40214E7119011AFA000BB4D2 /* DFCommentListController.m */; };
 		4027E31A193F542B00FDF898 /* DFComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E317193F542B00FDF898 /* DFComment.m */; };
 		4027E31B193F542B00FDF898 /* DFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E319193F542B00FDF898 /* DFMessage.m */; };
 		4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9318EDA48700EDE552 /* DFGlobalVar.m */; };
-		4030EA9718EDA98B00EDE552 /* DFUserCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9618EDA98B00EDE552 /* DFUserCenterController.m */; };
-		4030EA9A18EDA9A500EDE552 /* DFPersonalCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9918EDA9A500EDE552 /* DFPersonalCenterController.m */; };
 		403433CB18E91BF700459FF5 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433CA18E91BF700459FF5 /* bar.png */; };
 		403433CE18E9309100459FF5 /* chamber.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433CC18E9309100459FF5 /* chamber.png */; };
 		403433CF18E9309100459FF5 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 403433CD18E9309100459FF5 /* person.png */; };
@@ -43,13 +33,7 @@
 		4040C6A418E3050300163066 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4040C68618E3050300163066 /* UIKit.framework */; };
 		4040C6AC18E3050300163066 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6AA18E3050300163066 /* InfoPlist.strings */; };
 		4040C6AE18E3050300163066 /* AuroraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6AD18E3050300163066 /* AuroraTests.m */; };
-		4040C6DB18E3078C00163066 /* DFRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6BA18E3078C00163066 /* DFRegisterController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4040C6DC18E3078C00163066 /* DFReserveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6BC18E3078C00163066 /* DFReserveController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4040C6DD18E3078C00163066 /* DFShopDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6BE18E3078C00163066 /* DFShopDetailController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4040C6DE18E3078C00163066 /* DFBarListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C018E3078C00163066 /* DFBarListController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4040C6DF18E3078C00163066 /* DFLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C218E3078C00163066 /* DFLoginController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4040C6E018E3078C00163066 /* MyPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C418E3078C00163066 /* MyPageControl.m */; };
-		4040C6E118E3078C00163066 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C618E3078C00163066 /* ViewController.m */; };
 		4040C6E218E3078C00163066 /* ViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6C818E3078C00163066 /* ViewPager.m */; };
 		4040C6E318E3078C00163066 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6CC18E3078C00163066 /* EGOCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4040C6E418E3078C00163066 /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4040C6CF18E3078C00163066 /* EGOImageButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -72,23 +56,40 @@
 		4040C70D18E3079800163066 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6FB18E3079800163066 /* whiteArrow@2x.png */; };
 		4040C71018E307D500163066 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4040C70E18E307D500163066 /* MainStoryboard_iPhone.storyboard */; };
 		4043548A18F82F7B003F6542 /* DFShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4043548918F82F7B003F6542 /* DFShop.m */; };
-		40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40483D7218EC61BD0040116A /* DFRootTabBarController.m */; };
-		40AC793E18F034B0004B63C3 /* DFQualificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AC793D18F034B0004B63C3 /* DFQualificationController.m */; };
+		409F6C711956BE610030E746 /* WLBasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C4F1956BE610030E746 /* WLBasePage.m */; };
+		409F6C721956BE610030E746 /* WLFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C511956BE610030E746 /* WLFirstPage.m */; };
+		409F6C731956BE610030E746 /* WLFourthPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C531956BE610030E746 /* WLFourthPage.m */; };
+		409F6C741956BE610030E746 /* WLNavigationControlller.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C551956BE610030E746 /* WLNavigationControlller.m */; };
+		409F6C751956BE610030E746 /* WLSecondPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C571956BE610030E746 /* WLSecondPage.m */; };
+		409F6C761956BE610030E746 /* WLThirdPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C591956BE610030E746 /* WLThirdPage.m */; };
+		409F6C791956BE610030E746 /* WLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C5F1956BE610030E746 /* WLRootViewController.m */; };
+		409F6C9D1956C4600030E746 /* DFBarListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C7C1956C45F0030E746 /* DFBarListController.m */; };
+		409F6C9E1956C4600030E746 /* DFChamberListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C7E1956C45F0030E746 /* DFChamberListController.m */; };
+		409F6C9F1956C4600030E746 /* DFCommentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C801956C45F0030E746 /* DFCommentListController.m */; };
+		409F6CA01956C4600030E746 /* DFKTVListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C821956C45F0030E746 /* DFKTVListController.m */; };
+		409F6CA11956C4600030E746 /* DFLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C841956C45F0030E746 /* DFLoginController.m */; };
+		409F6CA21956C4600030E746 /* DFMGOrderDealListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C861956C4600030E746 /* DFMGOrderDealListController.m */; };
+		409F6CA31956C4600030E746 /* DFOderDealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C881956C4600030E746 /* DFOderDealController.m */; };
+		409F6CA41956C4600030E746 /* DFOrderDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C8A1956C4600030E746 /* DFOrderDetailController.m */; };
+		409F6CA51956C4600030E746 /* DFPersonalCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C8C1956C4600030E746 /* DFPersonalCenterController.m */; };
+		409F6CA61956C4600030E746 /* DFPSOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C8E1956C4600030E746 /* DFPSOrderListController.m */; };
+		409F6CA71956C4600030E746 /* DFQualificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C901956C4600030E746 /* DFQualificationController.m */; };
+		409F6CA81956C4600030E746 /* DFRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C921956C4600030E746 /* DFRegisterController.m */; };
+		409F6CA91956C4600030E746 /* DFReserveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C941956C4600030E746 /* DFReserveController.m */; };
+		409F6CAA1956C4600030E746 /* DFRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C961956C4600030E746 /* DFRootTabBarController.m */; };
+		409F6CAB1956C4600030E746 /* DFShopDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C981956C4600030E746 /* DFShopDetailController.m */; };
+		409F6CAC1956C4600030E746 /* DFUserCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C9A1956C4600030E746 /* DFUserCenterController.m */; };
+		409F6CAD1956C4600030E746 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C9C1956C4600030E746 /* ViewController.m */; };
 		40B0A09318FCFC1F009D5A0D /* NSString+SQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0A09018FCFC1F009D5A0D /* NSString+SQ.m */; };
 		40B0A09418FCFC1F009D5A0D /* UIColor+SQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0A09218FCFC1F009D5A0D /* UIColor+SQ.m */; };
 		40B0A09818FCFC32009D5A0D /* SQRiskCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0A09718FCFC32009D5A0D /* SQRiskCursor.m */; };
 		40B3E27718F43CB300472C1F /* DFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3E27618F43CB300472C1F /* DFUser.m */; };
-		40B3E27A18F4471500472C1F /* DFOderDealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3E27918F4471500472C1F /* DFOderDealController.m */; };
 		40B44EAC19339B7C00F04533 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B44EAB19339B7C00F04533 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		40B44EAE19339C7A00F04533 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44EAD19339C7A00F04533 /* CFNetwork.framework */; };
 		40B44EB019339C8700F04533 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44EAF19339C8700F04533 /* libz.dylib */; };
 		40B44EB219339C9400F04533 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44EB119339C9400F04533 /* libxml2.2.dylib */; };
-		40BFAE8918EEE3FC001C6767 /* DFPSOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE8818EEE3FC001C6767 /* DFPSOrderListController.m */; };
-		40BFAE8C18EEE419001C6767 /* DFMGOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE8B18EEE419001C6767 /* DFMGOrderListController.m */; };
 		40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE9318EF0062001C6767 /* DFUserOrder.m */; };
-		40D2DB6518FBAFEC000DA952 /* DFKTVListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2DB6418FBAFEC000DA952 /* DFKTVListController.m */; };
-		40D2DB6818FBB024000DA952 /* DFChamberListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2DB6718FBB024000DA952 /* DFChamberListController.m */; };
-		869A1B961951B115004F125A /* DFOrderDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869A1B951951B115004F125A /* DFOrderDetailController.m */; };
+		40F8DC881956C64300C93961 /* DFMGShopListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DC871956C64300C93961 /* DFMGShopListController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,38 +103,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F9EE14A19567FB600428AE7 /* WLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLRootViewController.h; sourceTree = "<group>"; };
-		0F9EE14B19567FB600428AE7 /* WLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLRootViewController.m; sourceTree = "<group>"; };
 		0F9EE14E1956852A00428AE7 /* WLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLUtils.h; path = Utils/WLUtils.h; sourceTree = "<group>"; };
 		0F9EE14F1956852A00428AE7 /* WLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLUtils.m; path = Utils/WLUtils.m; sourceTree = "<group>"; };
 		0F9EE15219568B4400428AE7 /* WLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBar.h; path = Views/WLTabBar.h; sourceTree = "<group>"; };
 		0F9EE15319568B4400428AE7 /* WLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLTabBar.m; path = Views/WLTabBar.m; sourceTree = "<group>"; };
 		0F9EE15519569F8200428AE7 /* WLTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarItem.h; path = Views/WLTabBarItem.h; sourceTree = "<group>"; };
 		0F9EE15619569F8200428AE7 /* WLTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLTabBarItem.m; path = Views/WLTabBarItem.m; sourceTree = "<group>"; };
-		0F9EE15C1956A10000428AE7 /* WLBasePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLBasePage.h; path = RootPages/WLBasePage.h; sourceTree = "<group>"; };
-		0F9EE15D1956A10000428AE7 /* WLBasePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLBasePage.m; path = RootPages/WLBasePage.m; sourceTree = "<group>"; };
-		0F9EE15F1956A15E00428AE7 /* WLNavigationControlller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLNavigationControlller.h; path = RootPages/WLNavigationControlller.h; sourceTree = "<group>"; };
-		0F9EE1601956A15E00428AE7 /* WLNavigationControlller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLNavigationControlller.m; path = RootPages/WLNavigationControlller.m; sourceTree = "<group>"; };
-		0F9EE1621956A1D700428AE7 /* WLSecondPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLSecondPage.h; path = RootPages/WLSecondPage.h; sourceTree = "<group>"; };
-		0F9EE1631956A1D700428AE7 /* WLSecondPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLSecondPage.m; path = RootPages/WLSecondPage.m; sourceTree = "<group>"; };
-		0F9EE1651956A20000428AE7 /* WLFirstPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLFirstPage.h; path = RootPages/WLFirstPage.h; sourceTree = "<group>"; };
-		0F9EE1661956A20000428AE7 /* WLFirstPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLFirstPage.m; path = RootPages/WLFirstPage.m; sourceTree = "<group>"; };
-		0F9EE1681956A21F00428AE7 /* WLThirdPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLThirdPage.h; path = RootPages/WLThirdPage.h; sourceTree = "<group>"; };
-		0F9EE1691956A21F00428AE7 /* WLThirdPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLThirdPage.m; path = RootPages/WLThirdPage.m; sourceTree = "<group>"; };
-		0F9EE16B1956A24F00428AE7 /* WLFourthPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLFourthPage.h; path = RootPages/WLFourthPage.h; sourceTree = "<group>"; };
-		0F9EE16C1956A24F00428AE7 /* WLFourthPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLFourthPage.m; path = RootPages/WLFourthPage.m; sourceTree = "<group>"; };
-		40214E7019011AFA000BB4D2 /* DFCommentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFCommentListController.h; sourceTree = "<group>"; };
-		40214E7119011AFA000BB4D2 /* DFCommentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFCommentListController.m; sourceTree = "<group>"; };
 		4027E316193F542B00FDF898 /* DFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFComment.h; sourceTree = "<group>"; };
 		4027E317193F542B00FDF898 /* DFComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFComment.m; sourceTree = "<group>"; };
 		4027E318193F542B00FDF898 /* DFMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFMessage.h; sourceTree = "<group>"; };
 		4027E319193F542B00FDF898 /* DFMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFMessage.m; sourceTree = "<group>"; };
 		4030EA9218EDA48700EDE552 /* DFGlobalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFGlobalVar.h; sourceTree = "<group>"; };
 		4030EA9318EDA48700EDE552 /* DFGlobalVar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFGlobalVar.m; sourceTree = "<group>"; };
-		4030EA9518EDA98B00EDE552 /* DFUserCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUserCenterController.h; sourceTree = "<group>"; };
-		4030EA9618EDA98B00EDE552 /* DFUserCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUserCenterController.m; sourceTree = "<group>"; };
-		4030EA9818EDA9A500EDE552 /* DFPersonalCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPersonalCenterController.h; sourceTree = "<group>"; };
-		4030EA9918EDA9A500EDE552 /* DFPersonalCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPersonalCenterController.m; sourceTree = "<group>"; };
 		403433CA18E91BF700459FF5 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		403433CC18E9309100459FF5 /* chamber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chamber.png; sourceTree = "<group>"; };
 		403433CD18E9309100459FF5 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
@@ -159,20 +140,8 @@
 		4040C6A918E3050300163066 /* AuroraTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AuroraTests-Info.plist"; sourceTree = "<group>"; };
 		4040C6AB18E3050300163066 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4040C6AD18E3050300163066 /* AuroraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuroraTests.m; sourceTree = "<group>"; };
-		4040C6B918E3078C00163066 /* DFRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRegisterController.h; sourceTree = "<group>"; };
-		4040C6BA18E3078C00163066 /* DFRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRegisterController.m; sourceTree = "<group>"; };
-		4040C6BB18E3078C00163066 /* DFReserveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFReserveController.h; sourceTree = "<group>"; };
-		4040C6BC18E3078C00163066 /* DFReserveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFReserveController.m; sourceTree = "<group>"; };
-		4040C6BD18E3078C00163066 /* DFShopDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFShopDetailController.h; sourceTree = "<group>"; };
-		4040C6BE18E3078C00163066 /* DFShopDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFShopDetailController.m; sourceTree = "<group>"; };
-		4040C6BF18E3078C00163066 /* DFBarListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFBarListController.h; sourceTree = "<group>"; };
-		4040C6C018E3078C00163066 /* DFBarListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBarListController.m; sourceTree = "<group>"; };
-		4040C6C118E3078C00163066 /* DFLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFLoginController.h; sourceTree = "<group>"; };
-		4040C6C218E3078C00163066 /* DFLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFLoginController.m; sourceTree = "<group>"; };
 		4040C6C318E3078C00163066 /* MyPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPageControl.h; path = Controller/MyPageControl.h; sourceTree = "<group>"; };
 		4040C6C418E3078C00163066 /* MyPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPageControl.m; path = Controller/MyPageControl.m; sourceTree = "<group>"; };
-		4040C6C518E3078C00163066 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4040C6C618E3078C00163066 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4040C6C718E3078C00163066 /* ViewPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewPager.h; path = Controller/ViewPager.h; sourceTree = "<group>"; };
 		4040C6C818E3078C00163066 /* ViewPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewPager.m; path = Controller/ViewPager.m; sourceTree = "<group>"; };
 		4040C6CB18E3078C00163066 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
@@ -202,10 +171,54 @@
 		4040C70F18E307D500163066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		4043548818F82F7B003F6542 /* DFShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFShop.h; sourceTree = "<group>"; };
 		4043548918F82F7B003F6542 /* DFShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFShop.m; sourceTree = "<group>"; };
-		40483D7118EC61BD0040116A /* DFRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRootTabBarController.h; sourceTree = "<group>"; };
-		40483D7218EC61BD0040116A /* DFRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRootTabBarController.m; sourceTree = "<group>"; };
-		40AC793C18F034B0004B63C3 /* DFQualificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFQualificationController.h; sourceTree = "<group>"; };
-		40AC793D18F034B0004B63C3 /* DFQualificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFQualificationController.m; sourceTree = "<group>"; };
+		409F6C4E1956BE610030E746 /* WLBasePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLBasePage.h; sourceTree = "<group>"; };
+		409F6C4F1956BE610030E746 /* WLBasePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLBasePage.m; sourceTree = "<group>"; };
+		409F6C501956BE610030E746 /* WLFirstPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLFirstPage.h; sourceTree = "<group>"; };
+		409F6C511956BE610030E746 /* WLFirstPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLFirstPage.m; sourceTree = "<group>"; };
+		409F6C521956BE610030E746 /* WLFourthPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLFourthPage.h; sourceTree = "<group>"; };
+		409F6C531956BE610030E746 /* WLFourthPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLFourthPage.m; sourceTree = "<group>"; };
+		409F6C541956BE610030E746 /* WLNavigationControlller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLNavigationControlller.h; sourceTree = "<group>"; };
+		409F6C551956BE610030E746 /* WLNavigationControlller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLNavigationControlller.m; sourceTree = "<group>"; };
+		409F6C561956BE610030E746 /* WLSecondPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLSecondPage.h; sourceTree = "<group>"; };
+		409F6C571956BE610030E746 /* WLSecondPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLSecondPage.m; sourceTree = "<group>"; };
+		409F6C581956BE610030E746 /* WLThirdPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLThirdPage.h; sourceTree = "<group>"; };
+		409F6C591956BE610030E746 /* WLThirdPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLThirdPage.m; sourceTree = "<group>"; };
+		409F6C5E1956BE610030E746 /* WLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLRootViewController.h; sourceTree = "<group>"; };
+		409F6C5F1956BE610030E746 /* WLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLRootViewController.m; sourceTree = "<group>"; };
+		409F6C7B1956C45F0030E746 /* DFBarListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFBarListController.h; path = Controller/DFBarListController.h; sourceTree = "<group>"; };
+		409F6C7C1956C45F0030E746 /* DFBarListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFBarListController.m; path = Controller/DFBarListController.m; sourceTree = "<group>"; };
+		409F6C7D1956C45F0030E746 /* DFChamberListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFChamberListController.h; path = Controller/DFChamberListController.h; sourceTree = "<group>"; };
+		409F6C7E1956C45F0030E746 /* DFChamberListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFChamberListController.m; path = Controller/DFChamberListController.m; sourceTree = "<group>"; };
+		409F6C7F1956C45F0030E746 /* DFCommentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFCommentListController.h; path = Controller/DFCommentListController.h; sourceTree = "<group>"; };
+		409F6C801956C45F0030E746 /* DFCommentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFCommentListController.m; path = Controller/DFCommentListController.m; sourceTree = "<group>"; };
+		409F6C811956C45F0030E746 /* DFKTVListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFKTVListController.h; path = Controller/DFKTVListController.h; sourceTree = "<group>"; };
+		409F6C821956C45F0030E746 /* DFKTVListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFKTVListController.m; path = Controller/DFKTVListController.m; sourceTree = "<group>"; };
+		409F6C831956C45F0030E746 /* DFLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFLoginController.h; path = Controller/DFLoginController.h; sourceTree = "<group>"; };
+		409F6C841956C45F0030E746 /* DFLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFLoginController.m; path = Controller/DFLoginController.m; sourceTree = "<group>"; };
+		409F6C851956C45F0030E746 /* DFMGOrderDealListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFMGOrderDealListController.h; path = Controller/DFMGOrderDealListController.h; sourceTree = "<group>"; };
+		409F6C861956C4600030E746 /* DFMGOrderDealListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFMGOrderDealListController.m; path = Controller/DFMGOrderDealListController.m; sourceTree = "<group>"; };
+		409F6C871956C4600030E746 /* DFOderDealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFOderDealController.h; path = Controller/DFOderDealController.h; sourceTree = "<group>"; };
+		409F6C881956C4600030E746 /* DFOderDealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFOderDealController.m; path = Controller/DFOderDealController.m; sourceTree = "<group>"; };
+		409F6C891956C4600030E746 /* DFOrderDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFOrderDetailController.h; path = Controller/DFOrderDetailController.h; sourceTree = "<group>"; };
+		409F6C8A1956C4600030E746 /* DFOrderDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFOrderDetailController.m; path = Controller/DFOrderDetailController.m; sourceTree = "<group>"; };
+		409F6C8B1956C4600030E746 /* DFPersonalCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFPersonalCenterController.h; path = Controller/DFPersonalCenterController.h; sourceTree = "<group>"; };
+		409F6C8C1956C4600030E746 /* DFPersonalCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFPersonalCenterController.m; path = Controller/DFPersonalCenterController.m; sourceTree = "<group>"; };
+		409F6C8D1956C4600030E746 /* DFPSOrderListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFPSOrderListController.h; path = Controller/DFPSOrderListController.h; sourceTree = "<group>"; };
+		409F6C8E1956C4600030E746 /* DFPSOrderListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFPSOrderListController.m; path = Controller/DFPSOrderListController.m; sourceTree = "<group>"; };
+		409F6C8F1956C4600030E746 /* DFQualificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFQualificationController.h; path = Controller/DFQualificationController.h; sourceTree = "<group>"; };
+		409F6C901956C4600030E746 /* DFQualificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFQualificationController.m; path = Controller/DFQualificationController.m; sourceTree = "<group>"; };
+		409F6C911956C4600030E746 /* DFRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFRegisterController.h; path = Controller/DFRegisterController.h; sourceTree = "<group>"; };
+		409F6C921956C4600030E746 /* DFRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFRegisterController.m; path = Controller/DFRegisterController.m; sourceTree = "<group>"; };
+		409F6C931956C4600030E746 /* DFReserveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFReserveController.h; path = Controller/DFReserveController.h; sourceTree = "<group>"; };
+		409F6C941956C4600030E746 /* DFReserveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFReserveController.m; path = Controller/DFReserveController.m; sourceTree = "<group>"; };
+		409F6C951956C4600030E746 /* DFRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFRootTabBarController.h; path = Controller/DFRootTabBarController.h; sourceTree = "<group>"; };
+		409F6C961956C4600030E746 /* DFRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFRootTabBarController.m; path = Controller/DFRootTabBarController.m; sourceTree = "<group>"; };
+		409F6C971956C4600030E746 /* DFShopDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFShopDetailController.h; path = Controller/DFShopDetailController.h; sourceTree = "<group>"; };
+		409F6C981956C4600030E746 /* DFShopDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFShopDetailController.m; path = Controller/DFShopDetailController.m; sourceTree = "<group>"; };
+		409F6C991956C4600030E746 /* DFUserCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFUserCenterController.h; path = Controller/DFUserCenterController.h; sourceTree = "<group>"; };
+		409F6C9A1956C4600030E746 /* DFUserCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFUserCenterController.m; path = Controller/DFUserCenterController.m; sourceTree = "<group>"; };
+		409F6C9B1956C4600030E746 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Controller/ViewController.h; sourceTree = "<group>"; };
+		409F6C9C1956C4600030E746 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Controller/ViewController.m; sourceTree = "<group>"; };
 		40B0A08F18FCFC1F009D5A0D /* NSString+SQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SQ.h"; sourceTree = "<group>"; };
 		40B0A09018FCFC1F009D5A0D /* NSString+SQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SQ.m"; sourceTree = "<group>"; };
 		40B0A09118FCFC1F009D5A0D /* UIColor+SQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SQ.h"; sourceTree = "<group>"; };
@@ -214,25 +227,15 @@
 		40B0A09718FCFC32009D5A0D /* SQRiskCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRiskCursor.m; sourceTree = "<group>"; };
 		40B3E27518F43CB300472C1F /* DFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUser.h; sourceTree = "<group>"; };
 		40B3E27618F43CB300472C1F /* DFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUser.m; sourceTree = "<group>"; };
-		40B3E27818F4471500472C1F /* DFOderDealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFOderDealController.h; sourceTree = "<group>"; };
-		40B3E27918F4471500472C1F /* DFOderDealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFOderDealController.m; sourceTree = "<group>"; };
 		40B44EAA19339B7C00F04533 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		40B44EAB19339B7C00F04533 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		40B44EAD19339C7A00F04533 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		40B44EAF19339C8700F04533 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		40B44EB119339C9400F04533 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
-		40BFAE8718EEE3FC001C6767 /* DFPSOrderListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPSOrderListController.h; sourceTree = "<group>"; };
-		40BFAE8818EEE3FC001C6767 /* DFPSOrderListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPSOrderListController.m; sourceTree = "<group>"; };
-		40BFAE8A18EEE419001C6767 /* DFMGOrderListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFMGOrderListController.h; sourceTree = "<group>"; };
-		40BFAE8B18EEE419001C6767 /* DFMGOrderListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFMGOrderListController.m; sourceTree = "<group>"; };
 		40BFAE9218EF0062001C6767 /* DFUserOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUserOrder.h; sourceTree = "<group>"; };
 		40BFAE9318EF0062001C6767 /* DFUserOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUserOrder.m; sourceTree = "<group>"; };
-		40D2DB6318FBAFEC000DA952 /* DFKTVListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFKTVListController.h; sourceTree = "<group>"; };
-		40D2DB6418FBAFEC000DA952 /* DFKTVListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFKTVListController.m; sourceTree = "<group>"; };
-		40D2DB6618FBB024000DA952 /* DFChamberListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFChamberListController.h; sourceTree = "<group>"; };
-		40D2DB6718FBB024000DA952 /* DFChamberListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFChamberListController.m; sourceTree = "<group>"; };
-		869A1B941951B115004F125A /* DFOrderDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFOrderDetailController.h; sourceTree = "<group>"; };
-		869A1B951951B115004F125A /* DFOrderDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFOrderDetailController.m; sourceTree = "<group>"; };
+		40F8DC861956C64300C93961 /* DFMGShopListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFMGShopListController.h; path = Controller/DFMGShopListController.h; sourceTree = "<group>"; };
+		40F8DC871956C64300C93961 /* DFMGShopListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFMGShopListController.m; path = Controller/DFMGShopListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,25 +283,6 @@
 				0F9EE15619569F8200428AE7 /* WLTabBarItem.m */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		0F9EE1581956A00700428AE7 /* RootPages */ = {
-			isa = PBXGroup;
-			children = (
-				0F9EE15C1956A10000428AE7 /* WLBasePage.h */,
-				0F9EE15D1956A10000428AE7 /* WLBasePage.m */,
-				0F9EE15F1956A15E00428AE7 /* WLNavigationControlller.h */,
-				0F9EE1601956A15E00428AE7 /* WLNavigationControlller.m */,
-				0F9EE1651956A20000428AE7 /* WLFirstPage.h */,
-				0F9EE1661956A20000428AE7 /* WLFirstPage.m */,
-				0F9EE1621956A1D700428AE7 /* WLSecondPage.h */,
-				0F9EE1631956A1D700428AE7 /* WLSecondPage.m */,
-				0F9EE1681956A21F00428AE7 /* WLThirdPage.h */,
-				0F9EE1691956A21F00428AE7 /* WLThirdPage.m */,
-				0F9EE16B1956A24F00428AE7 /* WLFourthPage.h */,
-				0F9EE16C1956A24F00428AE7 /* WLFourthPage.m */,
-			);
-			name = RootPages;
 			sourceTree = "<group>";
 		};
 		0F9EE16E1956AC7D00428AE7 /* Datas */ = {
@@ -400,6 +384,38 @@
 		4040C6B718E3078C00163066 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				409F6CAE1956C46E0030E746 /* OrderDeal */,
+				409F6C7B1956C45F0030E746 /* DFBarListController.h */,
+				409F6C7C1956C45F0030E746 /* DFBarListController.m */,
+				409F6C7D1956C45F0030E746 /* DFChamberListController.h */,
+				409F6C7E1956C45F0030E746 /* DFChamberListController.m */,
+				409F6C8D1956C4600030E746 /* DFPSOrderListController.h */,
+				409F6C8E1956C4600030E746 /* DFPSOrderListController.m */,
+				409F6C7F1956C45F0030E746 /* DFCommentListController.h */,
+				409F6C801956C45F0030E746 /* DFCommentListController.m */,
+				409F6C811956C45F0030E746 /* DFKTVListController.h */,
+				409F6C821956C45F0030E746 /* DFKTVListController.m */,
+				409F6C831956C45F0030E746 /* DFLoginController.h */,
+				409F6C841956C45F0030E746 /* DFLoginController.m */,
+				409F6C891956C4600030E746 /* DFOrderDetailController.h */,
+				409F6C8A1956C4600030E746 /* DFOrderDetailController.m */,
+				409F6C8B1956C4600030E746 /* DFPersonalCenterController.h */,
+				409F6C8C1956C4600030E746 /* DFPersonalCenterController.m */,
+				409F6C8F1956C4600030E746 /* DFQualificationController.h */,
+				409F6C901956C4600030E746 /* DFQualificationController.m */,
+				409F6C911956C4600030E746 /* DFRegisterController.h */,
+				409F6C921956C4600030E746 /* DFRegisterController.m */,
+				409F6C931956C4600030E746 /* DFReserveController.h */,
+				409F6C941956C4600030E746 /* DFReserveController.m */,
+				409F6C951956C4600030E746 /* DFRootTabBarController.h */,
+				409F6C961956C4600030E746 /* DFRootTabBarController.m */,
+				409F6C971956C4600030E746 /* DFShopDetailController.h */,
+				409F6C981956C4600030E746 /* DFShopDetailController.m */,
+				409F6C991956C4600030E746 /* DFUserCenterController.h */,
+				409F6C9A1956C4600030E746 /* DFUserCenterController.m */,
+				409F6C9B1956C4600030E746 /* ViewController.h */,
+				409F6C9C1956C4600030E746 /* ViewController.m */,
+				409F6C2A1956BE610030E746 /* Controller */,
 				0F9EE16E1956AC7D00428AE7 /* Datas */,
 				0F9EE15119568B1100428AE7 /* Views */,
 				0F9EE14D195684C000428AE7 /* Utils */,
@@ -411,56 +427,11 @@
 				40B0A09118FCFC1F009D5A0D /* UIColor+SQ.h */,
 				40B0A09218FCFC1F009D5A0D /* UIColor+SQ.m */,
 				40BFAE9118EF003E001C6767 /* Model */,
-				4040C6B818E3078C00163066 /* Controller */,
 				4040C6C918E3078C00163066 /* ImageCache */,
 				4030EA9218EDA48700EDE552 /* DFGlobalVar.h */,
 				4030EA9318EDA48700EDE552 /* DFGlobalVar.m */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		4040C6B818E3078C00163066 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				0F9EE1581956A00700428AE7 /* RootPages */,
-				4040C6B918E3078C00163066 /* DFRegisterController.h */,
-				4040C6BA18E3078C00163066 /* DFRegisterController.m */,
-				4040C6BB18E3078C00163066 /* DFReserveController.h */,
-				4040C6BC18E3078C00163066 /* DFReserveController.m */,
-				4040C6BD18E3078C00163066 /* DFShopDetailController.h */,
-				4040C6BE18E3078C00163066 /* DFShopDetailController.m */,
-				4040C6BF18E3078C00163066 /* DFBarListController.h */,
-				4040C6C018E3078C00163066 /* DFBarListController.m */,
-				4040C6C118E3078C00163066 /* DFLoginController.h */,
-				4040C6C218E3078C00163066 /* DFLoginController.m */,
-				4040C6C518E3078C00163066 /* ViewController.h */,
-				4040C6C618E3078C00163066 /* ViewController.m */,
-				40483D7118EC61BD0040116A /* DFRootTabBarController.h */,
-				40483D7218EC61BD0040116A /* DFRootTabBarController.m */,
-				4030EA9518EDA98B00EDE552 /* DFUserCenterController.h */,
-				4030EA9618EDA98B00EDE552 /* DFUserCenterController.m */,
-				4030EA9818EDA9A500EDE552 /* DFPersonalCenterController.h */,
-				4030EA9918EDA9A500EDE552 /* DFPersonalCenterController.m */,
-				40BFAE8718EEE3FC001C6767 /* DFPSOrderListController.h */,
-				40BFAE8818EEE3FC001C6767 /* DFPSOrderListController.m */,
-				40BFAE8A18EEE419001C6767 /* DFMGOrderListController.h */,
-				40BFAE8B18EEE419001C6767 /* DFMGOrderListController.m */,
-				40AC793C18F034B0004B63C3 /* DFQualificationController.h */,
-				40AC793D18F034B0004B63C3 /* DFQualificationController.m */,
-				40B3E27818F4471500472C1F /* DFOderDealController.h */,
-				40B3E27918F4471500472C1F /* DFOderDealController.m */,
-				40D2DB6318FBAFEC000DA952 /* DFKTVListController.h */,
-				40D2DB6418FBAFEC000DA952 /* DFKTVListController.m */,
-				40D2DB6618FBB024000DA952 /* DFChamberListController.h */,
-				40D2DB6718FBB024000DA952 /* DFChamberListController.m */,
-				40214E7019011AFA000BB4D2 /* DFCommentListController.h */,
-				40214E7119011AFA000BB4D2 /* DFCommentListController.m */,
-				869A1B941951B115004F125A /* DFOrderDetailController.h */,
-				869A1B951951B115004F125A /* DFOrderDetailController.m */,
-				0F9EE14A19567FB600428AE7 /* WLRootViewController.h */,
-				0F9EE14B19567FB600428AE7 /* WLRootViewController.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		4040C6C918E3078C00163066 /* ImageCache */ = {
@@ -538,6 +509,48 @@
 				4040C6FB18E3079800163066 /* whiteArrow@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		409F6C2A1956BE610030E746 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				409F6C4D1956BE610030E746 /* RootPages */,
+				409F6C5E1956BE610030E746 /* WLRootViewController.h */,
+				409F6C5F1956BE610030E746 /* WLRootViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		409F6C4D1956BE610030E746 /* RootPages */ = {
+			isa = PBXGroup;
+			children = (
+				409F6C4E1956BE610030E746 /* WLBasePage.h */,
+				409F6C4F1956BE610030E746 /* WLBasePage.m */,
+				409F6C501956BE610030E746 /* WLFirstPage.h */,
+				409F6C511956BE610030E746 /* WLFirstPage.m */,
+				409F6C521956BE610030E746 /* WLFourthPage.h */,
+				409F6C531956BE610030E746 /* WLFourthPage.m */,
+				409F6C541956BE610030E746 /* WLNavigationControlller.h */,
+				409F6C551956BE610030E746 /* WLNavigationControlller.m */,
+				409F6C561956BE610030E746 /* WLSecondPage.h */,
+				409F6C571956BE610030E746 /* WLSecondPage.m */,
+				409F6C581956BE610030E746 /* WLThirdPage.h */,
+				409F6C591956BE610030E746 /* WLThirdPage.m */,
+			);
+			path = RootPages;
+			sourceTree = "<group>";
+		};
+		409F6CAE1956C46E0030E746 /* OrderDeal */ = {
+			isa = PBXGroup;
+			children = (
+				409F6C881956C4600030E746 /* DFOderDealController.m */,
+				409F6C871956C4600030E746 /* DFOderDealController.h */,
+				409F6C851956C45F0030E746 /* DFMGOrderDealListController.h */,
+				409F6C861956C4600030E746 /* DFMGOrderDealListController.m */,
+				40F8DC861956C64300C93961 /* DFMGShopListController.h */,
+				40F8DC871956C64300C93961 /* DFMGShopListController.m */,
+			);
+			name = OrderDeal;
 			sourceTree = "<group>";
 		};
 		40B0A09518FCFC32009D5A0D /* slider */ = {
@@ -694,51 +707,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4040C6DC18E3078C00163066 /* DFReserveController.m in Sources */,
-				4040C6DB18E3078C00163066 /* DFRegisterController.m in Sources */,
-				869A1B961951B115004F125A /* DFOrderDetailController.m in Sources */,
-				0F9EE14C19567FB600428AE7 /* WLRootViewController.m in Sources */,
 				4040C6E718E3078C00163066 /* EGOImageView.m in Sources */,
 				4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */,
 				40B0A09318FCFC1F009D5A0D /* NSString+SQ.m in Sources */,
 				4040C69318E3050300163066 /* DFAppDelegate.m in Sources */,
-				4030EA9718EDA98B00EDE552 /* DFUserCenterController.m in Sources */,
 				4040C69918E3050300163066 /* DFViewController.m in Sources */,
-				4030EA9A18EDA9A500EDE552 /* DFPersonalCenterController.m in Sources */,
-				0F9EE1611956A15E00428AE7 /* WLNavigationControlller.m in Sources */,
-				40D2DB6518FBAFEC000DA952 /* DFKTVListController.m in Sources */,
+				409F6C9F1956C4600030E746 /* DFCommentListController.m in Sources */,
+				409F6CA21956C4600030E746 /* DFMGOrderDealListController.m in Sources */,
 				0F9EE15419568B4400428AE7 /* WLTabBar.m in Sources */,
-				4040C6E118E3078C00163066 /* ViewController.m in Sources */,
-				0F9EE16D1956A24F00428AE7 /* WLFourthPage.m in Sources */,
+				409F6C741956BE610030E746 /* WLNavigationControlller.m in Sources */,
+				409F6C731956BE610030E746 /* WLFourthPage.m in Sources */,
 				4027E31B193F542B00FDF898 /* DFMessage.m in Sources */,
+				409F6CA71956C4600030E746 /* DFQualificationController.m in Sources */,
+				409F6C711956BE610030E746 /* WLBasePage.m in Sources */,
+				409F6CAA1956C4600030E746 /* DFRootTabBarController.m in Sources */,
 				0F9EE15719569F8200428AE7 /* WLTabBarItem.m in Sources */,
+				409F6C751956BE610030E746 /* WLSecondPage.m in Sources */,
+				409F6C721956BE610030E746 /* WLFirstPage.m in Sources */,
 				4040C6E418E3078C00163066 /* EGOImageButton.m in Sources */,
-				4040C6DF18E3078C00163066 /* DFLoginController.m in Sources */,
-				40BFAE8C18EEE419001C6767 /* DFMGOrderListController.m in Sources */,
 				4027E31A193F542B00FDF898 /* DFComment.m in Sources */,
 				40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */,
-				0F9EE1641956A1D700428AE7 /* WLSecondPage.m in Sources */,
+				409F6C9E1956C4600030E746 /* DFChamberListController.m in Sources */,
+				409F6C761956BE610030E746 /* WLThirdPage.m in Sources */,
 				4040C6E218E3078C00163066 /* ViewPager.m in Sources */,
 				4043548A18F82F7B003F6542 /* DFShop.m in Sources */,
-				4040C6DE18E3078C00163066 /* DFBarListController.m in Sources */,
-				0F9EE15E1956A10000428AE7 /* WLBasePage.m in Sources */,
+				409F6CA01956C4600030E746 /* DFKTVListController.m in Sources */,
+				409F6CA51956C4600030E746 /* DFPersonalCenterController.m in Sources */,
+				409F6CA41956C4600030E746 /* DFOrderDetailController.m in Sources */,
+				40F8DC881956C64300C93961 /* DFMGShopListController.m in Sources */,
 				40B44EAC19339B7C00F04533 /* JSONKit.m in Sources */,
+				409F6CAB1956C4600030E746 /* DFShopDetailController.m in Sources */,
 				40B0A09418FCFC1F009D5A0D /* UIColor+SQ.m in Sources */,
-				0F9EE16A1956A21F00428AE7 /* WLThirdPage.m in Sources */,
-				40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */,
-				40B3E27A18F4471500472C1F /* DFOderDealController.m in Sources */,
+				409F6CA81956C4600030E746 /* DFRegisterController.m in Sources */,
 				4040C6E318E3078C00163066 /* EGOCache.m in Sources */,
-				40214E7219011AFA000BB4D2 /* DFCommentListController.m in Sources */,
-				4040C6DD18E3078C00163066 /* DFShopDetailController.m in Sources */,
-				40AC793E18F034B0004B63C3 /* DFQualificationController.m in Sources */,
+				409F6C9D1956C4600030E746 /* DFBarListController.m in Sources */,
+				409F6CAC1956C4600030E746 /* DFUserCenterController.m in Sources */,
+				409F6CA11956C4600030E746 /* DFLoginController.m in Sources */,
+				409F6CAD1956C4600030E746 /* ViewController.m in Sources */,
 				40B0A09818FCFC32009D5A0D /* SQRiskCursor.m in Sources */,
 				4040C6E518E3078C00163066 /* EGOImageLoadConnection.m in Sources */,
 				4040C68F18E3050300163066 /* main.m in Sources */,
 				0F9EE1501956852A00428AE7 /* WLUtils.m in Sources */,
-				40BFAE8918EEE3FC001C6767 /* DFPSOrderListController.m in Sources */,
-				40D2DB6818FBB024000DA952 /* DFChamberListController.m in Sources */,
-				0F9EE1671956A20000428AE7 /* WLFirstPage.m in Sources */,
+				409F6CA91956C4600030E746 /* DFReserveController.m in Sources */,
+				409F6C791956BE610030E746 /* WLRootViewController.m in Sources */,
 				4040C6E018E3078C00163066 /* MyPageControl.m in Sources */,
+				409F6CA31956C4600030E746 /* DFOderDealController.m in Sources */,
+				409F6CA61956C4600030E746 /* DFPSOrderListController.m in Sources */,
 				40B3E27718F43CB300472C1F /* DFUser.m in Sources */,
 				4040C6E618E3078C00163066 /* EGOImageLoader.m in Sources */,
 			);

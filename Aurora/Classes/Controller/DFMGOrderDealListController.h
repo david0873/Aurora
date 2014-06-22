@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DFOderDealController.h"
 
-@interface DFMGOrderListController : UITableViewController<DFOrderDealControllerDelegate>
+@interface DFMGOrderDealListController : UITableViewController<DFOrderDealControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *psOders;
 

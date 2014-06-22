@@ -56,11 +56,6 @@
     return NO;
 }
 
-- (void)dealloc {
-    [_account release];
-    [_password release];
-    [super dealloc];
-}
 
 - (IBAction)cancelPressed:(UIBarButtonItem *)sender {
     
