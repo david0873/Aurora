@@ -10,7 +10,7 @@
 #import "DFUserOrder.h"
 
 @interface DFOrderDetailController : UITableViewController<UITextViewDelegate>
-@property (copy, nonatomic) DFUserOrder * selection;
+@property (copy, nonatomic) DFUserOrder * userOrder;
 @property (weak, nonatomic) id delegate;
 @property (assign, nonatomic) NSInteger row;
 

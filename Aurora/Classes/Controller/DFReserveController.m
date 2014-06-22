@@ -132,12 +132,14 @@
     
     DFUserOrder * order = [DFUserOrder alloc];
     order.shopId= _shop.shopId;
+    order.shopName = _shop.shopName;
     order.number = [_numTextField.text intValue];
     
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"yyyy-MM-dd HH:mm"];
     order.startTime = [df dateFromString:_timeBeginTextField.text];
     order.endTime = [df dateFromString:_timeEndTextField.text];
+    order.orderTime = [NSDate date];
     
     order.remarks = _remarkText.text;
     

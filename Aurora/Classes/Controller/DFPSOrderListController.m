@@ -77,11 +77,13 @@ NSString *path;
     // Configure the cell...
     DFUserOrder * order = [self.psOrders objectAtIndex:indexPath.row];
     
-//    UILabel * shopName = (UILabel *)[cell viewWithTag:1];
-//    shopName.text = order.shopName;
+    UILabel * shopName = (UILabel *)[cell viewWithTag:1];
+    shopName.text = order.shopName;
     
-    UILabel * orderId = (UILabel *)[cell viewWithTag:2];
-    orderId.text = order.orderId;
+    UILabel * orderTime = (UILabel *)[cell viewWithTag:2];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy-MM-dd HH:mm"];
+    orderTime.text = [df stringFromDate:order.orderTime];
     
     UILabel * orderStatusLabel = (UILabel *)[cell viewWithTag:3];
     switch (order.orderStatus) {
@@ -151,10 +153,10 @@ NSString *path;
 {
     DFOrderDetailController *destination = segue.destinationViewController;
     
-    if ([destination respondsToSelector:@selector(setSelection:)]) {
+    if ([destination respondsToSelector:@selector(setUserOrder:)]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         DFUserOrder* userOrder = [self.psOrders objectAtIndex:indexPath.row];
-        [destination setValue:userOrder forKey:@"selection"];
+        [destination setValue:userOrder forKey:@"userOrder"];
     }
 }
 

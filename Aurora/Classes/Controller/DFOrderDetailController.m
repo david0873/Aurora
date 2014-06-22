@@ -30,24 +30,24 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     
-    _labelNumber.text = [NSString stringWithFormat:@"%d", _selection.number];
+    _labelNumber.text = [NSString stringWithFormat:@"%d", _userOrder.number];
     
-    _lableSeatType.text = _selection.seatType;
+    _lableSeatType.text = _userOrder.seatType;
     
-    _labelStartTime.text = [dateFormatter stringFromDate:_selection.startTime];
+    _labelStartTime.text = [dateFormatter stringFromDate:_userOrder.startTime];
     
-    _labelEndTime.text = [dateFormatter stringFromDate:_selection.endTime];
+    _labelEndTime.text = [dateFormatter stringFromDate:_userOrder.endTime];
     
-    _labelRemarks.text = _selection.remarks;
+    _labelRemarks.text = _userOrder.remarks;
     
     _labelComment.layer.borderColor = UIColor.grayColor.CGColor;
     _labelComment.layer.borderWidth =1.0;
     _labelComment.layer.cornerRadius =5.0;
     
-    _labelComment.text = _selection.reply;
+    _labelComment.text = _userOrder.reply;
     
-    _labelDeposit.text = [NSString stringWithFormat:@"%d", _selection.deposit];
-    _labelMinConsume.text = [NSString stringWithFormat:@"%d", _selection.miniCharge];
+    _labelDeposit.text = [NSString stringWithFormat:@"%d", _userOrder.deposit];
+    _labelMinConsume.text = [NSString stringWithFormat:@"%d", _userOrder.miniCharge];
     
 }
 
