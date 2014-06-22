@@ -151,7 +151,7 @@
     
     [array addObject:order];
     
-    [array writeToFile:path atomically:YES];
+    [NSKeyedArchiver archiveRootObject:array toFile:path];
     
     NSString * message = @"订单已提交";
     
