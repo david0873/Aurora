@@ -7,6 +7,7 @@
 //
 
 #import "DFOrderDetailController.h"
+#import "DFUserOrder.h"
 
 @interface DFOrderDetailController ()
 
@@ -48,6 +49,12 @@
     
     _labelDeposit.text = [NSString stringWithFormat:@"%d", _userOrder.deposit];
     _labelMinConsume.text = [NSString stringWithFormat:@"%d", _userOrder.miniCharge];
+    
+    _btnPay.enabled = NO;
+    
+    if (_userOrder.orderStatus == OrderNotPayed) {
+        _btnPay.enabled = YES;
+    }
     
 }
 
@@ -142,8 +149,8 @@
 }
 */
 
-- (IBAction)backPressed:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+//- (IBAction)backPressed:(UIBarButtonItem *)sender {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 
 @end

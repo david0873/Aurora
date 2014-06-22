@@ -27,7 +27,6 @@
     [copy setShopName:[self.shopName copyWithZone:zone]];
     copy.deposit = self.deposit;
     copy.miniCharge = self.miniCharge;
-    copy.payed = self.payed;
     return copy;
 }
 
@@ -50,7 +49,6 @@
     [aCoder encodeObject:self.shopName forKey:kUserOrderShopNameKey];
     [aCoder encodeInt:self.deposit forKey:kUserOrderDepositKey];
     [aCoder encodeInt:self.miniCharge forKey:kUserOrderMiniChargeKey];
-    [aCoder encodeInt:self.payed forKey:kUserOrderPayedKey];
     
 }
 
@@ -72,16 +70,15 @@
         _shopName = [aDecoder decodeObjectForKey:kUserOrderShopNameKey];
         _deposit = [aDecoder decodeIntForKey:kUserOrderDepositKey];
         _miniCharge = [aDecoder decodeIntForKey:kUserOrderMiniChargeKey];
-        _payed = [aDecoder decodeIntForKey:kUserOrderPayedKey];
     }
     return self;
 }
 
-- (NSString *)toJson{
-    NSDictionary* params = @{@"shop":_shopId, @"person_number":[NSString stringWithFormat:@"%d", _number], @"start_time":[self stringFromDate:_startTime], @"end_time":[self stringFromDate:_endTime], @"seat_type":_seatType};
-    NSString *string = [params JSONString];
-    return string;
-}
+//- (NSString *)toJson{
+//    NSDictionary* params = @{@"shop":_shopId, @"person_number":[NSString stringWithFormat:@"%d", _number], @"start_time":[self stringFromDate:_startTime], @"end_time":[self stringFromDate:_endTime], @"seat_type":_seatType};
+//    NSString *string = [params JSONString];
+//    return string;
+//}
 
 - (NSString *)stringFromDate:(NSDate *)date{
     
