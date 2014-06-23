@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface WLDataManager : NSObject
 @property(nonatomic, strong)NSMutableArray *mainPagesArray;
+@property(nonatomic, strong)UIStoryboard *mainStoryboard;
 
 + (WLDataManager*)instance;
 + (void)destory;
