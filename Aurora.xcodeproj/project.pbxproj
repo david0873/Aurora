@@ -90,6 +90,7 @@
 		40B44EB219339C9400F04533 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44EB119339C9400F04533 /* libxml2.2.dylib */; };
 		40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE9318EF0062001C6767 /* DFUserOrder.m */; };
 		40F8DC881956C64300C93961 /* DFMGShopListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DC871956C64300C93961 /* DFMGShopListController.m */; };
+		40F8DC891956D9E400C93961 /* WLDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1701956AE0100428AE7 /* WLDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,10 @@
 		0F9EE15319568B4400428AE7 /* WLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLTabBar.m; path = Views/WLTabBar.m; sourceTree = "<group>"; };
 		0F9EE15519569F8200428AE7 /* WLTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarItem.h; path = Views/WLTabBarItem.h; sourceTree = "<group>"; };
 		0F9EE15619569F8200428AE7 /* WLTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLTabBarItem.m; path = Views/WLTabBarItem.m; sourceTree = "<group>"; };
+		0F9EE16F1956AE0100428AE7 /* WLDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLDataManager.h; path = Datas/WLDataManager.h; sourceTree = "<group>"; };
+		0F9EE1701956AE0100428AE7 /* WLDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLDataManager.m; path = Datas/WLDataManager.m; sourceTree = "<group>"; };
+		0F9EE1721956C86B00428AE7 /* WLTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarDelegate.h; path = Views/WLTabBarDelegate.h; sourceTree = "<group>"; };
+		0F9EE1731956C9AD00428AE7 /* WLTabBarItemDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarItemDelegate.h; path = Views/WLTabBarItemDelegate.h; sourceTree = "<group>"; };
 		4027E316193F542B00FDF898 /* DFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFComment.h; sourceTree = "<group>"; };
 		4027E317193F542B00FDF898 /* DFComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFComment.m; sourceTree = "<group>"; };
 		4027E318193F542B00FDF898 /* DFMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFMessage.h; sourceTree = "<group>"; };
@@ -711,6 +716,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F8DC891956D9E400C93961 /* WLDataManager.m in Sources */,
 				4040C6E718E3078C00163066 /* EGOImageView.m in Sources */,
 				4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */,
 				40B0A09318FCFC1F009D5A0D /* NSString+SQ.m in Sources */,
@@ -840,7 +846,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -872,7 +878,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -886,7 +892,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Aurora/Aurora-Prefix.pch";
 				INFOPLIST_FILE = "Aurora/Aurora-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -900,7 +906,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Aurora/Aurora-Prefix.pch";
 				INFOPLIST_FILE = "Aurora/Aurora-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
