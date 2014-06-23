@@ -7,6 +7,7 @@
 //
 
 #import "WLNavigationControlller.h"
+#import "WLUtils.h"
 
 @interface WLNavigationControlller ()
 
@@ -28,7 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationBar.translucent = NO;
-    self.navigationBar.barTintColor = [UIColor greenColor];
+    self.navigationBar.barTintColor = [WLUtils colorWithRed:46 green:182 blue:168];
 }
 
 - (void)didReceiveMemoryWarning

@@ -14,4 +14,6 @@
 + (CGFloat)displayHeight;
 + (CGFloat)statusBarHeight;
 
++ (UIColor *)colorWithRed:(CGFloat)r green:(CGFloat)g blue:(CGFloat)b;
+
 @end

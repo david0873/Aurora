@@ -20,6 +20,9 @@
 		0F9EE1711956AE0100428AE7 /* WLDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1701956AE0100428AE7 /* WLDataManager.m */; };
 		0F9EE1781956DCD100428AE7 /* WLCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1751956DCD100428AE7 /* WLCollectionCell.m */; };
 		0F9EE1791956DCD100428AE7 /* WLCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1771956DCD100428AE7 /* WLCollectionView.m */; };
+		0FAB5A86195846CF00CE7DCC /* icon_tabbar_merchant_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAB5A84195846CF00CE7DCC /* icon_tabbar_merchant_normal.png */; };
+		0FAB5A87195846CF00CE7DCC /* icon_tabbar_merchant_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAB5A85195846CF00CE7DCC /* icon_tabbar_merchant_selected.png */; };
+		0FAB5A8A19584BEE00CE7DCC /* WLVIewCreater.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB5A8919584BEE00CE7DCC /* WLVIewCreater.m */; };
 		40214E7219011AFA000BB4D2 /* DFCommentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40214E7119011AFA000BB4D2 /* DFCommentListController.m */; };
 		4027E31A193F542B00FDF898 /* DFComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E317193F542B00FDF898 /* DFComment.m */; };
 		4027E31B193F542B00FDF898 /* DFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E319193F542B00FDF898 /* DFMessage.m */; };
@@ -134,6 +137,10 @@
 		0F9EE1751956DCD100428AE7 /* WLCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLCollectionCell.m; path = Views/WLCollectionCell.m; sourceTree = "<group>"; };
 		0F9EE1761956DCD100428AE7 /* WLCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLCollectionView.h; path = Views/WLCollectionView.h; sourceTree = "<group>"; };
 		0F9EE1771956DCD100428AE7 /* WLCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLCollectionView.m; path = Views/WLCollectionView.m; sourceTree = "<group>"; };
+		0FAB5A84195846CF00CE7DCC /* icon_tabbar_merchant_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_merchant_normal.png; sourceTree = "<group>"; };
+		0FAB5A85195846CF00CE7DCC /* icon_tabbar_merchant_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_merchant_selected.png; sourceTree = "<group>"; };
+		0FAB5A8819584BEE00CE7DCC /* WLVIewCreater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLVIewCreater.h; path = Utils/WLVIewCreater.h; sourceTree = "<group>"; };
+		0FAB5A8919584BEE00CE7DCC /* WLVIewCreater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLVIewCreater.m; path = Utils/WLVIewCreater.m; sourceTree = "<group>"; };
 		40214E7019011AFA000BB4D2 /* DFCommentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFCommentListController.h; sourceTree = "<group>"; };
 		40214E7119011AFA000BB4D2 /* DFCommentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFCommentListController.m; sourceTree = "<group>"; };
 		4027E316193F542B00FDF898 /* DFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFComment.h; sourceTree = "<group>"; };
@@ -281,6 +288,8 @@
 			children = (
 				0F9EE14E1956852A00428AE7 /* WLUtils.h */,
 				0F9EE14F1956852A00428AE7 /* WLUtils.m */,
+				0FAB5A8819584BEE00CE7DCC /* WLVIewCreater.h */,
+				0FAB5A8919584BEE00CE7DCC /* WLVIewCreater.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -328,6 +337,15 @@
 				0F9EE1701956AE0100428AE7 /* WLDataManager.m */,
 			);
 			name = Datas;
+			sourceTree = "<group>";
+		};
+		0FAB5A83195846CF00CE7DCC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0FAB5A84195846CF00CE7DCC /* icon_tabbar_merchant_normal.png */,
+				0FAB5A85195846CF00CE7DCC /* icon_tabbar_merchant_selected.png */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		40214E6F1900F32E000BB4D2 /* ViewPager */ = {
@@ -539,6 +557,7 @@
 		4040C6E918E3079700163066 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0FAB5A83195846CF00CE7DCC /* TabBar */,
 				403433DE18E93FB500459FF5 /* star_empty.png */,
 				403433DF18E93FB500459FF5 /* star_full.png */,
 				403433E018E93FB500459FF5 /* star_half.png */,
@@ -693,7 +712,9 @@
 				403433D118E9318B00459FF5 /* ktv.png in Resources */,
 				4040C70518E3079800163066 /* image4.jpg in Resources */,
 				4040C6FF18E3079800163066 /* blueArrow@2x.png in Resources */,
+				0FAB5A87195846CF00CE7DCC /* icon_tabbar_merchant_selected.png in Resources */,
 				4040C70B18E3079800163066 /* shopIcon.png in Resources */,
+				0FAB5A86195846CF00CE7DCC /* icon_tabbar_merchant_normal.png in Resources */,
 				403433E218E93FB600459FF5 /* star_full.png in Resources */,
 				4040C6FE18E3079800163066 /* blueArrow.png in Resources */,
 				403433E318E93FB600459FF5 /* star_half.png in Resources */,
@@ -720,6 +741,7 @@
 			files = (
 				4040C6DC18E3078C00163066 /* DFReserveController.m in Sources */,
 				4040C6DB18E3078C00163066 /* DFRegisterController.m in Sources */,
+				0FAB5A8A19584BEE00CE7DCC /* WLVIewCreater.m in Sources */,
 				869A1B961951B115004F125A /* DFOrderDetailController.m in Sources */,
 				0F9EE14C19567FB600428AE7 /* WLRootViewController.m in Sources */,
 				4040C6E718E3078C00163066 /* EGOImageView.m in Sources */,
