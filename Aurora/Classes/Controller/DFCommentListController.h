@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DFShop.h"
 
 @interface DFCommentListController : UITableViewController
 
+@property (copy, nonatomic) DFShop * shop;
+@property (nonatomic, strong) NSMutableArray *comments;
+
+- (IBAction)AddComment:(UIBarButtonItem *)sender;
 - (IBAction)backPressed:(UIBarButtonItem *)sender;
 @end

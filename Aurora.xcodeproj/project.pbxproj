@@ -282,6 +282,10 @@
 		0F9EE15119568B1100428AE7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0F9EE1741956DCD100428AE7 /* WLCollectionCell.h */,
+				0F9EE1751956DCD100428AE7 /* WLCollectionCell.m */,
+				0F9EE1761956DCD100428AE7 /* WLCollectionView.h */,
+				0F9EE1771956DCD100428AE7 /* WLCollectionView.m */,
 				0F9EE15219568B4400428AE7 /* WLTabBar.h */,
 				0F9EE15319568B4400428AE7 /* WLTabBar.m */,
 				0F9EE15519569F8200428AE7 /* WLTabBarItem.h */,

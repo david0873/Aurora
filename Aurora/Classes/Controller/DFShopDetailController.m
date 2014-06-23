@@ -10,6 +10,7 @@
 #import "EGOImageView.h"
 #import "DFReserveController.h"
 #import "DFGlobalVar.h"
+#import "DFCommentListController.h"
 
 @interface DFShopDetailController ()
 
@@ -79,6 +80,14 @@
             NSArray *viewControllers = destination.viewControllers;
             DFReserveController *reserveController = [viewControllers objectAtIndex:0];
             reserveController.shop = _shop;
+        }
+    }else if ([segue.identifier isEqualToString:@"segueComment"]){
+        DFUser * loginUser = [DFGlobalVar sharedGlobalVar].user;
+        if (loginUser != nil) {
+            UINavigationController * destination = [segue destinationViewController];
+            NSArray *viewControllers = destination.viewControllers;
+            DFCommentListController *commentController = [viewControllers objectAtIndex:0];
+            commentController.shop = _shop;
         }
     }
     
