@@ -17,6 +17,8 @@
     UIButton *_button;
     UIImageView *_itemImage;
     UILabel *_itemTitle;
+    
+    BOOL _isSelected;
 }
 
 @property(nonatomic, strong)NSString *itemTitle;
@@ -99,12 +101,19 @@
 
 - (void)touchDown
 {
+    if (_isSelected) {
+        return;
+    }
     _itemImage.image = [UIImage imageNamed:@"icon_tabbar_merchant_selected.png"];
     _itemTitle.textColor = [WLUtils colorWithRed:46 green:182 blue:168];
 }
 
 - (void)touchUpInside
 {
+    if (_isSelected) {
+        return;
+    }
+    
     if ([self.delegate respondsToSelector:@selector(didSelectedItem:)]) {
         [self.delegate didSelectedItem:self.itemID];
     }
@@ -113,6 +122,10 @@
 
 - (void)touchOut
 {
+    if (_isSelected) {
+        return;
+    }
+    
     _itemImage.image = [UIImage imageNamed:@"icon_tabbar_merchant_normal.png"];
     _itemTitle.textColor = [UIColor lightGrayColor];
 }
@@ -125,6 +138,7 @@
 
 - (void)select
 {
+    _isSelected = YES;
     _itemImage.image = [UIImage imageNamed:@"icon_tabbar_merchant_selected.png"];
     _itemTitle.textColor = [WLUtils colorWithRed:46 green:182 blue:168];
 }
