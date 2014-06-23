@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WLUtils.h"
+#import "WLDataManager.h"
+#import "WLNavigationControlller.h"
+#import "WLTabBar.h"
 
 @protocol WLPageDelegate <NSObject>
 
@@ -15,8 +18,9 @@
 
 @end
 
-@interface WLBasePage : UIViewController
-
+@interface WLBasePage : UIViewController<WLTabBarDelegate>
+@property(nonatomic, strong)WLTabBar *tabBar;
 @property(nonatomic)NSInteger pageIndex;
+@property(nonatomic, strong)UIScrollView *contentScrollView;
 
 @end

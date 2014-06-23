@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WLTabBarItem.h"
+#import "WLTabBarDelegate.h"
+#import "WLTabBarItemDelegate.h"
 
-@interface WLTabBar : UIView
+#define kTabBarHeight 49
+
+
+
+@interface WLTabBar : UIView <WLTabBarItemDelegate>
+@property(nonatomic, weak)id<WLTabBarDelegate> delegate;
+@property(nonatomic)NSInteger curItemID;
+@property(nonatomic, strong)NSMutableArray *items;
+
+- (id)initWithFrame:(CGRect)frame delegate:(id<WLTabBarDelegate>)aDelegate;
+
+- (void)selectItem:(NSInteger)itemID;
 
 @end

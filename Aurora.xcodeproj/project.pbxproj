@@ -17,6 +17,9 @@
 		0F9EE1671956A20000428AE7 /* WLFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1661956A20000428AE7 /* WLFirstPage.m */; };
 		0F9EE16A1956A21F00428AE7 /* WLThirdPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1691956A21F00428AE7 /* WLThirdPage.m */; };
 		0F9EE16D1956A24F00428AE7 /* WLFourthPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE16C1956A24F00428AE7 /* WLFourthPage.m */; };
+		0F9EE1711956AE0100428AE7 /* WLDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1701956AE0100428AE7 /* WLDataManager.m */; };
+		0F9EE1781956DCD100428AE7 /* WLCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1751956DCD100428AE7 /* WLCollectionCell.m */; };
+		0F9EE1791956DCD100428AE7 /* WLCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1771956DCD100428AE7 /* WLCollectionView.m */; };
 		40214E7219011AFA000BB4D2 /* DFCommentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40214E7119011AFA000BB4D2 /* DFCommentListController.m */; };
 		4027E31A193F542B00FDF898 /* DFComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E317193F542B00FDF898 /* DFComment.m */; };
 		4027E31B193F542B00FDF898 /* DFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E319193F542B00FDF898 /* DFMessage.m */; };
@@ -123,6 +126,14 @@
 		0F9EE1691956A21F00428AE7 /* WLThirdPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLThirdPage.m; path = RootPages/WLThirdPage.m; sourceTree = "<group>"; };
 		0F9EE16B1956A24F00428AE7 /* WLFourthPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLFourthPage.h; path = RootPages/WLFourthPage.h; sourceTree = "<group>"; };
 		0F9EE16C1956A24F00428AE7 /* WLFourthPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLFourthPage.m; path = RootPages/WLFourthPage.m; sourceTree = "<group>"; };
+		0F9EE16F1956AE0100428AE7 /* WLDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLDataManager.h; path = Datas/WLDataManager.h; sourceTree = "<group>"; };
+		0F9EE1701956AE0100428AE7 /* WLDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLDataManager.m; path = Datas/WLDataManager.m; sourceTree = "<group>"; };
+		0F9EE1721956C86B00428AE7 /* WLTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarDelegate.h; path = Views/WLTabBarDelegate.h; sourceTree = "<group>"; };
+		0F9EE1731956C9AD00428AE7 /* WLTabBarItemDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarItemDelegate.h; path = Views/WLTabBarItemDelegate.h; sourceTree = "<group>"; };
+		0F9EE1741956DCD100428AE7 /* WLCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLCollectionCell.h; path = Views/WLCollectionCell.h; sourceTree = "<group>"; };
+		0F9EE1751956DCD100428AE7 /* WLCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLCollectionCell.m; path = Views/WLCollectionCell.m; sourceTree = "<group>"; };
+		0F9EE1761956DCD100428AE7 /* WLCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLCollectionView.h; path = Views/WLCollectionView.h; sourceTree = "<group>"; };
+		0F9EE1771956DCD100428AE7 /* WLCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLCollectionView.m; path = Views/WLCollectionView.m; sourceTree = "<group>"; };
 		40214E7019011AFA000BB4D2 /* DFCommentListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFCommentListController.h; sourceTree = "<group>"; };
 		40214E7119011AFA000BB4D2 /* DFCommentListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFCommentListController.m; sourceTree = "<group>"; };
 		4027E316193F542B00FDF898 /* DFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFComment.h; sourceTree = "<group>"; };
@@ -277,10 +288,16 @@
 		0F9EE15119568B1100428AE7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0F9EE1741956DCD100428AE7 /* WLCollectionCell.h */,
+				0F9EE1751956DCD100428AE7 /* WLCollectionCell.m */,
+				0F9EE1761956DCD100428AE7 /* WLCollectionView.h */,
+				0F9EE1771956DCD100428AE7 /* WLCollectionView.m */,
 				0F9EE15219568B4400428AE7 /* WLTabBar.h */,
 				0F9EE15319568B4400428AE7 /* WLTabBar.m */,
 				0F9EE15519569F8200428AE7 /* WLTabBarItem.h */,
 				0F9EE15619569F8200428AE7 /* WLTabBarItem.m */,
+				0F9EE1721956C86B00428AE7 /* WLTabBarDelegate.h */,
+				0F9EE1731956C9AD00428AE7 /* WLTabBarItemDelegate.h */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -307,6 +324,8 @@
 		0F9EE16E1956AC7D00428AE7 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
+				0F9EE16F1956AE0100428AE7 /* WLDataManager.h */,
+				0F9EE1701956AE0100428AE7 /* WLDataManager.m */,
 			);
 			name = Datas;
 			sourceTree = "<group>";
@@ -731,9 +750,11 @@
 				40B44EAC19339B7C00F04533 /* JSONKit.m in Sources */,
 				40B0A09418FCFC1F009D5A0D /* UIColor+SQ.m in Sources */,
 				0F9EE16A1956A21F00428AE7 /* WLThirdPage.m in Sources */,
+				0F9EE1791956DCD100428AE7 /* WLCollectionView.m in Sources */,
 				40483D7318EC61BD0040116A /* DFRootTabBarController.m in Sources */,
 				40B3E27A18F4471500472C1F /* DFOderDealController.m in Sources */,
 				4040C6E318E3078C00163066 /* EGOCache.m in Sources */,
+				0F9EE1711956AE0100428AE7 /* WLDataManager.m in Sources */,
 				40214E7219011AFA000BB4D2 /* DFCommentListController.m in Sources */,
 				4040C6DD18E3078C00163066 /* DFShopDetailController.m in Sources */,
 				40AC793E18F034B0004B63C3 /* DFQualificationController.m in Sources */,
@@ -744,6 +765,7 @@
 				40BFAE8918EEE3FC001C6767 /* DFPSOrderListController.m in Sources */,
 				40D2DB6818FBB024000DA952 /* DFChamberListController.m in Sources */,
 				0F9EE1671956A20000428AE7 /* WLFirstPage.m in Sources */,
+				0F9EE1781956DCD100428AE7 /* WLCollectionCell.m in Sources */,
 				4040C6E018E3078C00163066 /* MyPageControl.m in Sources */,
 				40B3E27718F43CB300472C1F /* DFUser.m in Sources */,
 				4040C6E618E3078C00163066 /* EGOImageLoader.m in Sources */,
@@ -828,7 +850,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -860,7 +882,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
