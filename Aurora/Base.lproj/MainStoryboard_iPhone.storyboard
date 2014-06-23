@@ -1028,10 +1028,10 @@
             </objects>
             <point key="canvasLocation" x="2768" y="4371"/>
         </scene>
-        <!--Table View Controller - 区域经理-->
+        <!--Manager Controller - 区域经理-->
         <scene sceneID="BtQ-br-dEr">
             <objects>
-                <tableViewController id="elk-2o-gbn" sceneMemberID="viewController">
+                <tableViewController id="elk-2o-gbn" customClass="DFManagerController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="aHB-hP-R2V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1055,7 +1055,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Rap-6T-sB6" kind="push" trigger="accessoryAction" id="9Rj-dA-j4p"/>
+                                            <segue destination="Rap-6T-sB6" kind="push" id="Tb6-PI-I5e"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pwq-72-Mu8">
@@ -1074,7 +1074,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="eIb-KY-KuX" kind="push" trigger="accessoryAction" id="ozD-qa-Met"/>
+                                            <segue destination="eIb-KY-KuX" kind="push" id="vSc-fe-N30"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rFu-vh-2Sp">
@@ -1093,7 +1093,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="uZR-if-kP5" kind="push" id="N8Z-wn-43V"/>
+                                            <segue destination="uZR-if-kP5" kind="push" id="r1l-0c-eOT"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1104,7 +1104,13 @@
                             <outlet property="delegate" destination="elk-2o-gbn" id="SXd-CZ-Jgy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="区域经理" id="Wgf-ZX-TYJ"/>
+                    <navigationItem key="navigationItem" title="区域经理" id="Wgf-ZX-TYJ">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="HhG-Se-Epw">
+                            <connections>
+                                <action selector="backPressed:" destination="elk-2o-gbn" id="Xq0-9K-Lvy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dad-0A-aXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1142,7 +1148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qtk-Fc-fsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3545" y="4018"/>
+            <point key="canvasLocation" x="3545" y="4022"/>
         </scene>
         <!--Shop List Controller - 场子列表-->
         <scene sceneID="dW4-2P-KOw">
@@ -1170,7 +1176,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="yGe-9U-QhU" kind="push" trigger="accessoryAction" id="CzN-xC-61w"/>
+                                    <segue destination="yGe-9U-QhU" kind="push" id="z3y-Xb-erN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1216,7 +1222,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="3vW-ji-MG7" kind="push" id="2ck-se-zYj"/>
+                                    <segue destination="3vW-ji-MG7" kind="push" id="lb0-e4-Pew"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1362,12 +1368,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" text="回复" translatesAutoresizingMaskIntoConstraints="NO" id="WCR-tt-NI3">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="WCR-tt-NI3">
                                                     <rect key="frame" x="15" y="1" width="291" height="111"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1385,7 +1391,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aj-Dj-Msn">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aj-Dj-Msn">
                                                     <rect key="frame" x="117" y="5" width="183" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1407,7 +1413,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mT9-WJ-MMC">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mT9-WJ-MMC">
                                                     <rect key="frame" x="117" y="5" width="183" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2011,7 +2017,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="GTK-TJ-Gvj" kind="push" trigger="accessoryAction" id="seK-sW-B9h"/>
+                                    <segue destination="GTK-TJ-Gvj" kind="push" id="Ovl-eb-vKl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2024,7 +2030,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUN-tr-4Be" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3539" y="3313"/>
+            <point key="canvasLocation" x="3545" y="3321"/>
         </scene>
         <!--Order Deal List Controller - 订单列表-->
         <scene sceneID="KkX-pL-bf5">
@@ -2057,7 +2063,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="kdL-Og-xuG" kind="push" id="dYk-iO-ZIH"/>
+                                    <segue destination="kdL-Og-xuG" kind="push" id="AZO-Q5-eEf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2070,7 +2076,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWy-cw-pqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3980" y="3313"/>
+            <point key="canvasLocation" x="3986" y="3321"/>
         </scene>
         <!--Table View Controller - 订单详情-->
         <scene sceneID="Vws-lR-cBJ">
@@ -2191,7 +2197,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -2208,7 +2214,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -2226,11 +2232,11 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rjs-aM-x2g">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rjs-aM-x2g">
                                                     <rect key="frame" x="117" y="5" width="183" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -2248,11 +2254,11 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="scb-zG-AnU">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="scb-zG-AnU">
                                                     <rect key="frame" x="117" y="5" width="183" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -2297,7 +2303,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMa-oD-qTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4433" y="3313"/>
+            <point key="canvasLocation" x="4439" y="3321"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZyB-n7-yzd">
@@ -2332,6 +2338,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="aFt-aT-VGL"/>
-        <segue reference="iYq-CQ-gf9"/>
+        <segue reference="FI0-V8-Ll8"/>
     </inferredMetricsTieBreakers>
 </document>

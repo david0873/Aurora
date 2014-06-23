@@ -1,22 +1,18 @@
 //
-//  DFMGShopListController.m
+//  DFManagerController.m
 //  Aurora
 //
-//  Created by David on 14-6-22.
+//  Created by David on 14-6-23.
 //  Copyright (c) 2014年 david. All rights reserved.
 //
 
-#import "DFMGShopListController.h"
-#import "DFUserOrder.h"
+#import "DFManagerController.h"
 
-@interface DFMGShopListController ()
+@interface DFManagerController ()
 
 @end
 
-NSString *path;
-NSMutableArray *shopNames;
-
-@implementation DFMGShopListController
+@implementation DFManagerController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -31,24 +27,11 @@ NSMutableArray *shopNames;
 {
     [super viewDidLoad];
     
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
-    NSArray* myPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString* myDocPath = [myPaths objectAtIndex:0];
-    path = [myDocPath stringByAppendingPathComponent:@"order.plist"];
-    
-    self.psOrders = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
-    
-    shopNames = [[NSMutableArray alloc]init];
-    for (int i=0; i<self.psOrders.count; i++) {
-        DFUserOrder * userOrder = [self.psOrders objectAtIndex:i];
-        NSString * shopName = userOrder.shopName;
-        if (![shopNames containsObject:shopName]) {
-            [shopNames addObject:shopName];
-        }
-    }
-    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,27 +41,31 @@ NSMutableArray *shopNames;
 }
 
 #pragma mark - Table view data source
+//
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//#warning Potentially incomplete method implementation.
+//    // Return the number of sections.
+//    return 0;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//#warning Incomplete method implementation.
+//    // Return the number of rows in the section.
+//    return 0;
+//}
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return shopNames.count;
-}
-
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"shopCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    UILabel * shopName = (UILabel *) [cell viewWithTag:1];
-    shopName.text = [shopNames objectAtIndex:indexPath.row];
+    // Configure the cell...
     
     return cell;
 }
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -129,4 +116,7 @@ NSMutableArray *shopNames;
 }
 */
 
+- (IBAction)backPressed:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

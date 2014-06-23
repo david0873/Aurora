@@ -92,6 +92,7 @@
 		40F8DC881956C64300C93961 /* DFMGShopListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DC871956C64300C93961 /* DFMGShopListController.m */; };
 		40F8DC891956D9E400C93961 /* WLDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1701956AE0100428AE7 /* WLDataManager.m */; };
 		40F8DC8C19583CA900C93961 /* YBAddCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DC8B19583CA900C93961 /* YBAddCommentController.m */; };
+		40F8DC8F19584A5C00C93961 /* DFManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DC8E19584A5C00C93961 /* DFManagerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +245,8 @@
 		40F8DC871956C64300C93961 /* DFMGShopListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFMGShopListController.m; path = Controller/DFMGShopListController.m; sourceTree = "<group>"; };
 		40F8DC8A19583CA900C93961 /* YBAddCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YBAddCommentController.h; path = Controller/YBAddCommentController.h; sourceTree = "<group>"; };
 		40F8DC8B19583CA900C93961 /* YBAddCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YBAddCommentController.m; path = Controller/YBAddCommentController.m; sourceTree = "<group>"; };
+		40F8DC8D19584A5C00C93961 /* DFManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFManagerController.h; sourceTree = "<group>"; };
+		40F8DC8E19584A5C00C93961 /* DFManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFManagerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -444,6 +447,8 @@
 				4040C6C918E3078C00163066 /* ImageCache */,
 				4030EA9218EDA48700EDE552 /* DFGlobalVar.h */,
 				4030EA9318EDA48700EDE552 /* DFGlobalVar.m */,
+				40F8DC8D19584A5C00C93961 /* DFManagerController.h */,
+				40F8DC8E19584A5C00C93961 /* DFManagerController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -557,8 +562,8 @@
 		409F6CAE1956C46E0030E746 /* OrderDeal */ = {
 			isa = PBXGroup;
 			children = (
-				409F6C881956C4600030E746 /* DFOderDealController.m */,
 				409F6C871956C4600030E746 /* DFOderDealController.h */,
+				409F6C881956C4600030E746 /* DFOderDealController.m */,
 				409F6C851956C45F0030E746 /* DFMGOrderDealListController.h */,
 				409F6C861956C4600030E746 /* DFMGOrderDealListController.m */,
 				40F8DC861956C64300C93961 /* DFMGShopListController.h */,
@@ -764,6 +769,7 @@
 				4040C6E518E3078C00163066 /* EGOImageLoadConnection.m in Sources */,
 				4040C68F18E3050300163066 /* main.m in Sources */,
 				0F9EE1501956852A00428AE7 /* WLUtils.m in Sources */,
+				40F8DC8F19584A5C00C93961 /* DFManagerController.m in Sources */,
 				409F6CA91956C4600030E746 /* DFReserveController.m in Sources */,
 				409F6C791956BE610030E746 /* WLRootViewController.m in Sources */,
 				4040C6E018E3078C00163066 /* MyPageControl.m in Sources */,

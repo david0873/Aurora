@@ -94,6 +94,9 @@ NSString *path;
             orderStatusLabel.text = @"处理中";
             break;
         case 1:
+            orderStatusLabel.text = @"待支付";
+            break;
+        case 2:
             orderStatusLabel.text = @"成功";
             break;
         default:

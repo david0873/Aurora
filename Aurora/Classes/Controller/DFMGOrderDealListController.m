@@ -39,8 +39,6 @@ NSString *path;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     
 }
 
@@ -83,8 +81,10 @@ NSString *path;
     UILabel * nibName = (UILabel *)[cell viewWithTag:1];
     nibName.text = order.user.nibName;
     
-    UILabel * orderInfo = (UILabel *)[cell viewWithTag:2];
-    orderInfo.text = [NSString stringWithFormat:@"%d %@", order.number, order.seatType];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    UILabel * orderTime = (UILabel *)[cell viewWithTag:2];
+    orderTime.text = [dateFormatter stringFromDate:order.orderTime];
     
     return cell;
 }
@@ -150,8 +150,8 @@ NSString *path;
 
 }
 
-- (void)orderDealController:(DFOderDealController *)controller didUpdatePresident:(DFUserOrder *)president{
-    [self.psOders replaceObjectAtIndex:controller.row withObject:president];
+- (void)orderDealController:(DFOderDealController *)controller didUpdateOrder:(DFUserOrder *)order{
+    [self.psOders replaceObjectAtIndex:controller.row withObject:order];
     [self.tableView reloadData];
     [NSKeyedArchiver archiveRootObject:self.psOders toFile:path];
 }

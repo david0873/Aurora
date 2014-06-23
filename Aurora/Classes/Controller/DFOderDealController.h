@@ -11,7 +11,7 @@
 
 @protocol DFOrderDealControllerDelegate;
 
-@interface DFOderDealController : UITableViewController<UITextViewDelegate>
+@interface DFOderDealController : UITableViewController<UITextViewDelegate, UITextFieldDelegate>
 @property (copy, nonatomic) DFUserOrder * selection;
 @property (weak, nonatomic) id delegate;
 @property (assign, nonatomic) NSInteger row;
@@ -36,6 +36,6 @@
 @protocol DFOrderDealControllerDelegate <NSObject>
 
 - (void)orderDealController:(DFOderDealController *)controller
-                   didUpdatePresident:(DFUserOrder *)president;
+                   didUpdateOrder:(DFUserOrder *)order;
 
 @end

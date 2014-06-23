@@ -45,7 +45,8 @@
     _labelComment.layer.borderWidth =1.0;
     _labelComment.layer.cornerRadius =5.0;
     
-    _labelComment.text = _userOrder.reply;
+    _labelComment.text = _userOrder.addition;
+    
     
     _labelDeposit.text = [NSString stringWithFormat:@"%d", _userOrder.deposit];
     _labelMinConsume.text = [NSString stringWithFormat:@"%d", _userOrder.miniCharge];

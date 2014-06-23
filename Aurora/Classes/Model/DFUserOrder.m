@@ -21,7 +21,6 @@
     [copy setEndTime:[self.endTime copyWithZone:zone]];
     [copy setOrderTime:[self.orderTime copyWithZone:zone]];
     [copy setRemarks:[self.remarks copyWithZone:zone]];
-    [copy setReply:[self.reply copyWithZone:zone]];
     [copy setAddition:[self.addition copyWithZone:zone]];
     [copy setShopId:[self.shopId copyWithZone:zone]];
     [copy setShopName:[self.shopName copyWithZone:zone]];
@@ -43,7 +42,6 @@
     [aCoder encodeObject:self.endTime forKey:kUserOrderEndTimeKey];
     [aCoder encodeObject:self.orderTime forKey:kUserOrderOrderTimeKey];
     [aCoder encodeObject:self.remarks forKey:kUserOrderRemarksKey];
-    [aCoder encodeObject:self.reply forKey:kUserOrderReplyKey];
     [aCoder encodeObject:self.addition forKey:kUserOrderAdditonKey];
     [aCoder encodeObject:self.shopId forKey:kUserOrderShopIdKey];
     [aCoder encodeObject:self.shopName forKey:kUserOrderShopNameKey];
@@ -64,7 +62,6 @@
         _endTime = [aDecoder decodeObjectForKey:kUserOrderEndTimeKey];
         _orderTime = [aDecoder decodeObjectForKey:kUserOrderOrderTimeKey];
         _remarks = [aDecoder decodeObjectForKey:kUserOrderRemarksKey];
-        _reply = [aDecoder decodeObjectForKey:kUserOrderReplyKey];
         _addition = [aDecoder decodeObjectForKey:kUserOrderAdditonKey];
         _shopId = [aDecoder decodeObjectForKey:kUserOrderShopIdKey];
         _shopName = [aDecoder decodeObjectForKey:kUserOrderShopNameKey];

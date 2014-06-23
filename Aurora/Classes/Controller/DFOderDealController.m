@@ -46,6 +46,13 @@
     _labelComment.layer.borderWidth =1.0;
     _labelComment.layer.cornerRadius =5.0;
     _labelComment.delegate = self;
+    _labelComment.text = selection.addition;
+    
+    _textDeposit.delegate = self;
+    _textMinConsume.delegate = self;
+    
+    _textMinConsume.text = [NSString stringWithFormat:@"%d", selection.miniCharge];
+    _textDeposit.text = [NSString stringWithFormat:@"%d", selection.deposit];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -53,6 +60,22 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    
+//    if ([self.delegate respondsToSelector:@selector(setEditedSelection:)]) {
+//        // finish editing
+//        [self.textView endEditing:YES];
+//        // prepare selection info
+//        NSIndexPath *indexPath = self.selection[@"indexPath"];
+//        id object = self.textView.text;
+//        NSDictionary *editedSelection = @{@"indexPath" : indexPath,
+//                                          @"object" : object};
+//        [self.delegate setValue:editedSelection forKey:@"editedSelection"];
+//    }
+//}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -67,6 +90,11 @@
         [textView resignFirstResponder];
     }
     return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
 
 
@@ -130,15 +158,21 @@
 
 - (IBAction)okPressed:(id)sender {
     self.selection.addition = _labelComment.text;
-    self.selection.orderStatus = OrderSuccess;
-    [self.delegate orderDealController:self didUpdatePresident:self.selection];
+    self.selection.orderStatus = OrderNotPayed;
+    self.selection.miniCharge = [_textMinConsume.text intValue];
+    self.selection.deposit = [_textDeposit.text intValue];
+    self.selection.addition = _labelComment.text;
+    [self.delegate orderDealController:self didUpdateOrder:self.selection];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)rejectPressed:(UIButton *)sender {
     self.selection.addition = _labelComment.text;
     self.selection.orderStatus = OrderFail;
-    [self.delegate orderDealController:self didUpdatePresident:self.selection];
+    self.selection.miniCharge = [_textMinConsume.text intValue];
+    self.selection.deposit = [_textDeposit.text intValue];
+    self.selection.addition = _labelComment.text;
+    [self.delegate orderDealController:self didUpdateOrder:self.selection];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
