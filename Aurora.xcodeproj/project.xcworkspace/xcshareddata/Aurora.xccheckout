@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>7CDBAB4F-C4BD-4CF5-91A3-803007F9942D</string>
+	<string>3C97258F-639F-4379-8189-2C04887A15E7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Aurora</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4E4A7301-CDB9-4D0B-B57E-753B273F3580</key>
-		<string>https://github.com/david0873/Aurora</string>
+		<key>A7006A1B-4C37-4F65-8F20-661A0DFC244A</key>
+		<string>https://github.com/david0873/Aurora.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Aurora.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4E4A7301-CDB9-4D0B-B57E-753B273F3580</key>
+		<key>A7006A1B-4C37-4F65-8F20-661A0DFC244A</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/david0873/Aurora</string>
+	<string>https://github.com/david0873/Aurora.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4E4A7301-CDB9-4D0B-B57E-753B273F3580</string>
+	<string>A7006A1B-4C37-4F65-8F20-661A0DFC244A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4E4A7301-CDB9-4D0B-B57E-753B273F3580</string>
+			<string>A7006A1B-4C37-4F65-8F20-661A0DFC244A</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Aurora</string>
 		</dict>
