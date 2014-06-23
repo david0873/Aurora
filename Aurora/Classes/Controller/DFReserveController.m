@@ -127,7 +127,7 @@
     NSMutableArray * array = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
     
     if (array == nil) {
-        array = [[[NSMutableArray alloc] init] autorelease];
+        array = [[NSMutableArray alloc] init];
     }
     
     DFUserOrder * order = [DFUserOrder alloc];
@@ -164,7 +164,6 @@
                           cancelButtonTitle:@"确定"
                           otherButtonTitles:nil];
     [alert show];
-    [alert release];
     
 }
 
@@ -200,12 +199,4 @@
     return [NSString stringWithFormat:@"%i", row + 1];
 }
 
-- (void)dealloc {
-    [_numTextField release];
-    [_timeBeginTextField release];
-    [_timeEndTextField release];
-    [_seatType release];
-    [_remarkText release];
-    [super dealloc];
-}
 @end

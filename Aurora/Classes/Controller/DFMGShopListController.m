@@ -1,21 +1,22 @@
 //
-//  DFMGOrderListController.m
+//  DFMGShopListController.m
 //  Aurora
 //
-//  Created by David on 14-4-4.
+//  Created by David on 14-6-22.
 //  Copyright (c) 2014年 david. All rights reserved.
 //
 
-#import "DFMGOrderListController.h"
-#import "DFuserOrder.h"
-#import "DFOderDealController.h"
+#import "DFMGShopListController.h"
+#import "DFUserOrder.h"
 
-@interface DFMGOrderListController ()
+@interface DFMGShopListController ()
+
 @end
 
-@implementation DFMGOrderListController
-
 NSString *path;
+NSMutableArray *shopNames;
+
+@implementation DFMGShopListController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,17 +31,23 @@ NSString *path;
 {
     [super viewDidLoad];
     
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
     NSArray* myPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString* myDocPath = [myPaths objectAtIndex:0];
     path = [myDocPath stringByAppendingPathComponent:@"order.plist"];
     
-    self.psOders = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
+    self.psOrders = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
     
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    shopNames = [NSMutableArray init];
+    for (int i=0; i<self.psOrders.count; i++) {
+        DFUserOrder * userOrder = [self.psOrders objectAtIndex:i];
+        NSString * shopName = userOrder.shopName;
+        if (![shopNames containsObject:shopName]) {
+            [shopNames addObject:shopName];
+        }
+    }
     
 }
 
@@ -50,41 +57,25 @@ NSString *path;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.tableView reloadData];
-}
-
-/*
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
-*/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [_psOders count];
+    return shopNames.count;
 }
-
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identifier_managerOrder" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"shopCell" forIndexPath:indexPath];
     
-    DFUserOrder * order = [_psOders objectAtIndex:indexPath.row];
-    
-    UILabel * nibName = (UILabel *)[cell viewWithTag:1];
-    nibName.text = order.user.nibName;
-    
-    UILabel * orderInfo = (UILabel *)[cell viewWithTag:2];
-    orderInfo.text = [NSString stringWithFormat:@"%d %@", order.number, order.seatType];
+    UILabel * shopName = (UILabel *) [cell viewWithTag:1];
+    shopName.text = [shopNames objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -127,7 +118,7 @@ NSString *path;
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -135,29 +126,7 @@ NSString *path;
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    DFOderDealController * destination = [segue destinationViewController];
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    destination.row = indexPath.row;
-    
-    if([destination respondsToSelector:@selector(setDelegate:)]){
-        [destination setValue:self forKey:@"delegate"];
-    }
-    if ([destination respondsToSelector:@selector(setSelection:)]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        DFUserOrder* order = [_psOders objectAtIndex:indexPath.row];
-        [destination setValue:order forKey:@"selection"];
-    }
-
 }
+*/
 
-- (void)orderDealController:(DFOderDealController *)controller didUpdatePresident:(DFUserOrder *)president{
-    [self.psOders replaceObjectAtIndex:controller.row withObject:president];
-    [self.tableView reloadData];
-    [NSKeyedArchiver archiveRootObject:self.psOders toFile:path];
-}
-
-
-- (IBAction)backPressed:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 @end

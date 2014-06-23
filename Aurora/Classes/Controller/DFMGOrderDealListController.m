@@ -1,25 +1,21 @@
 //
-//  DFCommentListController.m
+//  DFMGOrderListController.m
 //  Aurora
 //
-//  Created by David on 14-4-18.
+//  Created by David on 14-4-4.
 //  Copyright (c) 2014年 david. All rights reserved.
 //
 
-#import "DFCommentListController.h"
-#import "DFUser.h"
-#import "DFGlobalVar.h"
-#import "YBAddCommentController.h"
-#import "DFComment.h"
-#import "SQRiskCursor.h"
+#import "DFMGOrderDealListController.h"
+#import "DFuserOrder.h"
+#import "DFOderDealController.h"
 
-@interface DFCommentListController ()
-
+@interface DFMGOrderDealListController ()
 @end
 
-NSString * path;
+@implementation DFMGOrderDealListController
 
-@implementation DFCommentListController
+NSString *path;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,9 +32,16 @@ NSString * path;
     
     NSArray* myPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString* myDocPath = [myPaths objectAtIndex:0];
-    path = [myDocPath stringByAppendingPathComponent:@"comment.plist"];
+    path = [myDocPath stringByAppendingPathComponent:@"order.plist"];
     
-    self.comments = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
+    self.psOders = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,40 +50,44 @@ NSString * path;
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
+/*
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
+*/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.comments.count;
+    return [_psOders count];
 }
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentIdentifier" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identifier_managerOrder" forIndexPath:indexPath];
     
-    DFComment * comment = [self.comments objectAtIndex:indexPath.row];
+    DFUserOrder * order = [_psOders objectAtIndex:indexPath.row];
     
-    UILabel * userName = (UILabel *)[cell viewWithTag:1];
-    userName.text = comment.user.nibName;
+    UILabel * nibName = (UILabel *)[cell viewWithTag:1];
+    nibName.text = order.user.nibName;
     
-    SQRiskCursor * hiDegree = (SQRiskCursor *)[cell viewWithTag:2];
-    hiDegree.value = comment.hiDegree;
-    hiDegree.enabled = NO;
-    
-    UITextView * content = (UITextView *)[cell viewWithTag:3];
-    content.text = comment.content;
+    UILabel * orderInfo = (UILabel *)[cell viewWithTag:2];
+    orderInfo.text = [NSString stringWithFormat:@"%d %@", order.number, order.seatType];
     
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -120,7 +127,7 @@ NSString * path;
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -128,39 +135,29 @@ NSString * path;
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)AddComment:(UIBarButtonItem *)sender {
-    DFUser * loginUser = [DFGlobalVar sharedGlobalVar].user;
-    if (loginUser == nil) {
-        NSString * segueIdentifier = @"segueLogin";
-        [self performSegueWithIdentifier:segueIdentifier sender:self];
-    }else{
-        NSString * segueIdentifier = @"segueCommentAdd";
-        [self performSegueWithIdentifier:segueIdentifier sender:self];
+    DFOderDealController * destination = [segue destinationViewController];
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    destination.row = indexPath.row;
+    
+    if([destination respondsToSelector:@selector(setDelegate:)]){
+        [destination setValue:self forKey:@"delegate"];
     }
+    if ([destination respondsToSelector:@selector(setSelection:)]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        DFUserOrder* order = [_psOders objectAtIndex:indexPath.row];
+        [destination setValue:order forKey:@"selection"];
+    }
+
 }
+
+- (void)orderDealController:(DFOderDealController *)controller didUpdatePresident:(DFUserOrder *)president{
+    [self.psOders replaceObjectAtIndex:controller.row withObject:president];
+    [self.tableView reloadData];
+    [NSKeyedArchiver archiveRootObject:self.psOders toFile:path];
+}
+
 
 - (IBAction)backPressed:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"segueCommentAdd"]) {
-        DFUser * loginUser = [DFGlobalVar sharedGlobalVar].user;
-        if (loginUser != nil) {
-            UINavigationController * destination = [segue destinationViewController];
-            NSArray *viewControllers = destination.viewControllers;
-            YBAddCommentController *commentController = [viewControllers objectAtIndex:0];
-            commentController.shop = _shop;
-        }
-    }
-    
-}
-
-
 @end
