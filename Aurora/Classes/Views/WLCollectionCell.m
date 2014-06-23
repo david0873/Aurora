@@ -7,7 +7,7 @@
 //
 
 #import "WLCollectionCell.h"
-#import "UPXDeviceUtils.h"
+#import "WLUtils.h"
 
 #define kTopMargin 10
 #define kColumnMargin 20
