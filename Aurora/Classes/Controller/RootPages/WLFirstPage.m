@@ -32,8 +32,6 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
     UIViewController *controller = (UIViewController *)
     [storyboard instantiateViewControllerWithIdentifier:@"rootView"];
-    
-    DFRootTabBarController *w = [[DFRootTabBarController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

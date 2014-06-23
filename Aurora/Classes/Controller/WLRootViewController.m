@@ -14,7 +14,7 @@
 #import "WLThirdPage.h"
 #import "WLFourthPage.h"
 
-#define kTabBarHeight 44
+
 
 @interface WLRootViewController ()
 

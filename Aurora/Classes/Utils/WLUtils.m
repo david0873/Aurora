@@ -46,4 +46,12 @@
 }
 
 
++ (UIColor *)colorWithRed:(CGFloat)r green:(CGFloat)g blue:(CGFloat)b
+{
+    CGFloat red = r/0xFF;
+    CGFloat green = g/0xFF;
+    CGFloat blue = b/0xFF;
+    return [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+}
+
 @end
