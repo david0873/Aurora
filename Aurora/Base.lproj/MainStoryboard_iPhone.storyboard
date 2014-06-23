@@ -497,7 +497,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="HY7-CH-uxQ" kind="modal" identifier="segueLogin" id="iYq-CQ-gf9"/>
-                        <segue destination="QQf-sI-dHE" kind="modal" identifier="segueCommentAdd" id="mac-JG-6hY"/>
+                        <segue destination="XLa-hL-EY3" kind="modal" identifier="segueCommentAdd" id="NEt-5r-dYq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCb-Z5-ara" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -561,7 +561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9b-1M-FFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3179" y="-146"/>
+            <point key="canvasLocation" x="2779" y="-146"/>
         </scene>
         <!--Root Tab Bar Controller-->
         <scene sceneID="6OY-iv-nY9">

@@ -91,6 +91,7 @@
 		40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE9318EF0062001C6767 /* DFUserOrder.m */; };
 		40F8DC881956C64300C93961 /* DFMGShopListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DC871956C64300C93961 /* DFMGShopListController.m */; };
 		40F8DC891956D9E400C93961 /* WLDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1701956AE0100428AE7 /* WLDataManager.m */; };
+		40F8DC8C19583CA900C93961 /* YBAddCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DC8B19583CA900C93961 /* YBAddCommentController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +242,8 @@
 		40BFAE9318EF0062001C6767 /* DFUserOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUserOrder.m; sourceTree = "<group>"; };
 		40F8DC861956C64300C93961 /* DFMGShopListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFMGShopListController.h; path = Controller/DFMGShopListController.h; sourceTree = "<group>"; };
 		40F8DC871956C64300C93961 /* DFMGShopListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFMGShopListController.m; path = Controller/DFMGShopListController.m; sourceTree = "<group>"; };
+		40F8DC8A19583CA900C93961 /* YBAddCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YBAddCommentController.h; path = Controller/YBAddCommentController.h; sourceTree = "<group>"; };
+		40F8DC8B19583CA900C93961 /* YBAddCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YBAddCommentController.m; path = Controller/YBAddCommentController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,10 +285,6 @@
 		0F9EE15119568B1100428AE7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0F9EE1741956DCD100428AE7 /* WLCollectionCell.h */,
-				0F9EE1751956DCD100428AE7 /* WLCollectionCell.m */,
-				0F9EE1761956DCD100428AE7 /* WLCollectionView.h */,
-				0F9EE1771956DCD100428AE7 /* WLCollectionView.m */,
 				0F9EE15219568B4400428AE7 /* WLTabBar.h */,
 				0F9EE15319568B4400428AE7 /* WLTabBar.m */,
 				0F9EE15519569F8200428AE7 /* WLTabBarItem.h */,
@@ -397,6 +396,8 @@
 		4040C6B718E3078C00163066 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				40F8DC8A19583CA900C93961 /* YBAddCommentController.h */,
+				40F8DC8B19583CA900C93961 /* YBAddCommentController.m */,
 				409F6CAE1956C46E0030E746 /* OrderDeal */,
 				409F6C7B1956C45F0030E746 /* DFBarListController.h */,
 				409F6C7C1956C45F0030E746 /* DFBarListController.m */,
@@ -740,6 +741,7 @@
 				409F6C721956BE610030E746 /* WLFirstPage.m in Sources */,
 				4040C6E418E3078C00163066 /* EGOImageButton.m in Sources */,
 				4027E31A193F542B00FDF898 /* DFComment.m in Sources */,
+				40F8DC8C19583CA900C93961 /* YBAddCommentController.m in Sources */,
 				40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */,
 				409F6C9E1956C4600030E746 /* DFChamberListController.m in Sources */,
 				409F6C761956BE610030E746 /* WLThirdPage.m in Sources */,
