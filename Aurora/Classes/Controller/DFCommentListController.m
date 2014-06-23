@@ -7,10 +7,17 @@
 //
 
 #import "DFCommentListController.h"
+#import "DFUser.h"
+#import "DFGlobalVar.h"
+#import "YBAddCommentController.h"
+#import "DFComment.h"
+#import "SQRiskCursor.h"
 
 @interface DFCommentListController ()
 
 @end
+
+NSString * path;
 
 @implementation DFCommentListController
 
@@ -27,11 +34,11 @@
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    NSArray* myPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* myDocPath = [myPaths objectAtIndex:0];
+    path = [myDocPath stringByAppendingPathComponent:@"comment.plist"];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.comments = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,28 +51,35 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.comments.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentIdentifier" forIndexPath:indexPath];
     
-    // Configure the cell...
+    DFComment * comment = [self.comments objectAtIndex:indexPath.row];
+    
+    UILabel * userName = (UILabel *)[cell viewWithTag:1];
+    userName.text = comment.user.nibName;
+    
+    SQRiskCursor * hiDegree = (SQRiskCursor *)[cell viewWithTag:2];
+    hiDegree.value = comment.hiDegree;
+    
+    UITextView * content = (UITextView *)[cell viewWithTag:3];
+    content.text = comment.content;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -116,7 +130,36 @@
 }
 */
 
+- (IBAction)AddComment:(UIBarButtonItem *)sender {
+    DFUser * loginUser = [DFGlobalVar sharedGlobalVar].user;
+    if (loginUser == nil) {
+        NSString * segueIdentifier = @"segueLogin";
+        [self performSegueWithIdentifier:segueIdentifier sender:self];
+    }else{
+        NSString * segueIdentifier = @"segueCommentAdd";
+        [self performSegueWithIdentifier:segueIdentifier sender:self];
+    }
+}
+
 - (IBAction)backPressed:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"segueCommentAdd"]) {
+        DFUser * loginUser = [DFGlobalVar sharedGlobalVar].user;
+        if (loginUser != nil) {
+            UINavigationController * destination = [segue destinationViewController];
+            NSArray *viewControllers = destination.viewControllers;
+            YBAddCommentController *commentController = [viewControllers objectAtIndex:0];
+            commentController.shop = _shop;
+        }
+    }
+    
+}
+
+
 @end

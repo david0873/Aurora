@@ -448,20 +448,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="133" id="SJf-e4-GHx">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="commentIdentifier" rowHeight="133" id="SJf-e4-GHx">
                                 <rect key="frame" x="0.0" y="86" width="320" height="133"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SJf-e4-GHx" id="gNN-xb-c9I">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[用户昵称]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U20-ID-xY8">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[用户昵称]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U20-ID-xY8">
                                             <rect key="frame" x="20" y="3" width="126" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18v-Jw-y13">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18v-Jw-y13">
                                             <rect key="frame" x="20" y="58" width="280" height="67"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -469,7 +469,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o6r-45-LXw" customClass="RateView">
+                                        <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o6r-45-LXw" customClass="SQRiskCursor">
                                             <rect key="frame" x="20" y="28" width="223" height="24"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -491,14 +491,18 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="说两句" id="ksd-Oh-HL7">
                             <connections>
-                                <segue destination="XLa-hL-EY3" kind="push" id="wEk-Qb-7Np"/>
+                                <action selector="AddComment:" destination="NUe-gL-1Pn" id="U2E-ij-xiO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="HY7-CH-uxQ" kind="modal" identifier="segueLogin" id="iYq-CQ-gf9"/>
+                        <segue destination="QQf-sI-dHE" kind="modal" identifier="segueCommentAdd" id="mac-JG-6hY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCb-Z5-ara" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2104" y="-146"/>
+            <point key="canvasLocation" x="2182" y="-146"/>
         </scene>
         <!--Add Comment Controller - 说两句-->
         <scene sceneID="GJX-LG-chb">
@@ -526,9 +530,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="评论内容" translatesAutoresizingMaskIntoConstraints="NO" id="Koq-dR-uYx">
                                 <rect key="frame" x="20" y="117" width="280" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBa-Ov-c6K">
                                 <rect key="frame" x="77" y="346" width="166" height="30"/>
@@ -543,7 +547,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="说两句" id="kzL-oW-0G4"/>
+                    <navigationItem key="navigationItem" title="说两句" id="kzL-oW-0G4">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="GIb-Zi-EXc">
+                            <connections>
+                                <action selector="backPressed:" destination="XLa-hL-EY3" id="MkZ-aq-feg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="comment" destination="Koq-dR-uYx" id="NNT-2i-AsG"/>
                         <outlet property="hidegree" destination="I7y-TW-vNg" id="aY5-uI-Ie1"/>
@@ -551,7 +561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9b-1M-FFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2653" y="-146"/>
+            <point key="canvasLocation" x="3179" y="-146"/>
         </scene>
         <!--Root Tab Bar Controller-->
         <scene sceneID="6OY-iv-nY9">
@@ -1923,6 +1933,24 @@
             </objects>
             <point key="canvasLocation" x="3169" y="2063"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="41l-jG-xuB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QQf-sI-dHE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Bz-gX-BkE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XLa-hL-EY3" kind="relationship" relationship="rootViewController" id="GjV-39-ll7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYe-Re-8XG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2653" y="-146"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bar.png" width="24" height="24"/>
@@ -1938,6 +1966,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="aFt-aT-VGL"/>
-        <segue reference="2BD-CD-ihF"/>
+        <segue reference="iYq-CQ-gf9"/>
     </inferredMetricsTieBreakers>
 </document>
