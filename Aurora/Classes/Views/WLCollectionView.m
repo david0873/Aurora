@@ -7,7 +7,7 @@
 //
 
 #import "WLCollectionView.h"
-#import "UPXDeviceUtils.h"
+#import "WLUtils.h"
 
 @interface WLCollectionView ()
 {
@@ -25,7 +25,7 @@
     CGRect frame = CGRectZero;
     frame.origin = origin;
     frame.size = CGSizeZero;
-    frame.size.width = [[UPXDeviceUtils deviceWidth] floatValue];
+    frame.size.width = [WLUtils displayWidth];
     
     self = [super initWithFrame:frame];
     if (self) {

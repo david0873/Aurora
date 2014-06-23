@@ -10,7 +10,7 @@
 
 #define kCellNumberForRow 4
 
-#define kCellHeight   [[UPXDeviceUtils deviceWidth] floatValue] / kCellNumberForRow
+#define kCellHeight   [WLUtils displayWidth] / kCellNumberForRow
 
 @interface WLCollectionCell : UIView
 
