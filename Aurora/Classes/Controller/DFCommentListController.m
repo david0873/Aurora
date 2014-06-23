@@ -73,6 +73,7 @@ NSString * path;
     
     SQRiskCursor * hiDegree = (SQRiskCursor *)[cell viewWithTag:2];
     hiDegree.value = comment.hiDegree;
+    hiDegree.enabled = NO;
     
     UITextView * content = (UITextView *)[cell viewWithTag:3];
     content.text = comment.content;
