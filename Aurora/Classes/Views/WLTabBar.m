@@ -8,6 +8,7 @@
 
 #import "WLTabBar.h"
 #import "WLUtils.h"
+#import "WLVIewCreater.h"
 
 #define kItemWidth
 
@@ -23,21 +24,28 @@
         // Initialization code
         self.delegate = aDelegate;
         self.items = [NSMutableArray array];
+        NSArray *titles = @[@"首页", @"推荐", @"我的", @"更多"];
         
         NSInteger index = 0;
         WLTabBarItem *item = nil;
         CGFloat itemWidth = [WLUtils displayWidth] / 4;
         CGRect itemFrame = CGRectMake(0*itemWidth, 0, itemWidth, kTabBarHeight);
         
+        
         while (index < 4) {
             itemFrame.origin.x = index * itemWidth;
-            NSString *title = [NSString stringWithFormat:@"%ldaaaa", index];
+            NSString *title = [titles objectAtIndex:index];
             item = [[WLTabBarItem alloc] initWithFrame:itemFrame aId:index delegate:self title:title image:nil];
             [self addSubview:item];
             [self.items addObject:item];
             
             index ++;
         }
+        
+        // add line
+        CAShapeLayer *layer = [WLVIewCreater lineLayerWithStartPoint:CGPointMake(0, 0) endPoint:CGPointMake(frame.size.width, 0) width:0.5 color:[UIColor blackColor]];
+        layer.lineWidth = 0.2;
+        [self.layer addSublayer:layer];
         
         
     }

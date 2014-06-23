@@ -12,6 +12,7 @@ static WLDataManager* gInstance = nil;
 
 @implementation WLDataManager
 @synthesize mainPagesArray;
+@synthesize mainStoryboard;
 
 + (WLDataManager*)instance
 {

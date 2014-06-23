@@ -47,7 +47,8 @@
     WLNavigationControlller *page4 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLFourthPage alloc] init]];
     [[WLDataManager instance].mainPagesArray addObject:page4];
     
-    
+    // load storyboard
+    [WLDataManager instance].mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
