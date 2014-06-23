@@ -39,7 +39,50 @@ NSString * path;
     path = [myDocPath stringByAppendingPathComponent:@"comment.plist"];
     
     self.comments = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
+    
+    // 设置refreshControl属性，该属性值应该是UIRefreshControl控件
+	self.refreshControl = [[UIRefreshControl alloc]init];
+	// 设置UIRefreshControl控件的颜色
+	self.refreshControl.tintColor = [UIColor grayColor];
+	// 设置该控件的提示标题
+	self.refreshControl.attributedTitle = [[NSAttributedString alloc]
+                                           initWithString:@"下拉刷新"];
+	// 为UIRefreshControl控件的刷新事件设置事件处理方法
+	[self.refreshControl addTarget:self action:@selector(refreshData)
+                  forControlEvents:UIControlEventValueChanged];
 }
+
+
+// 刷新数据的方法
+- (void) refreshData
+{
+	// 使用延迟2秒来模拟远程获取数据
+	[self performSelector:@selector(handleData) withObject:nil afterDelay:2];
+}
+
+- (void) handleData
+{
+//	// 获取一个随机数字符串
+//	NSString* randStr = [NSString stringWithFormat:@"%d"
+//                         , arc4random() % 10000];
+//	// 将随机数字符串添加list集合中
+//	[list addObject:randStr];
+    NSArray* myPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* myDocPath = [myPaths objectAtIndex:0];
+    path = [myDocPath stringByAppendingPathComponent:@"comment.plist"];
+    
+    self.comments = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
+
+    
+	self.refreshControl.attributedTitle = [[NSAttributedString alloc]
+                                           initWithString:@"正在刷新..."];
+	// 停止刷新
+	[self.refreshControl endRefreshing];
+	// 控制表格重新加载数据
+	[self.tableView reloadData];
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
