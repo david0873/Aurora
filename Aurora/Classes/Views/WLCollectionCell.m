@@ -9,7 +9,7 @@
 #import "WLCollectionCell.h"
 #import "WLUtils.h"
 
-#define kTopMargin 13
+#define kTopMargin 12
 #define kColumnMargin 20
 #define kMargin 2
 #define kTitleFont 16
