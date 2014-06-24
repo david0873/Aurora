@@ -9,6 +9,8 @@
 #import "WLFirstPage.h"
 #import "WLRootViewController.h"
 #import "DFRootTabBarController.h"
+#import "WLCollectionView.h"
+
 
 @interface WLFirstPage ()
 
