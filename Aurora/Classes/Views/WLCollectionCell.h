@@ -12,14 +12,16 @@
 
 #define kCellHeight   [WLUtils displayWidth] / kCellNumberForRow
 
+typedef void (^WLCollectionBlock)(void);
+
 @interface WLCollectionCell : UIView
 
-- (id)initWithImage:(UIImage *)image title:(NSString *)title action:(SEL) action;
+- (id)initWithImage:(UIImage *)image title:(NSString *)title action:(WLCollectionBlock) action;
 
 
 @property(nonatomic, strong)UIImage *cellImage;
 @property(nonatomic, strong)NSString *cellTitle;
-@property(nonatomic)SEL cellAction;
+@property(nonatomic, strong)WLCollectionBlock cellBlock;
 
 
 @end

@@ -39,12 +39,7 @@
     return self;
 }
 
-- (void)action
-{
-    UIViewController *controller = (UIViewController *)
-    [[WLDataManager instance].mainStoryboard instantiateViewControllerWithIdentifier:@"rootView"];
-    [self.navigationController pushViewController:controller animated:YES];
-}
+
 
 - (void)action2
 {
@@ -56,22 +51,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"首页";
+    self.title = @"Aurora";
     self.view.backgroundColor = [UIColor redColor];
     [self.tabBar selectItem:0];
     
     [self createColletionModels];
     [self addCollections];
-    
-    
-    
-    
-    return;
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.frame = CGRectMake(100, 100, 120, 50);
-    [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
-    [button setTitle:@"开始" forState:UIControlStateNormal];
-    [self.view addSubview:button];
 }
 
 - (void)didReceiveMemoryWarning
@@ -114,7 +99,7 @@
                         @"更多分类"];
     
     for (NSInteger i = 0; i<images.count; i++) {
-        model = [[WLCollectionCellModel alloc] initWithImage:[UIImage imageNamed:[images objectAtIndex:i]] title:[titles objectAtIndex:i] action:nil id:i];
+        model = [[WLCollectionCellModel alloc] initWithImage:[UIImage imageNamed:[images objectAtIndex:i]] title:[titles objectAtIndex:i] action:nil aId:i];
         [_collections addObject:model];
     }
     
@@ -123,15 +108,23 @@
 
 - (void)addCollections
 {
-    WLCollectionView *collections = [[WLCollectionView alloc] initWithOrigin:CGPointMake(0, 10)];
+    WLCollectionView *collections = [[WLCollectionView alloc] initWithOrigin:CGPointMake(0, 0)];
     [self.view addSubview:collections];
-    
+    __block WLFirstPage *weakSelf = self;
     for (NSInteger i = 0; i<_collections.count; i++) {
         WLCollectionCellModel *model = [_collections objectAtIndex:i];
-        WLCollectionCell *cell = [[WLCollectionCell alloc] initWithImage:model.cellImage title:model.cellTitle action:model.cellAction];
+        
+        WLCollectionCell *cell = [[WLCollectionCell alloc] initWithImage:model.cellImage title:model.cellTitle action:^{[weakSelf collectionAction];}];
         [collections addCell:cell];
     }
     
+}
+
+- (void)collectionAction
+{
+    UIViewController *controller = (UIViewController *)
+    [[WLDataManager instance].mainStoryboard instantiateViewControllerWithIdentifier:@"rootView"];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

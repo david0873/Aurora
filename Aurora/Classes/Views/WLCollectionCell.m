@@ -9,7 +9,7 @@
 #import "WLCollectionCell.h"
 #import "WLUtils.h"
 
-#define kTopMargin 3
+#define kTopMargin 13
 #define kColumnMargin 20
 #define kMargin 2
 #define kTitleFont 16
@@ -26,13 +26,17 @@
 - (void)addImage;
 - (void)addTitle;
 
+- (void)action;
+- (void)touchDown;
+- (void)touchOut;
+
 @end
 
 
 @implementation WLCollectionCell
 @synthesize cellImage;
 @synthesize cellTitle;
-@synthesize cellAction;
+@synthesize cellBlock;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -43,19 +47,22 @@
     return self;
 }
 
-- (id)initWithImage:(UIImage *)image title:(NSString *)title action:(SEL) action
+- (id)initWithImage:(UIImage *)image title:(NSString *)title action:(WLCollectionBlock) action
 {
-    CGRect frame = CGRectMake(0, 0, kCellHeight, kCellHeight - 8);
+    CGRect frame = CGRectMake(0, 0, kCellHeight, kCellHeight);
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
         self.cellImage = image;
         self.cellTitle = title;
-        self.cellAction = action;
+        self.cellBlock = action;
         
         _actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _actionButton.frame = frame;
-        [_actionButton addTarget:self action:self.cellAction forControlEvents:UIControlEventTouchUpInside];
+        _actionButton.exclusiveTouch = YES;
+        [_actionButton addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
+        [_actionButton addTarget:self action:@selector(touchDown) forControlEvents:UIControlEventTouchDown];
+        [_actionButton addTarget:self action:@selector(touchOut) forControlEvents:UIControlEventTouchDragOutside];
         [self addSubview:_actionButton];
         
         [self addImage];
@@ -106,6 +113,27 @@
     [_actionButton addSubview:_titleLabel];
     
 }
+
+
+- (void)action
+{
+    _actionButton.backgroundColor = [UIColor whiteColor];
+    if (self.cellBlock) {
+        self.cellBlock();
+    }
+}
+
+- (void)touchDown
+{
+    _actionButton.backgroundColor = [UIColor lightGrayColor];
+}
+
+
+- (void)touchOut
+{
+    _actionButton.backgroundColor = [UIColor whiteColor];
+}
+
 
 
 @end

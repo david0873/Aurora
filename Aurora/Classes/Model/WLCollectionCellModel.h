@@ -15,6 +15,6 @@
 @property (nonatomic) SEL cellAction;
 @property (nonatomic) NSInteger cellID;
 
-- (id)initWithImage:(UIImage *)image title:(NSString *)title action:(SEL)action id:(NSInteger)aId;
+- (id)initWithImage:(UIImage *)image title:(NSString *)title action:(SEL)action aId:(NSInteger)aId;
 
 @end

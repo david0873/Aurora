@@ -30,6 +30,9 @@
     // Do any additional setup after loading the view.
     self.navigationBar.translucent = NO;
     self.navigationBar.barTintColor = [WLUtils colorWithRed:46 green:182 blue:168];
+    self.navigationBar.tintColor = [UIColor whiteColor];
+    NSDictionary *dic = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+    self.navigationBar.titleTextAttributes = dic;
 }
 
 - (void)didReceiveMemoryWarning
