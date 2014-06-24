@@ -57,7 +57,7 @@
     
     if ((_nextCellX + CGRectGetWidth(frame)) >= CGRectGetWidth(self.frame)) {
         _nextCellX = 0;
-        _nextCellY += CGRectGetWidth(frame);
+        _nextCellY += CGRectGetHeight(frame);
         frame = self.frame;
         frame.size.height = _nextCellY;
         self.frame = frame;
@@ -65,7 +65,7 @@
     else {
         _nextCellX += CGRectGetWidth(frame);
         frame = self.frame;
-        frame.size.height += _nextCellY + CGRectGetWidth(cell.frame);
+        frame.size.height += _nextCellY + CGRectGetHeight(cell.frame);
         self.frame = frame;
     }
     

@@ -67,7 +67,7 @@
         _itemTitle.backgroundColor = [UIColor clearColor];
         _itemTitle.textColor = [UIColor lightGrayColor];
         _itemTitle.textAlignment = NSTextAlignmentCenter;
-        _itemTitle.font = [UIFont systemFontOfSize:12];
+        _itemTitle.font = [UIFont systemFontOfSize:10];
         [_bgView addSubview:_itemTitle];
         
         

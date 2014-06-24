@@ -9,9 +9,9 @@
 #import "WLCollectionCell.h"
 #import "WLUtils.h"
 
-#define kTopMargin 10
+#define kTopMargin 3
 #define kColumnMargin 20
-#define kMargin 5
+#define kMargin 2
 #define kTitleFont 16
 #define kTitleHeight 20
 
@@ -45,7 +45,7 @@
 
 - (id)initWithImage:(UIImage *)image title:(NSString *)title action:(SEL) action
 {
-    CGRect frame = CGRectMake(0, 0, kCellHeight, kCellHeight);
+    CGRect frame = CGRectMake(0, 0, kCellHeight, kCellHeight - 8);
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
@@ -87,7 +87,7 @@
 
 - (void)addImage
 {
-    CGFloat width = CGRectGetHeight(self.frame)-kColumnMargin*2;
+    CGFloat width = CGRectGetWidth(self.frame)-kColumnMargin*2;
     _imageView = [[UIImageView alloc] initWithImage:self.cellImage];
     _imageView.frame = CGRectMake(kColumnMargin, kTopMargin, width, width);
     [_actionButton addSubview:_imageView];
@@ -100,6 +100,9 @@
     _titleLabel = [[UILabel alloc] initWithFrame:frame];
     _titleLabel.backgroundColor =[UIColor clearColor];
     _titleLabel.textAlignment = NSTextAlignmentCenter;
+    _titleLabel.textColor = [UIColor grayColor];
+    _titleLabel.font = [UIFont systemFontOfSize:12];
+    _titleLabel.text = self.cellTitle;
     [_actionButton addSubview:_titleLabel];
     
 }
