@@ -16,7 +16,7 @@ profile
 *.moved-aside
 DerivedData
 .idea/
-*.xcodeproj
+
 Aurora.xcodeproj/project.xcworkspace/xcshareddata/Aurora.xccheckout
 
 *.xccheckout
