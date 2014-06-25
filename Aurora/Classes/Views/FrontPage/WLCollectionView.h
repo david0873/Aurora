@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WLCollectionCell.h"
+#import "WLCollectionCellModel.h"
 
 @interface WLCollectionView : UIView
 
 - (id)initWithOrigin:(CGPoint)origin;
 
-- (void)addCell:(WLCollectionCell *)cell;
+- (void)addCellByModel:(WLCollectionCellModel *)model;
 
 @end

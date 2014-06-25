@@ -11,6 +11,7 @@
 #import "DFRootTabBarController.h"
 #import "WLCollectionView.h"
 #import "WLCollectionCellModel.h"
+#import "WLSecondPage.h"
 
 
 @interface WLFirstPage ()
@@ -53,6 +54,7 @@
     // Do any additional setup after loading the view.
     self.title = @"Aurora";
     self.view.backgroundColor = [UIColor redColor];
+    self.navigationItem.leftBarButtonItem = nil;
     [self.tabBar selectItem:0];
     
     [self createColletionModels];
@@ -97,25 +99,22 @@
                         @"电影",
                         @"今日新单",
                         @"更多分类"];
-    
+    __block WLFirstPage *weakSelf = self;
     for (NSInteger i = 0; i<images.count; i++) {
-        model = [[WLCollectionCellModel alloc] initWithImage:[UIImage imageNamed:[images objectAtIndex:i]] title:[titles objectAtIndex:i] action:nil aId:i];
+        model = [[WLCollectionCellModel alloc] initWithImage:[UIImage imageNamed:[images objectAtIndex:i]] title:[titles objectAtIndex:i] action:^{[weakSelf collectionAction];} aId:i];
         [_collections addObject:model];
     }
-    
     
 }
 
 - (void)addCollections
 {
     WLCollectionView *collections = [[WLCollectionView alloc] initWithOrigin:CGPointMake(0, 0)];
-    [self.view addSubview:collections];
-    __block WLFirstPage *weakSelf = self;
+    [self.contentScrollView addSubview:collections];
+    
     for (NSInteger i = 0; i<_collections.count; i++) {
-        WLCollectionCellModel *model = [_collections objectAtIndex:i];
-        
-        WLCollectionCell *cell = [[WLCollectionCell alloc] initWithImage:model.cellImage title:model.cellTitle action:^{[weakSelf collectionAction];}];
-        [collections addCell:cell];
+        WLCollectionCellModel *model = [_collections objectAtIndex:i];        
+        [collections addCellByModel:model];
     }
     
 }

@@ -15,6 +15,7 @@
 #import "WLThirdPage.h"
 #import "WLFourthPage.h"
 #import "WLDataManager.h"
+#import "WLNavigationBar.h"
 
 @implementation DFAppDelegate
 @synthesize PagesArray;
@@ -35,16 +36,21 @@
 {
     [WLDataManager instance].mainPagesArray = [NSMutableArray array];
     
-    WLNavigationControlller *page1 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLFirstPage alloc] init]];
+    
+    WLNavigationControlller *page1 = [[WLNavigationControlller alloc] initWithNavigationBarClass:[WLNavigationBar class] toolbarClass:nil];
+    page1.viewControllers = [NSArray arrayWithObject:[[WLFirstPage alloc] init]];
     [[WLDataManager instance].mainPagesArray addObject:page1];
     
-    WLNavigationControlller *page2 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLSecondPage alloc] init]];
+    WLNavigationControlller *page2 = [[WLNavigationControlller alloc] initWithNavigationBarClass:[WLNavigationBar class] toolbarClass:nil];
+    page2.viewControllers = [NSArray arrayWithObject:[[WLSecondPage alloc] init]];
     [[WLDataManager instance].mainPagesArray addObject:page2];
     
-    WLNavigationControlller *page3 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLThirdPage alloc] init]];
+    WLNavigationControlller *page3 = [[WLNavigationControlller alloc] initWithNavigationBarClass:[WLNavigationBar class] toolbarClass:nil];
+    page3.viewControllers = [NSArray arrayWithObject:[[WLThirdPage alloc] init]];
     [[WLDataManager instance].mainPagesArray addObject:page3];
     
-    WLNavigationControlller *page4 = [[WLNavigationControlller alloc] initWithRootViewController:[[WLFourthPage alloc] init]];
+    WLNavigationControlller *page4 = [[WLNavigationControlller alloc] initWithNavigationBarClass:[WLNavigationBar class] toolbarClass:nil];
+    page4.viewControllers = [NSArray arrayWithObject:[[WLFourthPage alloc] init]];
     [[WLDataManager instance].mainPagesArray addObject:page4];
     
     // load storyboard
