@@ -10,6 +10,10 @@
 #import "WLUtils.h"
 
 @interface WLNavigationControlller ()
+{
+    UIButton *_button;
+}
+- (void)createNavigationBackItem;
 
 @end
 
@@ -33,12 +37,30 @@
     self.navigationBar.tintColor = [UIColor whiteColor];
     NSDictionary *dic = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     self.navigationBar.titleTextAttributes = dic;
+    
+    //[self createNavigationBackItem];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)createNavigationBackItem
+{
+    UIImage *normalImage = [UIImage imageNamed:@"ump_icon_back.png"];
+    UIImage *highImage = [UIImage imageNamed:@"ump_icon_back_foucs.png"];
+    _button = [UIButton buttonWithType:UIButtonTypeCustom];
+    _button.frame = CGRectMake(-50, 0, normalImage.size.width/2, normalImage.size.height/2);
+    [_button setImage:normalImage forState:UIControlStateNormal];
+    [_button setImage:highImage forState:UIControlStateHighlighted];
+    //[_button addTarget:self action:@selector(navigationBackUp) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:_button];
+    
+   
+    self.navigationItem.leftBarButtonItem = backItem;
+    _button.frame = CGRectMake(-50, 0, normalImage.size.width/2, normalImage.size.height/2);
 }
 
 /*

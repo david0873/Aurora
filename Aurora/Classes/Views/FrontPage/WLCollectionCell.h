@@ -16,12 +16,15 @@ typedef void (^WLCollectionBlock)(void);
 
 @interface WLCollectionCell : UIView
 
-- (id)initWithImage:(UIImage *)image title:(NSString *)title action:(WLCollectionBlock) action;
+- (id)initWithImage:(UIImage *)image
+              title:(NSString *)title
+             action:(WLCollectionBlock) action;
 
 
 @property(nonatomic, strong)UIImage *cellImage;
 @property(nonatomic, strong)NSString *cellTitle;
 @property(nonatomic, strong)WLCollectionBlock cellBlock;
 
+- (void)firstRow;
 
 @end

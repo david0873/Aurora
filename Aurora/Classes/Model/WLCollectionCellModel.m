@@ -10,7 +10,7 @@
 
 @implementation WLCollectionCellModel
 
-- (id)initWithImage:(UIImage *)image title:(NSString *)title action:(SEL)action aId:(NSInteger)aId
+- (id)initWithImage:(UIImage *)image title:(NSString *)title action:(WLCollectionBlock)action aId:(NSInteger)aId
 {
     if (self = [super init]) {
         _cellImage = image;

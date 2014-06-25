@@ -13,9 +13,15 @@
 
 @interface WLBasePage ()
 
+
 - (void)createContentScrollView;
 
 - (void)createTabBar;
+
+- (void)createNavigationBackItem;
+
+- (void)navigationBack;
+
 
 @end
 
@@ -39,7 +45,7 @@
     // Do any additional setup after loading the view.
     [self createContentScrollView];
     [self createTabBar];
-    
+    [self createNavigationBackItem];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,7 +67,6 @@
 - (void)createContentScrollView
 {
     CGFloat contentHeight = [WLUtils displayHeight] - [WLUtils statusBarHeight] - kTabBarHeight - kNavBarHeight;
-    
     CGRect contentFrame = CGRectMake(0, 0, [WLUtils displayWidth], contentHeight);
     self.contentScrollView = [[UIScrollView alloc] initWithFrame:contentFrame];
     self.contentScrollView.showsHorizontalScrollIndicator = NO;
@@ -76,6 +81,28 @@
     self.tabBar = [[WLTabBar alloc] initWithFrame:frame delegate:self];
     [self.view addSubview:self.tabBar];
 }
+
+
+
+- (void)createNavigationBackItem
+{
+    UIImage *normalImage = [UIImage imageNamed:@"ump_icon_back.png"];
+    UIImage *highImage = [UIImage imageNamed:@"ump_icon_back_foucs.png"];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, normalImage.size.width/2, normalImage.size.height/2);
+    [button setImage:normalImage forState:UIControlStateNormal];
+    [button setImage:highImage forState:UIControlStateHighlighted];
+    [button addTarget:self action:@selector(navigationBack) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.leftBarButtonItem = backItem;
+}
+
+
+- (void)navigationBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 #pragma mark - TabBarDelegate
 

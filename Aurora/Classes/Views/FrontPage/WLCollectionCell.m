@@ -9,7 +9,8 @@
 #import "WLCollectionCell.h"
 #import "WLUtils.h"
 
-#define kTopMargin 12
+#define kTopMargin 14
+#define kTopMargin2 7
 #define kColumnMargin 20
 #define kMargin 2
 #define kTitleFont 16
@@ -47,7 +48,9 @@
     return self;
 }
 
-- (id)initWithImage:(UIImage *)image title:(NSString *)title action:(WLCollectionBlock) action
+- (id)initWithImage:(UIImage *)image
+              title:(NSString *)title
+             action:(WLCollectionBlock) action;
 {
     CGRect frame = CGRectMake(0, 0, kCellHeight, kCellHeight);
     self = [super initWithFrame:frame];
@@ -55,7 +58,7 @@
         // Initialization code
         self.cellImage = image;
         self.cellTitle = title;
-        self.cellBlock = action;
+        self.cellBlock = action;     
         
         _actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _actionButton.frame = frame;
@@ -96,7 +99,7 @@
 {
     CGFloat width = CGRectGetWidth(self.frame)-kColumnMargin*2;
     _imageView = [[UIImageView alloc] initWithImage:self.cellImage];
-    _imageView.frame = CGRectMake(kColumnMargin, kTopMargin, width, width);
+    _imageView.frame = CGRectMake(kColumnMargin, kTopMargin2, width, width);
     [_actionButton addSubview:_imageView];
     
 }
@@ -134,6 +137,14 @@
     _actionButton.backgroundColor = [UIColor whiteColor];
 }
 
-
+- (void)firstRow
+{
+    CGRect frame = _imageView.frame;
+    frame.origin.y += kTopMargin - kTopMargin2;
+    _imageView.frame = frame;
+    frame = _titleLabel.frame;
+    frame.origin.y += kTopMargin - kTopMargin2;
+    _titleLabel.frame = frame;
+}
 
 @end

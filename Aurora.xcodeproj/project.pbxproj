@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F9EE1501956852A00428AE7 /* WLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE14F1956852A00428AE7 /* WLUtils.m */; };
-		0F9EE15419568B4400428AE7 /* WLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE15319568B4400428AE7 /* WLTabBar.m */; };
-		0F9EE15719569F8200428AE7 /* WLTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE15619569F8200428AE7 /* WLTabBarItem.m */; };
-		0FAB5A9D19585DFF00CE7DCC /* WLCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB5A9A19585DFF00CE7DCC /* WLCollectionCell.m */; };
-		0FAB5A9E19585DFF00CE7DCC /* WLCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB5A9C19585DFF00CE7DCC /* WLCollectionView.m */; };
 		0FAB5AA119585E0B00CE7DCC /* WLVIewCreater.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB5AA019585E0B00CE7DCC /* WLVIewCreater.m */; };
 		0FDEC96A19598D0000B462FE /* icon_tabbar_merchant_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FDEC96819598CFF00B462FE /* icon_tabbar_merchant_normal.png */; };
 		0FDEC96B19598D0000B462FE /* icon_tabbar_merchant_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FDEC96919598CFF00B462FE /* icon_tabbar_merchant_selected.png */; };
@@ -26,6 +22,12 @@
 		0FDEC97F1959951B00B462FE /* WLCollectionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEC97E1959951B00B462FE /* WLCollectionCellModel.m */; };
 		0FDEC9851959A8C500B462FE /* ump_icon_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FDEC9831959A8C500B462FE /* ump_icon_back.png */; };
 		0FDEC9861959A8C500B462FE /* ump_icon_back_foucs.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FDEC9841959A8C500B462FE /* ump_icon_back_foucs.png */; };
+		0FDEC98A195AE88C00B462FE /* WLAdvertismentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEC989195AE88C00B462FE /* WLAdvertismentView.m */; };
+		0FDEC995195AE8B900B462FE /* WLCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEC98C195AE8B900B462FE /* WLCollectionCell.m */; };
+		0FDEC996195AE8B900B462FE /* WLCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEC98E195AE8B900B462FE /* WLCollectionView.m */; };
+		0FDEC997195AE8B900B462FE /* WLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEC990195AE8B900B462FE /* WLTabBar.m */; };
+		0FDEC998195AE8B900B462FE /* WLTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEC993195AE8B900B462FE /* WLTabBarItem.m */; };
+		0FDEC99B195AFF9800B462FE /* WLNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEC99A195AFF9800B462FE /* WLNavigationBar.m */; };
 		4027E31A193F542B00FDF898 /* DFComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E317193F542B00FDF898 /* DFComment.m */; };
 		4027E31B193F542B00FDF898 /* DFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E319193F542B00FDF898 /* DFMessage.m */; };
 		4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9318EDA48700EDE552 /* DFGlobalVar.m */; };
@@ -127,18 +129,8 @@
 /* Begin PBXFileReference section */
 		0F9EE14E1956852A00428AE7 /* WLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLUtils.h; path = Utils/WLUtils.h; sourceTree = "<group>"; };
 		0F9EE14F1956852A00428AE7 /* WLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLUtils.m; path = Utils/WLUtils.m; sourceTree = "<group>"; };
-		0F9EE15219568B4400428AE7 /* WLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBar.h; path = Views/WLTabBar.h; sourceTree = "<group>"; };
-		0F9EE15319568B4400428AE7 /* WLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLTabBar.m; path = Views/WLTabBar.m; sourceTree = "<group>"; };
-		0F9EE15519569F8200428AE7 /* WLTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarItem.h; path = Views/WLTabBarItem.h; sourceTree = "<group>"; };
-		0F9EE15619569F8200428AE7 /* WLTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLTabBarItem.m; path = Views/WLTabBarItem.m; sourceTree = "<group>"; };
 		0F9EE16F1956AE0100428AE7 /* WLDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLDataManager.h; path = Datas/WLDataManager.h; sourceTree = "<group>"; };
 		0F9EE1701956AE0100428AE7 /* WLDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLDataManager.m; path = Datas/WLDataManager.m; sourceTree = "<group>"; };
-		0F9EE1721956C86B00428AE7 /* WLTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarDelegate.h; path = Views/WLTabBarDelegate.h; sourceTree = "<group>"; };
-		0F9EE1731956C9AD00428AE7 /* WLTabBarItemDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarItemDelegate.h; path = Views/WLTabBarItemDelegate.h; sourceTree = "<group>"; };
-		0FAB5A9919585DFF00CE7DCC /* WLCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLCollectionCell.h; path = Views/WLCollectionCell.h; sourceTree = "<group>"; };
-		0FAB5A9A19585DFF00CE7DCC /* WLCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLCollectionCell.m; path = Views/WLCollectionCell.m; sourceTree = "<group>"; };
-		0FAB5A9B19585DFF00CE7DCC /* WLCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLCollectionView.h; path = Views/WLCollectionView.h; sourceTree = "<group>"; };
-		0FAB5A9C19585DFF00CE7DCC /* WLCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLCollectionView.m; path = Views/WLCollectionView.m; sourceTree = "<group>"; };
 		0FAB5A9F19585E0B00CE7DCC /* WLVIewCreater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLVIewCreater.h; path = Utils/WLVIewCreater.h; sourceTree = "<group>"; };
 		0FAB5AA019585E0B00CE7DCC /* WLVIewCreater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLVIewCreater.m; path = Utils/WLVIewCreater.m; sourceTree = "<group>"; };
 		0FDEC96819598CFF00B462FE /* icon_tabbar_merchant_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_merchant_normal.png; sourceTree = "<group>"; };
@@ -155,6 +147,20 @@
 		0FDEC97E1959951B00B462FE /* WLCollectionCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLCollectionCellModel.m; sourceTree = "<group>"; };
 		0FDEC9831959A8C500B462FE /* ump_icon_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ump_icon_back.png; sourceTree = "<group>"; };
 		0FDEC9841959A8C500B462FE /* ump_icon_back_foucs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ump_icon_back_foucs.png; sourceTree = "<group>"; };
+		0FDEC988195AE88C00B462FE /* WLAdvertismentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLAdvertismentView.h; path = Views/FrontPage/WLAdvertismentView.h; sourceTree = "<group>"; };
+		0FDEC989195AE88C00B462FE /* WLAdvertismentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLAdvertismentView.m; path = Views/FrontPage/WLAdvertismentView.m; sourceTree = "<group>"; };
+		0FDEC98B195AE8B900B462FE /* WLCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLCollectionCell.h; path = Views/FrontPage/WLCollectionCell.h; sourceTree = "<group>"; };
+		0FDEC98C195AE8B900B462FE /* WLCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLCollectionCell.m; path = Views/FrontPage/WLCollectionCell.m; sourceTree = "<group>"; };
+		0FDEC98D195AE8B900B462FE /* WLCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLCollectionView.h; path = Views/FrontPage/WLCollectionView.h; sourceTree = "<group>"; };
+		0FDEC98E195AE8B900B462FE /* WLCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLCollectionView.m; path = Views/FrontPage/WLCollectionView.m; sourceTree = "<group>"; };
+		0FDEC98F195AE8B900B462FE /* WLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBar.h; path = Views/FrontPage/WLTabBar.h; sourceTree = "<group>"; };
+		0FDEC990195AE8B900B462FE /* WLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLTabBar.m; path = Views/FrontPage/WLTabBar.m; sourceTree = "<group>"; };
+		0FDEC991195AE8B900B462FE /* WLTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarDelegate.h; path = Views/FrontPage/WLTabBarDelegate.h; sourceTree = "<group>"; };
+		0FDEC992195AE8B900B462FE /* WLTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarItem.h; path = Views/FrontPage/WLTabBarItem.h; sourceTree = "<group>"; };
+		0FDEC993195AE8B900B462FE /* WLTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLTabBarItem.m; path = Views/FrontPage/WLTabBarItem.m; sourceTree = "<group>"; };
+		0FDEC994195AE8B900B462FE /* WLTabBarItemDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarItemDelegate.h; path = Views/FrontPage/WLTabBarItemDelegate.h; sourceTree = "<group>"; };
+		0FDEC999195AFF9800B462FE /* WLNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLNavigationBar.h; sourceTree = "<group>"; };
+		0FDEC99A195AFF9800B462FE /* WLNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLNavigationBar.m; sourceTree = "<group>"; };
 		4027E316193F542B00FDF898 /* DFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFComment.h; sourceTree = "<group>"; };
 		4027E317193F542B00FDF898 /* DFComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFComment.m; sourceTree = "<group>"; };
 		4027E318193F542B00FDF898 /* DFMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFMessage.h; sourceTree = "<group>"; };
@@ -335,16 +341,7 @@
 		0F9EE15119568B1100428AE7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0FAB5A9919585DFF00CE7DCC /* WLCollectionCell.h */,
-				0FAB5A9A19585DFF00CE7DCC /* WLCollectionCell.m */,
-				0FAB5A9B19585DFF00CE7DCC /* WLCollectionView.h */,
-				0FAB5A9C19585DFF00CE7DCC /* WLCollectionView.m */,
-				0F9EE15219568B4400428AE7 /* WLTabBar.h */,
-				0F9EE15319568B4400428AE7 /* WLTabBar.m */,
-				0F9EE15519569F8200428AE7 /* WLTabBarItem.h */,
-				0F9EE15619569F8200428AE7 /* WLTabBarItem.m */,
-				0F9EE1721956C86B00428AE7 /* WLTabBarDelegate.h */,
-				0F9EE1731956C9AD00428AE7 /* WLTabBarItemDelegate.h */,
+				0FDEC987195AE83500B462FE /* FontPage */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -389,6 +386,25 @@
 				0FDEC9841959A8C500B462FE /* ump_icon_back_foucs.png */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		0FDEC987195AE83500B462FE /* FontPage */ = {
+			isa = PBXGroup;
+			children = (
+				0FDEC98B195AE8B900B462FE /* WLCollectionCell.h */,
+				0FDEC98C195AE8B900B462FE /* WLCollectionCell.m */,
+				0FDEC98D195AE8B900B462FE /* WLCollectionView.h */,
+				0FDEC98E195AE8B900B462FE /* WLCollectionView.m */,
+				0FDEC98F195AE8B900B462FE /* WLTabBar.h */,
+				0FDEC990195AE8B900B462FE /* WLTabBar.m */,
+				0FDEC991195AE8B900B462FE /* WLTabBarDelegate.h */,
+				0FDEC992195AE8B900B462FE /* WLTabBarItem.h */,
+				0FDEC993195AE8B900B462FE /* WLTabBarItem.m */,
+				0FDEC994195AE8B900B462FE /* WLTabBarItemDelegate.h */,
+				0FDEC988195AE88C00B462FE /* WLAdvertismentView.h */,
+				0FDEC989195AE88C00B462FE /* WLAdvertismentView.m */,
+			);
+			name = FontPage;
 			sourceTree = "<group>";
 		};
 		40214E6F1900F32E000BB4D2 /* ViewPager */ = {
@@ -656,6 +672,8 @@
 				409F6C571956BE610030E746 /* WLSecondPage.m */,
 				409F6C581956BE610030E746 /* WLThirdPage.h */,
 				409F6C591956BE610030E746 /* WLThirdPage.m */,
+				0FDEC999195AFF9800B462FE /* WLNavigationBar.h */,
+				0FDEC99A195AFF9800B462FE /* WLNavigationBar.m */,
 			);
 			path = RootPages;
 			sourceTree = "<group>";
@@ -848,18 +866,16 @@
 				40B0A09318FCFC1F009D5A0D /* NSString+SQ.m in Sources */,
 				4040C69318E3050300163066 /* DFAppDelegate.m in Sources */,
 				4040C69918E3050300163066 /* DFViewController.m in Sources */,
+				0FDEC995195AE8B900B462FE /* WLCollectionCell.m in Sources */,
 				409F6C9F1956C4600030E746 /* DFCommentListController.m in Sources */,
 				409F6CA21956C4600030E746 /* DFMGOrderDealListController.m in Sources */,
-				0F9EE15419568B4400428AE7 /* WLTabBar.m in Sources */,
 				409F6C741956BE610030E746 /* WLNavigationControlller.m in Sources */,
 				409F6C731956BE610030E746 /* WLFourthPage.m in Sources */,
 				4027E31B193F542B00FDF898 /* DFMessage.m in Sources */,
-				0FAB5A9D19585DFF00CE7DCC /* WLCollectionCell.m in Sources */,
-				0FAB5A9E19585DFF00CE7DCC /* WLCollectionView.m in Sources */,
 				409F6CA71956C4600030E746 /* DFQualificationController.m in Sources */,
 				409F6C711956BE610030E746 /* WLBasePage.m in Sources */,
+				0FDEC99B195AFF9800B462FE /* WLNavigationBar.m in Sources */,
 				409F6CAA1956C4600030E746 /* DFRootTabBarController.m in Sources */,
-				0F9EE15719569F8200428AE7 /* WLTabBarItem.m in Sources */,
 				409F6C751956BE610030E746 /* WLSecondPage.m in Sources */,
 				409F6C721956BE610030E746 /* WLFirstPage.m in Sources */,
 				0FAB5AA119585E0B00CE7DCC /* WLVIewCreater.m in Sources */,
@@ -881,6 +897,7 @@
 				40B0A09418FCFC1F009D5A0D /* UIColor+SQ.m in Sources */,
 				409F6CA81956C4600030E746 /* DFRegisterController.m in Sources */,
 				4040C6E318E3078C00163066 /* EGOCache.m in Sources */,
+				0FDEC996195AE8B900B462FE /* WLCollectionView.m in Sources */,
 				409F6C9D1956C4600030E746 /* DFBarListController.m in Sources */,
 				409F6CAC1956C4600030E746 /* DFUserCenterController.m in Sources */,
 				409F6CA11956C4600030E746 /* DFLoginController.m in Sources */,
@@ -893,10 +910,13 @@
 				40F8DC8F19584A5C00C93961 /* DFManagerController.m in Sources */,
 				409F6CA91956C4600030E746 /* DFReserveController.m in Sources */,
 				409F6C791956BE610030E746 /* WLRootViewController.m in Sources */,
+				0FDEC998195AE8B900B462FE /* WLTabBarItem.m in Sources */,
 				4040C6E018E3078C00163066 /* MyPageControl.m in Sources */,
 				409F6CA31956C4600030E746 /* DFOderDealController.m in Sources */,
+				0FDEC98A195AE88C00B462FE /* WLAdvertismentView.m in Sources */,
 				409F6CA61956C4600030E746 /* DFPSOrderListController.m in Sources */,
 				40B3E27718F43CB300472C1F /* DFUser.m in Sources */,
+				0FDEC997195AE8B900B462FE /* WLTabBar.m in Sources */,
 				4040C6E618E3078C00163066 /* EGOImageLoader.m in Sources */,
 				0FDEC97F1959951B00B462FE /* WLCollectionCellModel.m in Sources */,
 			);

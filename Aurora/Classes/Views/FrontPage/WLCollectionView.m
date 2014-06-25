@@ -46,11 +46,16 @@
 }
 */
 
-- (void)addCell:(WLCollectionCell *)cell
+- (void)addCellByModel:(WLCollectionCellModel *)model
 {
+    WLCollectionCell *cell = [[WLCollectionCell alloc] initWithImage:model.cellImage title:model.cellTitle action:model.cellAction];
+    
     CGRect frame = cell.frame;
     frame.origin.x = _nextCellX;
     frame.origin.y = _nextCellY;
+    if (_nextCellY == 0) {
+        [cell firstRow];
+    }
     cell.frame = frame;
     
     [self addSubview:cell];
@@ -70,5 +75,7 @@
     }
     
 }
+
+
 
 @end
