@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "DFOderDealController.h"
 
+
 @interface DFMGOrderDealListController : UITableViewController<DFOrderDealControllerDelegate>
 
-@property (nonatomic, strong) NSMutableArray *psOders;
+@property (nonatomic, strong) NSMutableArray *psOrders;
+@property (copy, nonatomic) NSString * shopName;
 
 - (IBAction)backPressed:(UIBarButtonItem *)sender;
 

@@ -1991,23 +1991,23 @@
             </objects>
             <point key="canvasLocation" x="3169" y="2063"/>
         </scene>
-        <!--Table View Controller - 场子列表-->
+        <!--History Shop List Controller - 场子列表-->
         <scene sceneID="OOf-7o-9J6">
             <objects>
-                <tableViewController id="eIb-KY-KuX" sceneMemberID="viewController">
+                <tableViewController id="eIb-KY-KuX" customClass="DFMGHistoryShopListController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cdj-7J-PD7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ZMb-Bf-B8Q">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="shopCell" id="ZMb-Bf-B8Q">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZMb-Bf-B8Q" id="xyA-0B-Uz2">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[场子名称]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETM-CR-b0K">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[场子名称]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETM-CR-b0K">
                                             <rect key="frame" x="20" y="11" width="89" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2032,10 +2032,10 @@
             </objects>
             <point key="canvasLocation" x="3545" y="3321"/>
         </scene>
-        <!--Order Deal List Controller - 订单列表-->
+        <!--History Order List Controller - 订单列表-->
         <scene sceneID="KkX-pL-bf5">
             <objects>
-                <tableViewController title="订单列表" id="GTK-TJ-Gvj" customClass="DFMGOrderDealListController" sceneMemberID="viewController">
+                <tableViewController title="订单列表" id="GTK-TJ-Gvj" customClass="DFMGHistoryOrderListController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="Z2a-qP-fy4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2078,10 +2078,10 @@
             </objects>
             <point key="canvasLocation" x="3986" y="3321"/>
         </scene>
-        <!--Table View Controller - 订单详情-->
+        <!--History Order Detail Controller - 订单详情-->
         <scene sceneID="Vws-lR-cBJ">
             <objects>
-                <tableViewController id="kdL-Og-xuG" sceneMemberID="viewController">
+                <tableViewController id="kdL-Og-xuG" customClass="DFMGHistoryOrderDetailController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ne5-gL-uZC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2297,6 +2297,7 @@
                         <outlet property="labelRemarks" destination="2yB-nb-qLI" id="Gkc-ne-Ip1"/>
                         <outlet property="labelStartTime" destination="WBB-yc-pvo" id="LyI-No-4xk"/>
                         <outlet property="lableSeatType" destination="JKp-d2-iHs" id="8Jj-za-2ox"/>
+                        <outlet property="orderStatus" destination="Oec-eu-Vme" id="5mH-pe-J1K"/>
                         <outlet property="textDeposit" destination="scb-zG-AnU" id="CxI-4Y-0Ul"/>
                         <outlet property="textMinConsume" destination="Rjs-aM-x2g" id="lBa-91-ZdS"/>
                     </connections>

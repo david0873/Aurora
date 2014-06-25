@@ -1,23 +1,24 @@
 //
-//  DFMGOrderListController.m
+//  DFMGHistoryOrderListController.m
 //  Aurora
 //
-//  Created by David on 14-4-4.
+//  Created by David on 14-6-25.
 //  Copyright (c) 2014年 david. All rights reserved.
 //
 
-#import "DFMGOrderDealListController.h"
+#import "DFMGHistoryOrderListController.h"
 #import "DFuserOrder.h"
-#import "DFOderDealController.h"
+#import "DFMGHistoryOrderDetailController.h"
 
-@interface DFMGOrderDealListController ()
+@interface DFMGHistoryOrderListController ()
+
 @end
-
-@implementation DFMGOrderDealListController
 
 NSString *path;
 NSMutableArray * filteredOrders;
 NSMutableArray * filteredOrderIndexes;
+
+@implementation DFMGHistoryOrderListController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,7 +45,7 @@ NSMutableArray * filteredOrderIndexes;
     for (int i=0; i<self.psOrders.count; i++) {
         DFUserOrder * userOrder = [self.psOrders objectAtIndex:i];
         NSString * tempShopName = userOrder.shopName;
-        if ([self.shopName isEqualToString:tempShopName]&&userOrder.orderStatus==0) {
+        if ([self.shopName isEqualToString:tempShopName]&&userOrder.orderStatus!=0) {
             [filteredOrders addObject:userOrder];
             [filteredOrderIndexes addObject:[NSNumber numberWithInt:i]];
         }
@@ -52,7 +53,7 @@ NSMutableArray * filteredOrderIndexes;
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -65,7 +66,7 @@ NSMutableArray * filteredOrderIndexes;
     for (int i=0; i<self.psOrders.count; i++) {
         DFUserOrder * userOrder = [self.psOrders objectAtIndex:i];
         NSString * tempShopName = userOrder.shopName;
-        if ([self.shopName isEqualToString:tempShopName]&&userOrder.orderStatus==0) {
+        if ([self.shopName isEqualToString:tempShopName]&&userOrder.orderStatus!=0) {
             [filteredOrders addObject:userOrder];
             [filteredOrderIndexes addObject:[NSNumber numberWithInt:i]];
         }
@@ -79,38 +80,17 @@ NSMutableArray * filteredOrderIndexes;
     // Dispose of any resources that can be recreated.
 }
 
-//- (void)viewWillAppear:(BOOL)animated{
-//    [super viewWillAppear:animated];
-//    [filteredOrderIndexes removeAllObjects];
-//    
-//    for (int i=0; i<self.psOrders.count; i++) {
-//        DFUserOrder * userOrder = [self.psOrders objectAtIndex:i];
-//        NSString * tempShopName = userOrder.shopName;
-//        if ([self.shopName isEqualToString:tempShopName]&&userOrder.orderStatus==0) {
-//            [filteredOrders addObject:userOrder];
-//            [filteredOrderIndexes addObject:[NSNumber numberWithInt:i]];
-//        }
-//    }
-//    [self.tableView reloadData];
-//}
-
-/*
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
-*/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [filteredOrders count];
+    return filteredOrders.count;
 }
-
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -129,6 +109,7 @@ NSMutableArray * filteredOrderIndexes;
     
     return cell;
 }
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -171,12 +152,11 @@ NSMutableArray * filteredOrderIndexes;
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    DFOderDealController * destination = [segue destinationViewController];
+    DFMGHistoryOrderDetailController * destination = [segue destinationViewController];
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     destination.row = [[filteredOrderIndexes objectAtIndex:indexPath.row] integerValue];
     
@@ -188,17 +168,7 @@ NSMutableArray * filteredOrderIndexes;
         DFUserOrder* order = [filteredOrders objectAtIndex:indexPath.row];
         [destination setValue:order forKey:@"selection"];
     }
-
-}
-
-- (void)orderDealController:(DFOderDealController *)controller didUpdateOrder:(DFUserOrder *)order{
-    [self.psOrders replaceObjectAtIndex:controller.row withObject:order];
-    [NSKeyedArchiver archiveRootObject:self.psOrders toFile:path];
     
 }
 
-
-- (IBAction)backPressed:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 @end

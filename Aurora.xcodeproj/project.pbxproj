@@ -72,6 +72,9 @@
 		4040C70D18E3079800163066 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4040C6FB18E3079800163066 /* whiteArrow@2x.png */; };
 		4040C71018E307D500163066 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4040C70E18E307D500163066 /* MainStoryboard_iPhone.storyboard */; };
 		4043548A18F82F7B003F6542 /* DFShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4043548918F82F7B003F6542 /* DFShop.m */; };
+		408FBDF2195B14AB00DC1331 /* DFMGHistoryOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408FBDF1195B14AB00DC1331 /* DFMGHistoryOrderListController.m */; };
+		408FBDF5195B157C00DC1331 /* DFMGHistoryShopListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408FBDF4195B157C00DC1331 /* DFMGHistoryShopListController.m */; };
+		408FBDF8195B15AB00DC1331 /* DFMGHistoryOrderDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408FBDF7195B15AB00DC1331 /* DFMGHistoryOrderDetailController.m */; };
 		409F6C711956BE610030E746 /* WLBasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C4F1956BE610030E746 /* WLBasePage.m */; };
 		409F6C721956BE610030E746 /* WLFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C511956BE610030E746 /* WLFirstPage.m */; };
 		409F6C731956BE610030E746 /* WLFourthPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 409F6C531956BE610030E746 /* WLFourthPage.m */; };
@@ -214,6 +217,12 @@
 		4040C70F18E307D500163066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		4043548818F82F7B003F6542 /* DFShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFShop.h; sourceTree = "<group>"; };
 		4043548918F82F7B003F6542 /* DFShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFShop.m; sourceTree = "<group>"; };
+		408FBDF0195B14AB00DC1331 /* DFMGHistoryOrderListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFMGHistoryOrderListController.h; path = Controller/OrderHistory/DFMGHistoryOrderListController.h; sourceTree = "<group>"; };
+		408FBDF1195B14AB00DC1331 /* DFMGHistoryOrderListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFMGHistoryOrderListController.m; path = Controller/OrderHistory/DFMGHistoryOrderListController.m; sourceTree = "<group>"; };
+		408FBDF3195B157C00DC1331 /* DFMGHistoryShopListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFMGHistoryShopListController.h; path = Controller/OrderHistory/DFMGHistoryShopListController.h; sourceTree = "<group>"; };
+		408FBDF4195B157C00DC1331 /* DFMGHistoryShopListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFMGHistoryShopListController.m; path = Controller/OrderHistory/DFMGHistoryShopListController.m; sourceTree = "<group>"; };
+		408FBDF6195B15AB00DC1331 /* DFMGHistoryOrderDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFMGHistoryOrderDetailController.h; path = Controller/OrderHistory/DFMGHistoryOrderDetailController.h; sourceTree = "<group>"; };
+		408FBDF7195B15AB00DC1331 /* DFMGHistoryOrderDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFMGHistoryOrderDetailController.m; path = Controller/OrderHistory/DFMGHistoryOrderDetailController.m; sourceTree = "<group>"; };
 		409F6C4E1956BE610030E746 /* WLBasePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLBasePage.h; sourceTree = "<group>"; };
 		409F6C4F1956BE610030E746 /* WLBasePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLBasePage.m; sourceTree = "<group>"; };
 		409F6C501956BE610030E746 /* WLFirstPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLFirstPage.h; sourceTree = "<group>"; };
@@ -474,6 +483,7 @@
 		4040C6B718E3078C00163066 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				408FBDEF195B0F3100DC1331 /* OrderHistory */,
 				40F8DC8A19583CA900C93961 /* YBAddCommentController.h */,
 				40F8DC8B19583CA900C93961 /* YBAddCommentController.m */,
 				409F6CAE1956C46E0030E746 /* OrderDeal */,
@@ -606,6 +616,19 @@
 				4040C6FB18E3079800163066 /* whiteArrow@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		408FBDEF195B0F3100DC1331 /* OrderHistory */ = {
+			isa = PBXGroup;
+			children = (
+				408FBDF0195B14AB00DC1331 /* DFMGHistoryOrderListController.h */,
+				408FBDF1195B14AB00DC1331 /* DFMGHistoryOrderListController.m */,
+				408FBDF3195B157C00DC1331 /* DFMGHistoryShopListController.h */,
+				408FBDF4195B157C00DC1331 /* DFMGHistoryShopListController.m */,
+				408FBDF6195B15AB00DC1331 /* DFMGHistoryOrderDetailController.h */,
+				408FBDF7195B15AB00DC1331 /* DFMGHistoryOrderDetailController.m */,
+			);
+			name = OrderHistory;
 			sourceTree = "<group>";
 		};
 		409F6C2A1956BE610030E746 /* Controller */ = {
@@ -820,6 +843,7 @@
 			files = (
 				40F8DC891956D9E400C93961 /* WLDataManager.m in Sources */,
 				4040C6E718E3078C00163066 /* EGOImageView.m in Sources */,
+				408FBDF8195B15AB00DC1331 /* DFMGHistoryOrderDetailController.m in Sources */,
 				4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */,
 				40B0A09318FCFC1F009D5A0D /* NSString+SQ.m in Sources */,
 				4040C69318E3050300163066 /* DFAppDelegate.m in Sources */,
@@ -840,6 +864,7 @@
 				409F6C721956BE610030E746 /* WLFirstPage.m in Sources */,
 				0FAB5AA119585E0B00CE7DCC /* WLVIewCreater.m in Sources */,
 				4040C6E418E3078C00163066 /* EGOImageButton.m in Sources */,
+				408FBDF2195B14AB00DC1331 /* DFMGHistoryOrderListController.m in Sources */,
 				4027E31A193F542B00FDF898 /* DFComment.m in Sources */,
 				40F8DC8C19583CA900C93961 /* YBAddCommentController.m in Sources */,
 				40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */,
@@ -864,6 +889,7 @@
 				4040C6E518E3078C00163066 /* EGOImageLoadConnection.m in Sources */,
 				4040C68F18E3050300163066 /* main.m in Sources */,
 				0F9EE1501956852A00428AE7 /* WLUtils.m in Sources */,
+				408FBDF5195B157C00DC1331 /* DFMGHistoryShopListController.m in Sources */,
 				40F8DC8F19584A5C00C93961 /* DFManagerController.m in Sources */,
 				409F6CA91956C4600030E746 /* DFReserveController.m in Sources */,
 				409F6C791956BE610030E746 /* WLRootViewController.m in Sources */,

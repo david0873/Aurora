@@ -1,23 +1,24 @@
 //
-//  DFMGShopListController.m
+//  DFMGHistoryShopListController.m
 //  Aurora
 //
-//  Created by David on 14-6-22.
+//  Created by David on 14-6-25.
 //  Copyright (c) 2014年 david. All rights reserved.
 //
 
-#import "DFMGShopListController.h"
+#import "DFMGHistoryShopListController.h"
 #import "DFUserOrder.h"
-#import "DFMGOrderDealListController.h"
+#import "DFMGHistoryOrderListController.h"
 
-@interface DFMGShopListController ()
+@interface DFMGHistoryShopListController ()
 
 @end
+
 
 NSString *path;
 NSMutableArray *shopNames;
 
-@implementation DFMGShopListController
+@implementation DFMGHistoryShopListController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,7 +46,7 @@ NSMutableArray *shopNames;
     for (int i=0; i<self.psOrders.count; i++) {
         DFUserOrder * userOrder = [self.psOrders objectAtIndex:i];
         NSString * shopName = userOrder.shopName;
-        if (![shopNames containsObject:shopName]&&userOrder.orderStatus==0) {
+        if (![shopNames containsObject:shopName]&&userOrder.orderStatus!=0) {
             [shopNames addObject:shopName];
         }
     }
@@ -62,7 +63,7 @@ NSMutableArray *shopNames;
     for (int i=0; i<self.psOrders.count; i++) {
         DFUserOrder * userOrder = [self.psOrders objectAtIndex:i];
         NSString * shopName = userOrder.shopName;
-        if (![shopNames containsObject:shopName]&&userOrder.orderStatus==0) {
+        if (![shopNames containsObject:shopName]&&userOrder.orderStatus!=0) {
             [shopNames addObject:shopName];
         }
     }
@@ -97,6 +98,7 @@ NSMutableArray *shopNames;
     
     return cell;
 }
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -142,7 +144,7 @@ NSMutableArray *shopNames;
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    DFMGOrderDealListController * destination = [segue destinationViewController];
+    DFMGHistoryOrderListController * destination = [segue destinationViewController];
     
     if ([destination respondsToSelector:@selector(setShopName:)]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];

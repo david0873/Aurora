@@ -1,16 +1,14 @@
 //
-//  DFMGShopListController.h
+//  DFMGHistoryNameListController.h
 //  Aurora
 //
-//  Created by David on 14-6-22.
+//  Created by David on 14-6-25.
 //  Copyright (c) 2014年 david. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "DFMGOrderDealListController.h"
 
-@interface DFMGShopListController : UITableViewController
+@interface DFMGHistoryShopListController : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray *psOrders;
-
 @end
