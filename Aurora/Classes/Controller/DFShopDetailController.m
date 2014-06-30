@@ -11,6 +11,7 @@
 #import "DFReserveController.h"
 #import "DFGlobalVar.h"
 #import "DFCommentListController.h"
+#import "DFMessage.h"
 
 @interface DFShopDetailController ()
 
@@ -36,17 +37,24 @@
     imagview.imageURL = [NSURL URLWithString: _shop.shopImage];
     [self.view addSubview:imagview];
     
-    UITextView *textView1 = [[UITextView alloc] init];
-    textView1.font = [UIFont systemFontOfSize:16];
-    textView1.editable = false;
-    textView1.text = @"购买早午餐菜单中任意两份特色早午餐, 汉堡或意面, 即可获赠小蓝蛙菜单中主菜及软饮一份. \n蓝蛙正大广场店开业慈善派对\n2014年4月18日\n下午6点半至闭店\n";
+    NSArray* myPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* myDocPath = [myPaths objectAtIndex:0];
+    NSString* path = [myDocPath stringByAppendingPathComponent:@"msg.plist"];
     
-    UITextView *textView2 = [[UITextView alloc] init];
-    textView2.font = [UIFont systemFontOfSize:16];
-    textView2.editable = false;
-    textView2.text = @"购买早午餐菜单中任意两份特色早午餐, 汉堡或意面, 即可获赠小蓝蛙菜单中主菜及软饮一份. \n蓝蛙正大广场店开业慈善派对\n2014年4月18日\n下午6点半至闭店";
-
-    NSArray * views = [NSArray arrayWithObjects:textView1, textView2, nil];
+    NSMutableArray * array = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
+    
+    NSMutableArray * views = [[NSMutableArray alloc]init];
+    
+    if (array != nil) {
+        for (int i=0; i<array.count; i++) {
+            UITextView *textView = [[UITextView alloc] init];
+            textView.font = [UIFont systemFontOfSize:16];
+            textView.editable = false;
+            DFMessage * msg = [array objectAtIndex:i];
+            textView.text = msg.message;
+            [views addObject:textView];
+        }
+    }
     
     viewPager = [[ViewPager alloc]initWithFrame:CGRectMake(0, 65, 320, 230) andViews:views];
     viewPager.delegate = self;

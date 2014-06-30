@@ -10,6 +10,7 @@
 
 #define kMsgMessageIdKey            @"MessageId"
 #define kMsgUserIdKey               @"UserId"
+#define kMsgShopNameKey             @"ShopName"
 #define kMsgMessageKey              @"Message"
 
 
@@ -18,6 +19,7 @@
 @property (nonatomic, copy) NSString * messageId;
 @property (nonatomic, copy) NSString * userId;
 @property (nonatomic, copy) NSString * message;
+@property (nonatomic, copy) NSString * shopName;
 
 
 

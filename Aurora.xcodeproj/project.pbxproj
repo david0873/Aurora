@@ -28,6 +28,8 @@
 		0FDEC997195AE8B900B462FE /* WLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEC990195AE8B900B462FE /* WLTabBar.m */; };
 		0FDEC998195AE8B900B462FE /* WLTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEC993195AE8B900B462FE /* WLTabBarItem.m */; };
 		0FDEC99B195AFF9800B462FE /* WLNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEC99A195AFF9800B462FE /* WLNavigationBar.m */; };
+		4005E2B3196179DD00C0FC00 /* DFMSGShopListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005E2B2196179DD00C0FC00 /* DFMSGShopListController.m */; };
+		4005E2B619617C5E00C0FC00 /* DFMSGlistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005E2B519617C5E00C0FC00 /* DFMSGlistController.m */; };
 		4027E31A193F542B00FDF898 /* DFComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E317193F542B00FDF898 /* DFComment.m */; };
 		4027E31B193F542B00FDF898 /* DFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027E319193F542B00FDF898 /* DFMessage.m */; };
 		4030EA9418EDA48700EDE552 /* DFGlobalVar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030EA9318EDA48700EDE552 /* DFGlobalVar.m */; };
@@ -110,6 +112,7 @@
 		40B44EB019339C8700F04533 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44EAF19339C8700F04533 /* libz.dylib */; };
 		40B44EB219339C9400F04533 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44EB119339C9400F04533 /* libxml2.2.dylib */; };
 		40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFAE9318EF0062001C6767 /* DFUserOrder.m */; };
+		40EE790D195CF4B300815EA1 /* DFAddMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40EE790C195CF4B300815EA1 /* DFAddMessageController.m */; };
 		40F8DC881956C64300C93961 /* DFMGShopListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DC871956C64300C93961 /* DFMGShopListController.m */; };
 		40F8DC891956D9E400C93961 /* WLDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EE1701956AE0100428AE7 /* WLDataManager.m */; };
 		40F8DC8C19583CA900C93961 /* YBAddCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DC8B19583CA900C93961 /* YBAddCommentController.m */; };
@@ -161,6 +164,10 @@
 		0FDEC994195AE8B900B462FE /* WLTabBarItemDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WLTabBarItemDelegate.h; path = Views/FrontPage/WLTabBarItemDelegate.h; sourceTree = "<group>"; };
 		0FDEC999195AFF9800B462FE /* WLNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLNavigationBar.h; sourceTree = "<group>"; };
 		0FDEC99A195AFF9800B462FE /* WLNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLNavigationBar.m; sourceTree = "<group>"; };
+		4005E2B1196179DD00C0FC00 /* DFMSGShopListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFMSGShopListController.h; sourceTree = "<group>"; };
+		4005E2B2196179DD00C0FC00 /* DFMSGShopListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFMSGShopListController.m; sourceTree = "<group>"; };
+		4005E2B419617C5E00C0FC00 /* DFMSGlistController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFMSGlistController.h; sourceTree = "<group>"; };
+		4005E2B519617C5E00C0FC00 /* DFMSGlistController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFMSGlistController.m; sourceTree = "<group>"; };
 		4027E316193F542B00FDF898 /* DFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFComment.h; sourceTree = "<group>"; };
 		4027E317193F542B00FDF898 /* DFComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFComment.m; sourceTree = "<group>"; };
 		4027E318193F542B00FDF898 /* DFMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFMessage.h; sourceTree = "<group>"; };
@@ -292,6 +299,8 @@
 		40B44EB119339C9400F04533 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		40BFAE9218EF0062001C6767 /* DFUserOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUserOrder.h; sourceTree = "<group>"; };
 		40BFAE9318EF0062001C6767 /* DFUserOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUserOrder.m; sourceTree = "<group>"; };
+		40EE790B195CF4B300815EA1 /* DFAddMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFAddMessageController.h; path = Controller/DFAddMessageController.h; sourceTree = "<group>"; };
+		40EE790C195CF4B300815EA1 /* DFAddMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFAddMessageController.m; path = Controller/DFAddMessageController.m; sourceTree = "<group>"; };
 		40F8DC861956C64300C93961 /* DFMGShopListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFMGShopListController.h; path = Controller/DFMGShopListController.h; sourceTree = "<group>"; };
 		40F8DC871956C64300C93961 /* DFMGShopListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFMGShopListController.m; path = Controller/DFMGShopListController.m; sourceTree = "<group>"; };
 		40F8DC8A19583CA900C93961 /* YBAddCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YBAddCommentController.h; path = Controller/YBAddCommentController.h; sourceTree = "<group>"; };
@@ -550,6 +559,12 @@
 				4030EA9318EDA48700EDE552 /* DFGlobalVar.m */,
 				40F8DC8D19584A5C00C93961 /* DFManagerController.h */,
 				40F8DC8E19584A5C00C93961 /* DFManagerController.m */,
+				4005E2B419617C5E00C0FC00 /* DFMSGlistController.h */,
+				4005E2B519617C5E00C0FC00 /* DFMSGlistController.m */,
+				4005E2B1196179DD00C0FC00 /* DFMSGShopListController.h */,
+				4005E2B2196179DD00C0FC00 /* DFMSGShopListController.m */,
+				40EE790B195CF4B300815EA1 /* DFAddMessageController.h */,
+				40EE790C195CF4B300815EA1 /* DFAddMessageController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -876,6 +891,7 @@
 				409F6C711956BE610030E746 /* WLBasePage.m in Sources */,
 				0FDEC99B195AFF9800B462FE /* WLNavigationBar.m in Sources */,
 				409F6CAA1956C4600030E746 /* DFRootTabBarController.m in Sources */,
+				4005E2B3196179DD00C0FC00 /* DFMSGShopListController.m in Sources */,
 				409F6C751956BE610030E746 /* WLSecondPage.m in Sources */,
 				409F6C721956BE610030E746 /* WLFirstPage.m in Sources */,
 				0FAB5AA119585E0B00CE7DCC /* WLVIewCreater.m in Sources */,
@@ -886,6 +902,7 @@
 				40BFAE9418EF0062001C6767 /* DFUserOrder.m in Sources */,
 				409F6C9E1956C4600030E746 /* DFChamberListController.m in Sources */,
 				409F6C761956BE610030E746 /* WLThirdPage.m in Sources */,
+				4005E2B619617C5E00C0FC00 /* DFMSGlistController.m in Sources */,
 				4040C6E218E3078C00163066 /* ViewPager.m in Sources */,
 				4043548A18F82F7B003F6542 /* DFShop.m in Sources */,
 				409F6CA01956C4600030E746 /* DFKTVListController.m in Sources */,
@@ -899,6 +916,7 @@
 				4040C6E318E3078C00163066 /* EGOCache.m in Sources */,
 				0FDEC996195AE8B900B462FE /* WLCollectionView.m in Sources */,
 				409F6C9D1956C4600030E746 /* DFBarListController.m in Sources */,
+				40EE790D195CF4B300815EA1 /* DFAddMessageController.m in Sources */,
 				409F6CAC1956C4600030E746 /* DFUserCenterController.m in Sources */,
 				409F6CA11956C4600030E746 /* DFLoginController.m in Sources */,
 				409F6CAD1956C4600030E746 /* ViewController.m in Sources */,

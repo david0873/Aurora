@@ -17,6 +17,7 @@
     [copy setMessageId:[self.messageId copyWithZone:zone]];
     [copy setUserId:[self.userId copyWithZone:zone]];
     [copy setMessage:[self.message copyWithZone:zone]];
+    [copy setShopName:[self.shopName copyWithZone:zone]];
     
     return copy;
 }
@@ -25,6 +26,7 @@
     [aCoder encodeObject:self.messageId forKey:kMsgMessageIdKey];
     [aCoder encodeObject:self.userId forKey:kMsgUserIdKey];
     [aCoder encodeObject:self.message forKey:kMsgMessageKey];
+    [aCoder encodeObject:self.shopName forKey:kMsgShopNameKey];
     
 }
 
@@ -34,6 +36,7 @@
         _messageId = [aDecoder decodeObjectForKey:kMsgMessageIdKey];
         _userId = [aDecoder decodeObjectForKey:kMsgUserIdKey];
         _message = [aDecoder decodeObjectForKey:kMsgMessageKey];
+        _shopName = [aDecoder decodeObjectForKey:kMsgShopNameKey];
     }
     return self;
 }
