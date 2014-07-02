@@ -19,13 +19,14 @@
     NSMutableArray *_collections;
 }
 
-- (void)action;
 
 - (void)createColletionModels;
 
 - (void)addCollections;
 
 - (void)collectionAction;
+
+- (void)addAdvertismentView;
 
 @end
 
@@ -125,5 +126,8 @@
     [[WLDataManager instance].mainStoryboard instantiateViewControllerWithIdentifier:@"rootView"];
     [self.navigationController pushViewController:controller animated:YES];
 }
+
+- (void)addAdvertismentView
+{}
 
 @end
