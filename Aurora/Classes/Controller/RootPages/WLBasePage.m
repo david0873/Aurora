@@ -16,7 +16,7 @@
 
 - (void)createContentScrollView;
 
-- (void)createTabBar;
+
 
 - (void)createNavigationBackItem;
 
@@ -43,15 +43,30 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self createContentScrollView];
-    [self createTabBar];
     [self createNavigationBackItem];
+    [self createContentScrollView];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+//    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)])
+//    {
+//        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+//        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+//        
+//    }
 }
 
 /*
@@ -66,7 +81,7 @@
 */
 - (void)createContentScrollView
 {
-    CGFloat contentHeight = [WLUtils displayHeight] - [WLUtils statusBarHeight] - kTabBarHeight - kNavBarHeight;
+    CGFloat contentHeight = [WLUtils displayHeight] - [WLUtils statusBarHeight] - kNavBarHeight;
     CGRect contentFrame = CGRectMake(0, 0, [WLUtils displayWidth], contentHeight);
     self.contentScrollView = [[UIScrollView alloc] initWithFrame:contentFrame];
     self.contentScrollView.showsHorizontalScrollIndicator = NO;
@@ -77,9 +92,15 @@
 
 - (void)createTabBar
 {
-    CGRect frame = CGRectMake(0, CGRectGetMaxY(self.contentScrollView.frame), [WLUtils displayWidth], kTabBarHeight);
+    CGRect frame = self.contentScrollView.frame;
+    frame.size.height = [WLUtils displayHeight] - [WLUtils statusBarHeight] - kTabBarHeight - kNavBarHeight;
+    self.contentScrollView.frame = frame;
+    
+    frame = CGRectMake(0, CGRectGetMaxY(self.contentScrollView.frame), [WLUtils displayWidth], kTabBarHeight);
     self.tabBar = [[WLTabBar alloc] initWithFrame:frame delegate:self];
     [self.view addSubview:self.tabBar];
+    
+    
 }
 
 
@@ -93,6 +114,7 @@
     [button setImage:normalImage forState:UIControlStateNormal];
     [button setImage:highImage forState:UIControlStateHighlighted];
     [button addTarget:self action:@selector(navigationBack) forControlEvents:UIControlEventTouchUpInside];
+
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = backItem;
 }
@@ -111,5 +133,7 @@
     WLNavigationControlller *w = [[WLDataManager instance].mainPagesArray objectAtIndex:itemID];
     [UIApplication sharedApplication].keyWindow.rootViewController = w;
 }
+
+
 
 @end

@@ -38,6 +38,7 @@
     self.title = @"凤飞飞";
     self.view.backgroundColor = [UIColor yellowColor];
     //self.navigationItem.leftBarButtonItem = nil;
+    [self createTabBar];
     [self.tabBar selectItem:1];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];

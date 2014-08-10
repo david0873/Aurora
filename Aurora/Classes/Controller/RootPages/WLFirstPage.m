@@ -56,6 +56,7 @@
     self.title = @"Aurora";
     self.view.backgroundColor = [UIColor redColor];
     self.navigationItem.leftBarButtonItem = nil;
+    [self createTabBar];
     [self.tabBar selectItem:0];
     
     [self createColletionModels];
@@ -122,6 +123,11 @@
 
 - (void)collectionAction
 {
+    WLRootViewController *r = [[WLRootViewController alloc] init];
+    [self.navigationController pushViewController:r animated:YES];
+    return;
+    
+    
     UIViewController *controller = (UIViewController *)
     [[WLDataManager instance].mainStoryboard instantiateViewControllerWithIdentifier:@"rootView"];
     [self.navigationController pushViewController:controller animated:YES];

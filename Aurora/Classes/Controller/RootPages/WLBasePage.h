@@ -23,4 +23,6 @@
 @property(nonatomic)NSInteger pageIndex;
 @property(nonatomic, strong)UIScrollView *contentScrollView;
 
+- (void)createTabBar;
+
 @end

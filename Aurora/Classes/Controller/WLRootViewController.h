@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WLBasePage.h"
 
-@interface WLRootViewController : UIViewController
+@interface WLRootViewController : WLBasePage
 
 @end

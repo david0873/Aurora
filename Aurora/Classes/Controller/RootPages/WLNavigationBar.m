@@ -31,7 +31,7 @@
 - (void)layoutSubviews {
     
     [super layoutSubviews];
-    
+
     UINavigationItem *navigationItem = [self topItem];
     
     for (UIView *subview in [self subviews]) {

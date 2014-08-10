@@ -10,10 +10,7 @@
 #import "WLUtils.h"
 
 @interface WLNavigationControlller ()
-{
-    UIButton *_button;
-}
-- (void)createNavigationBackItem;
+
 
 @end
 
@@ -38,7 +35,13 @@
     NSDictionary *dic = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     self.navigationBar.titleTextAttributes = dic;
     
-    //[self createNavigationBackItem];
+    __weak WLNavigationControlller *weakSelf = self;
+    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
+    {
+        self.interactivePopGestureRecognizer.delegate = weakSelf;
+        self.delegate = weakSelf;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,21 +50,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)createNavigationBackItem
-{
-    UIImage *normalImage = [UIImage imageNamed:@"ump_icon_back.png"];
-    UIImage *highImage = [UIImage imageNamed:@"ump_icon_back_foucs.png"];
-    _button = [UIButton buttonWithType:UIButtonTypeCustom];
-    _button.frame = CGRectMake(-50, 0, normalImage.size.width/2, normalImage.size.height/2);
-    [_button setImage:normalImage forState:UIControlStateNormal];
-    [_button setImage:highImage forState:UIControlStateHighlighted];
-    //[_button addTarget:self action:@selector(navigationBackUp) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:_button];
-    
-   
-    self.navigationItem.leftBarButtonItem = backItem;
-    _button.frame = CGRectMake(-50, 0, normalImage.size.width/2, normalImage.size.height/2);
-}
+
+
+
 
 /*
 #pragma mark - Navigation
@@ -73,5 +64,30 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+// Hijack the push method to disable the gesture
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
+        self.interactivePopGestureRecognizer.enabled = NO;
+    
+    [super pushViewController:viewController animated:animated];
+}
+
+#pragma mark UINavigationControllerDelegate
+
+- (void)navigationController:(UINavigationController *)navigationController
+       didShowViewController:(UIViewController *)viewController
+                    animated:(BOOL)animate
+{
+    // Enable the gesture again once the new controller is shown
+    
+    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
+        self.interactivePopGestureRecognizer.enabled = YES;
+}
+
+
 
 @end
